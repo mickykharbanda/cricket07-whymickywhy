@@ -1,6 +1,6 @@
 /* DirectSound: buffers live in guest memory; a mixer thread advances play cursors in real time, fires
  * position notifications and mixes playing buffers to stereo float. Output goes to CoreAudio
- * (macOS; RC_NO_AUDIO=1 to mute). */
+ * (macOS), SDL2 audio (Android) or the page's AudioWorklet ring (browser); RC_NO_AUDIO=1 to mute. */
 #include "com.h"
 
 #include <math.h>
@@ -9,6 +9,10 @@
 
 #ifdef __APPLE__
 #include <AudioToolbox/AudioToolbox.h>
+#endif
+
+#ifdef __ANDROID__
+#include <SDL2/SDL.h>
 #endif
 
 #define W(name) static void name(CPU *c)
@@ -125,6 +129,36 @@ static int start_coreaudio(void) {
 }
 #endif
 
+#ifdef __ANDROID__
+/* Android: SDL2 owns the output device (AAudio or OpenSL ES underneath). allowed_changes = 0, so SDL
+   converts for us and the callback always sees packed stereo float32 at MIX_RATE. */
+static void sdl_audio_callback(void *ud, Uint8 *stream, int len) {
+    (void)ud;
+    mix_frames((float *)stream, len / 8);   /* 8 bytes per stereo float frame */
+}
+
+static int start_sdl_audio(void) {
+    if (SDL_InitSubSystem(SDL_INIT_AUDIO) != 0) {
+        fprintf(stderr, "[dsound] SDL_InitSubSystem(AUDIO) failed: %s\n", SDL_GetError());
+        return 0;
+    }
+    SDL_AudioSpec want, got;
+    memset(&want, 0, sizeof want);
+    want.freq = MIX_RATE;
+    want.format = AUDIO_F32SYS;
+    want.channels = 2;
+    want.samples = 512;              /* ~12 ms, matching the CoreAudio buffer above */
+    want.callback = sdl_audio_callback;
+    SDL_AudioDeviceID dev = SDL_OpenAudioDevice(NULL, 0, &want, &got, 0);
+    if (!dev) {
+        fprintf(stderr, "[dsound] SDL_OpenAudioDevice failed: %s\n", SDL_GetError());
+        return 0;
+    }
+    SDL_PauseAudioDevice(dev, 0);
+    return 1;
+}
+#endif
+
 #ifdef __EMSCRIPTEN__
 /* Browser: mixed audio goes into a ring in shared memory that the page's AudioWorklet reads
    (web/loader.js). The ring holds stereo float frames; w and r count frames written and read. */
@@ -183,6 +217,9 @@ static void start_mixer(void) {
     g_mixer_sched = sched_new("mixer", NULL, NULL);
 #ifdef __APPLE__
     if (!g_mixer_sched && !getenv("RC_NO_AUDIO") && start_coreaudio()) { LOG("[dsound] CoreAudio output started\n"); return; }
+#endif
+#ifdef __ANDROID__
+    if (!g_mixer_sched && !getenv("RC_NO_AUDIO") && start_sdl_audio()) { LOG("[dsound] SDL audio output started\n"); return; }
 #endif
     pthread_t t;
     pthread_create(&t, NULL, silent_mixer, NULL);

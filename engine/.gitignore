@@ -3,6 +3,7 @@ out_all/
 out_trace/
 build/
 build_web/
+build_android/
 tests/results/
 third_party/
 userdata/
@@ -13,6 +14,7 @@ __pycache__/
 *.dll
 functions.json
 ghidra_project/
+work/
 *.csv
 .dev.vars
 .wrangler/

@@ -20,7 +20,11 @@
 
 extern int g_window_w, g_window_h;
 #ifndef __EMSCRIPTEN__
-extern void *g_metal_layer;
+#ifdef __ANDROID__
+extern void *g_android_window;   /* ANativeWindow * from window_android.c */
+#else
+extern void *g_metal_layer;      /* CAMetalLayer from window.c */
+#endif
 #endif
 
 /* ------------------------------------------------------------------ shader */
@@ -348,6 +352,16 @@ static void create_resources(void) {
 #ifndef __EMSCRIPTEN__
 int gpu_init_native(void) {
     if (g_dev) return 1;
+#ifdef __ANDROID__
+    if (!g_android_window) { fprintf(stderr, "[wgpu] no window\n"); return 0; }
+    g_inst = wgpuCreateInstance(NULL);
+    /* Vulkan via VK_KHR_android_surface; the backend is chosen by the adapter request below. */
+    WGPUSurfaceSourceAndroidNativeWindow aw = WGPU_SURFACE_SOURCE_ANDROID_NATIVE_WINDOW_INIT;
+    aw.window = g_android_window;
+    WGPUSurfaceDescriptor sd = WGPU_SURFACE_DESCRIPTOR_INIT;
+    sd.nextInChain = &aw.chain;
+    g_surface = wgpuInstanceCreateSurface(g_inst, &sd);
+#else
     if (!g_metal_layer) { fprintf(stderr, "[wgpu] no window\n"); return 0; }
     g_inst = wgpuCreateInstance(NULL);
     WGPUSurfaceSourceMetalLayer ml = WGPU_SURFACE_SOURCE_METAL_LAYER_INIT;
@@ -355,6 +369,7 @@ int gpu_init_native(void) {
     WGPUSurfaceDescriptor sd = WGPU_SURFACE_DESCRIPTOR_INIT;
     sd.nextInChain = &ml.chain;
     g_surface = wgpuInstanceCreateSurface(g_inst, &sd);
+#endif
 
     WGPURequestAdapterOptions ao = WGPU_REQUEST_ADAPTER_OPTIONS_INIT;
     ao.compatibleSurface = g_surface;

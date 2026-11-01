@@ -69,12 +69,9 @@ static void *game_main(void *arg) {
 #include <emscripten/wasmfs.h>
 #endif
 
-int main(int argc, char **argv) {
-#if defined(__EMSCRIPTEN__) && !defined(RC_NODE_BUILD)
-    /* browser: the page copied the player's game folder into OPFS; reach it through /opfs */
-    wasmfs_create_directory("/opfs", 0777, wasmfs_create_opfs_backend());
-#endif
-    const char *game = argc > 1 ? argv[1] : "game";
+/* The boot sequence, shared by the native/browser main() below and by the Android entry point
+   (host/main_android.c), which has no argv and gets its game folder from the app. */
+int rc_boot(const char *game) {
     if (!realpath(game, g_game_root)) { perror(game); return 1; }
     /* RC_USERDATA: another folder for saves and settings (e.g. a fresh copy per test run) */
     if (getenv("RC_USERDATA")) snprintf(g_user_root, sizeof g_user_root, "%s", getenv("RC_USERDATA"));
@@ -128,3 +125,13 @@ int main(int argc, char **argv) {
     else window_event_loop();  /* never returns; closing the window exits */
     return 0;
 }
+
+#ifndef __ANDROID__
+int main(int argc, char **argv) {
+#if defined(__EMSCRIPTEN__) && !defined(RC_NODE_BUILD)
+    /* browser: the page copied the player's game folder into OPFS; reach it through /opfs */
+    wasmfs_create_directory("/opfs", 0777, wasmfs_create_opfs_backend());
+#endif
+    return rc_boot(argc > 1 ? argv[1] : "game");
+}
+#endif
