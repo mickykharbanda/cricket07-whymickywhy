@@ -19,6 +19,14 @@ if [ "${TRACE:-0}" = 1 ]; then OUT=out_trace; OBJ=obj_trace; LIB=librecomp_trace
 else OUT=out_all; OBJ=obj_all; LIB=librecomp.dylib; TFLAG=; fi
 export OUT OBJ  # used inside the per-file compile command below
 
+# Functions Ghidra's export missed, recovered by hand. Merged in here so a fresh Ghidra run cannot
+# silently lose them; ghidra/extra-functions.json says why each one is there.
+if [ -f "$R/ghidra/extra-functions.json" ]; then
+    mkdir -p "$R/build"
+    "$PY" -I "$R/ghidra/merge-extra.py" "$FUNCS" "$R/ghidra/extra-functions.json" "$R/build/functions-merged.json"
+    FUNCS="$R/build/functions-merged.json"
+fi
+
 "$PY" -I "$R/translator/x86toc.py" "$EXE" "$FUNCS" "$R/$OUT" --all --per-file 300 $TFLAG | head -1
 mkdir -p "$R/build/$OBJ"
 cd "$R"

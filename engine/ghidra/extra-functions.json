@@ -1,0 +1,33 @@
+{
+  "_comment": [
+    "Functions Ghidra's export missed, recovered by hand. build.sh merges these into",
+    "work/functions.json before translating, so a fresh Ghidra run cannot silently lose them.",
+    "An entry is skipped automatically if a later export does find the function.",
+    "Same shape as ghidra/export.sh's output; 'why' is ignored by the translator."
+  ],
+  "functions": [
+    {
+      "entry": 6355712,
+      "name": "FUN_0060fb00",
+      "cc": "unknown",
+      "purge": 0,
+      "ranges": [[6355712, 6355888]],
+      "why": [
+        "0x0060fb00, 176 bytes. Without this the game aborts before its first frame:",
+        "'guest trap at 0060fb00: indirect call to unknown function', from the direct calls at",
+        "0x00612b99 and 0x00612dca. __thiscall, no stack args, always returns 1; a four-case switch",
+        "on [[this+0xc]+0x48] that publishes display config into the globals at 0x9e454c..0x9e4580,",
+        "called right after the IDirect3D8::CheckDeviceType probing in FUN_0060fbc0 and right before",
+        "CreateDevice.",
+        "Ghidra gave up at 'jmp dword ptr [eax*4 + 0x60fbb0]' -- a jump table it could not resolve,",
+        "sitting in the 16 bytes between this function's last ret and FUN_0060fbc0. The translator",
+        "recovers that table itself (translator/x86toc.py:350-351), so only the entry is needed.",
+        "x86toc.py's own gap recovery could not find it either: it promotes direct call targets seen",
+        "inside KNOWN function ranges (x86toc.py:1321-1328), and both call sites are themselves in",
+        "unrecognised territory. The same body is hand-inlined at 0x0060f30c and 0x00612ecb, which",
+        "corroborates the extent."
+      ]
+    }
+  ],
+  "jumptables": []
+}
