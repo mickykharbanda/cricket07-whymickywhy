@@ -18,6 +18,17 @@
 #include <string.h>
 #include <time.h>
 
+/* Progress breadcrumb. On Android there is no usable USB connection, so the log ladder in logcat is
+   out of reach; rc_rung leaves the last rung the engine reached on disk instead. host/main_android.c
+   writes it with a raw write + fsync, so it survives a crash, a kill and the low-memory killer
+   alike -- the failures that leave no tombstone are exactly the ones we cannot otherwise see.
+   A no-op on every other target. */
+#ifdef __ANDROID__
+void rc_rung(const char *token);
+#else
+#define rc_rung(token) ((void)0)
+#endif
+
 #define ARG(i) R32(c->esp + 4 + 4 * (i))
 /* return from a stdcall import with `nargs` 32-bit arguments */
 #define RET(nargs, value) do { c->eax = (uint32_t)(value); c->esp += 4 + 4 * (nargs); return; } while (0)

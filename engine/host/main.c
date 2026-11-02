@@ -96,6 +96,7 @@ int rc_boot(const char *game) {
     if (load_image(exe, &g_img)) return 1;
     register_all_functions();
     fprintf(stderr, "loaded %s: %u imports, %u of them implemented\n", exe, g_img.num_imports, n);
+    rc_rung("image-loaded");
 
     /* The window and its event loop must live on the main thread (macOS); the game gets its own
        thread. RC_HEADLESS=1 runs without a window (no rendering, 60 Hz pacing). */

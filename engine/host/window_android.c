@@ -136,6 +136,7 @@ int window_create(const char *title) {
         fprintf(stderr, "SDL_Init failed: %s\n", SDL_GetError());
         return 0;
     }
+    rc_rung("sdl-init");
     /* Android gives us one fullscreen surface; 0x0 means "whatever the display is".
        SDL_WINDOW_VULKAN is not optional here. With no graphics flag at all, SDL_CreateWindow adds
        SDL_WINDOW_OPENGL on Android (SDL_DefaultGraphicsBackends) and binds an EGL/GLES surface to
@@ -157,6 +158,7 @@ int window_create(const char *title) {
 
     read_drawable_size();
     fprintf(stderr, "window: %dx%d drawable (ANativeWindow %p)\n", g_window_w, g_window_h, g_android_window);
+    rc_rung("window-ok");
     for (int i = 0; i < SDL_NumJoysticks(); i++) pad_added(i);
     return 1;
 }

@@ -13,6 +13,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_main.h>
 #include <android/log.h>
+#include <fcntl.h>
 #include <pthread.h>
 #include <unistd.h>
 
@@ -49,8 +50,28 @@ static void redirect_output_to_logcat(void) {
     if (!pthread_create(&t, NULL, log_pump, NULL)) pthread_detach(t);
 }
 
+/* The launcher reads this out of getFilesDir() after a failed launch. One short token, overwritten
+ * each time: the file is truncated first so a longer token cannot leave a tail of the previous one.
+ * No stdio anywhere in here -- a buffered byte that never reaches the disk is the whole failure we
+ * are trying to avoid. Repeats are dropped, so the per-frame call at the end costs one fsync once. */
+static char g_rung_path[1024];
+
+void rc_rung(const char *token) {
+    static char last[32];
+    if (!g_rung_path[0] || !strcmp(last, token)) return;
+    snprintf(last, sizeof last, "%s", token);
+    int fd = open(g_rung_path, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+    if (fd < 0) return;
+    size_t n = strlen(token);
+    if (write(fd, token, n) == (ssize_t)n) fsync(fd);
+    close(fd);
+}
+
 int SDL_main(int argc, char *argv[]) {
     redirect_output_to_logcat();
+
+    const char *internal = SDL_AndroidGetInternalStoragePath();
+    if (internal) snprintf(g_rung_path, sizeof g_rung_path, "%s/engine-progress.txt", internal);
 
     char fallback[1024];
     const char *game = argc > 1 ? argv[1] : NULL;
