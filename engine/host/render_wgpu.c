@@ -12,6 +12,9 @@
 
 #include <math.h>
 #include <webgpu/webgpu.h>
+#ifndef __EMSCRIPTEN__
+#include <webgpu/wgpu.h>   /* wgpu-native only: the log callback below */
+#endif
 #include <unistd.h>
 #include <sys/stat.h>
 #ifdef __EMSCRIPTEN__
@@ -157,6 +160,10 @@ static WGPUDevice g_dev;
 static WGPUQueue g_queue;
 static WGPUSurface g_surface;
 static WGPUTextureFormat g_surf_fmt;
+/* Chosen from the surface's own capabilities in create_resources(), not assumed: configure_surface()
+   runs again on every resize and must not re-derive them. */
+static WGPUTextureUsage g_surf_usage = WGPUTextureUsage_RenderAttachment | WGPUTextureUsage_CopyDst;
+static WGPUCompositeAlphaMode g_surf_alpha = WGPUCompositeAlphaMode_Opaque;
 static int g_surf_w, g_surf_h;   /* back buffer: the largest 4:3 area that fits the window */
 static int g_win_w, g_win_h;     /* window (swap chain) size; the back buffer is centred in it */
 static WGPUTexture g_depth;
@@ -220,6 +227,16 @@ static void on_device(WGPURequestDeviceStatus st, WGPUDevice d, WGPUStringView m
     if (st != WGPURequestDeviceStatus_Success) fprintf(stderr, "[wgpu] device: %.*s\n", (int)msg.length, msg.data);
     *(WGPUDevice *)u1 = d;
 }
+#ifndef __EMSCRIPTEN__
+/* wgpu-native is built panic=abort, so a validation failure in a call with no error callback -- a
+   surface configure, say -- kills the process with only "Validation Error" on the way out. This
+   prints the rule that actually failed, which is the difference between a fix and a guess. */
+static void on_wgpu_log(WGPULogLevel level, WGPUStringView msg, void *u) {
+    (void)u;
+    fprintf(stderr, "[wgpu-log %d] %.*s\n", (int)level, (int)msg.length, msg.data);
+}
+#endif
+
 static void on_error(WGPUDevice const *d, WGPUErrorType t, WGPUStringView msg, void *u1, void *u2) {
     (void)d; (void)u1; (void)u2;
     static int count;
@@ -252,14 +269,14 @@ static void configure_surface(void) {
     WGPUSurfaceConfiguration sc = WGPU_SURFACE_CONFIGURATION_INIT;
     sc.device = g_dev;
     sc.format = g_surf_fmt;
-    sc.usage = WGPUTextureUsage_RenderAttachment | WGPUTextureUsage_CopyDst;  /* back buffer is copied in */
+    sc.usage = g_surf_usage;   /* back buffer is copied in, where the surface allows it */
     sc.width = (uint32_t)g_win_w;
     sc.height = (uint32_t)g_win_h;
     sc.presentMode = WGPUPresentMode_Fifo;   /* vsync, like D3DPRESENT_INTERVAL_ONE */
 #ifdef __EMSCRIPTEN__
     sc.usage = WGPUTextureUsage_RenderAttachment | WGPUTextureUsage_CopyDst;
 #endif
-    sc.alphaMode = WGPUCompositeAlphaMode_Opaque;
+    sc.alphaMode = g_surf_alpha;
     wgpuSurfaceConfigure(g_surface, &sc);
     make_depth();
 }
@@ -295,11 +312,34 @@ static WGPUShaderModule make_module(const char *fragment) {
 
 /* everything after the device exists: surface format, back buffer, shaders, layouts, buffers */
 static void create_resources(void) {
+    /* Every field of the surface configuration has to come from the surface itself. Metal accepts the
+       obvious defaults, so the desktop never noticed; Android is the strict case. Mali's only
+       composite-alpha mode is typically Inherit, and asking for Opaque there fails
+       wgpuSurfaceConfigure validation outright -- which, in a panic=abort build, takes the process
+       down before anything is drawn. */
     WGPUSurfaceCapabilities caps = WGPU_SURFACE_CAPABILITIES_INIT;
     wgpuSurfaceGetCapabilities(g_surface, g_adapter, &caps);
+
     g_surf_fmt = caps.formatCount ? caps.formats[0] : WGPUTextureFormat_BGRA8Unorm;
     for (size_t i = 0; i < caps.formatCount; i++)   /* prefer a non-sRGB format: D3D8 blends in gamma space */
         if (caps.formats[i] == WGPUTextureFormat_BGRA8Unorm) g_surf_fmt = caps.formats[i];
+
+    /* CopyDst is required: exec_present blits the back buffer into the swapchain image. Do NOT gate
+       it on caps.usages -- Metal reports only 0x11 (RenderAttachment | CopySrc) here and yet accepts
+       and needs CopyDst, so trusting the report drops the flag and every frame then dies in
+       wgpuQueueSubmit instead. The report is advisory; this flag is not. */
+    g_surf_usage = WGPUTextureUsage_RenderAttachment | WGPUTextureUsage_CopyDst;
+
+    g_surf_alpha = caps.alphaModeCount ? caps.alphaModes[0] : WGPUCompositeAlphaMode_Auto;
+    for (size_t i = 0; i < caps.alphaModeCount; i++)
+        if (caps.alphaModes[i] == WGPUCompositeAlphaMode_Opaque) g_surf_alpha = caps.alphaModes[i];
+
+    fprintf(stderr, "[wgpu] surface: format %d, usage %#x (of %#x), alpha %d (of %zu offered)\n",
+            (int)g_surf_fmt, (unsigned)g_surf_usage, (unsigned)caps.usages, (int)g_surf_alpha,
+            caps.alphaModeCount);
+    for (size_t i = 0; i < caps.formatCount; i++) fprintf(stderr, "[wgpu]   format %zu: %d\n", i, (int)caps.formats[i]);
+    for (size_t i = 0; i < caps.alphaModeCount; i++) fprintf(stderr, "[wgpu]   alpha %zu: %d\n", i, (int)caps.alphaModes[i]);
+    wgpuSurfaceCapabilitiesFreeMembers(caps);
     configure_surface();
 
     g_shader = make_module(WGSL_FF);
@@ -354,6 +394,8 @@ int gpu_init_native(void) {
     if (g_dev) return 1;
 #ifdef __ANDROID__
     if (!g_android_window) { fprintf(stderr, "[wgpu] no window\n"); return 0; }
+    wgpuSetLogCallback(on_wgpu_log, NULL);
+    wgpuSetLogLevel(WGPULogLevel_Warn);
     g_inst = wgpuCreateInstance(NULL);
     /* Vulkan via VK_KHR_android_surface; the backend is chosen by the adapter request below. */
     WGPUSurfaceSourceAndroidNativeWindow aw = WGPU_SURFACE_SOURCE_ANDROID_NATIVE_WINDOW_INIT;
@@ -361,8 +403,11 @@ int gpu_init_native(void) {
     WGPUSurfaceDescriptor sd = WGPU_SURFACE_DESCRIPTOR_INIT;
     sd.nextInChain = &aw.chain;
     g_surface = wgpuInstanceCreateSurface(g_inst, &sd);
+    rc_rung("wgpu-surface");
 #else
     if (!g_metal_layer) { fprintf(stderr, "[wgpu] no window\n"); return 0; }
+    wgpuSetLogCallback(on_wgpu_log, NULL);
+    wgpuSetLogLevel(WGPULogLevel_Warn);
     g_inst = wgpuCreateInstance(NULL);
     WGPUSurfaceSourceMetalLayer ml = WGPU_SURFACE_SOURCE_METAL_LAYER_INIT;
     ml.layer = g_metal_layer;
@@ -380,6 +425,7 @@ int gpu_init_native(void) {
     aci.userdata1 = &g_adapter;
     wgpuInstanceRequestAdapter(g_inst, &ao, aci);
     while (!g_adapter) wgpuInstanceProcessEvents(g_inst);
+    rc_rung("wgpu-adapter");
 
     WGPUDeviceDescriptor dd = WGPU_DEVICE_DESCRIPTOR_INIT;
     dd.uncapturedErrorCallbackInfo.callback = on_error;
@@ -393,8 +439,10 @@ int gpu_init_native(void) {
     dci.userdata1 = &g_dev;
     wgpuAdapterRequestDevice(g_adapter, &dd, dci);
     while (!g_dev) wgpuInstanceProcessEvents(g_inst);
+    rc_rung("wgpu-device");
     g_queue = wgpuDeviceGetQueue(g_dev);
     create_resources();
+    rc_rung("resources");
     return 1;
 }
 #endif
@@ -1068,6 +1116,7 @@ static void exec_present(const CmdPresent *c) {
         wgpuCommandEncoderRelease(enc);
 #ifndef __EMSCRIPTEN__
         wgpuSurfacePresent(g_surface);   /* FIFO: waits for vsync */
+        rc_rung("frame-1");   /* after the picture is actually on screen, not before */
         wgpuTextureRelease(cur.texture);
         /* RC_PACE60: fixed 60 Hz even on fast displays, so scripted input (RC_INPUT) is repeatable */
         static int pace = -1;
