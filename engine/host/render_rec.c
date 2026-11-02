@@ -38,11 +38,27 @@ static void rec_leave(void) { pthread_mutex_unlock(&g_rec_lock); }
 static uint8_t *g_cb;
 static size_t g_cb_len, g_cb_cap;
 
+/* Every upload in a frame is staged here in host memory before the frame is submitted, and with
+   g_gpu_bc == 0 (any GPU without BC, which is every Mali phone) sync_texture stages the whole
+   UNCOMPRESSED mip chain. A match load therefore pushes its working set through this buffer at
+   4-8x its on-disk size, so the growth is 1.5x rather than 2x: doubling here over-reserves by the
+   size of the working set again, and realloc has to hold the old and the new block at once, which
+   is what actually decides whether a phone can do this. */
 static void *cmd_alloc(uint32_t type, size_t size) {
     size = (size + 7) & ~(size_t)7;
     if (g_cb_len + size > g_cb_cap) {
-        g_cb_cap = (g_cb_len + size) * 2 + (1u << 20);
-        g_cb = realloc(g_cb, g_cb_cap);
+        size_t want = g_cb_len + size;
+        size_t cap = want + want / 2 + (1u << 20);
+        uint8_t *grown = realloc(g_cb, cap);
+        if (!grown) {   /* named failure beats the NULL + offset dereference two lines down */
+            fprintf(stderr, "[render] out of memory: could not grow the command buffer to %zu MB "
+                            "(%zu MB in use, %zu MB wanted for one command)\n",
+                    cap >> 20, (size_t)(g_cb_len >> 20), size >> 20);
+            rc_rung("oom-cmdbuf");
+            exit(1);
+        }
+        g_cb = grown;
+        g_cb_cap = cap;
     }
     CmdHdr *h = (CmdHdr *)(g_cb + g_cb_len);
     memset(h, 0, size);
