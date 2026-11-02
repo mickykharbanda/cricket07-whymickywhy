@@ -309,6 +309,7 @@ int load_image(const char *path, LoadedImage *out) {
     uint32_t entry = rd32(opt + 16);
     uint32_t hdr_size = rd32(opt + 60);
     uint32_t imp_rva = rd32(opt + 96 + 8);
+    uint32_t image_size = rd32(opt + 56);   /* SizeOfImage; read here because `opt` points into `file` */
 
     memcpy(HP(image_base), file, hdr_size);
     const uint8_t *sec = opt + optsz;
@@ -344,10 +345,10 @@ int load_image(const char *path, LoadedImage *out) {
             g_nimports++;
         }
     }
-    free(file);
+    free(file);   /* nothing below may touch `file`, `pe`, `opt` or `sec` again */
     out->image_base = image_base;
     g_image_lo = image_base;
-    g_image_hi = image_base + rd32(opt + 56);   /* SizeOfImage */
+    g_image_hi = image_base + image_size;
     out->entry = image_base + entry;
     out->num_imports = g_nimports;
     return 0;
