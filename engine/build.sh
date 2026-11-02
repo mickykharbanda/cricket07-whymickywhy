@@ -44,6 +44,8 @@ echo "built build/$LIB"
 if [ "${TRACE:-0}" != 1 ]; then
     mkdir -p build/host
     for f in host/*.c; do
+        # main_android.c and window_android.c need the NDK; window.c/watch.c cover macOS instead.
+        case "$(basename "$f")" in *_android.c) continue ;; esac
         clang $OPT -Wall -Wno-unused-function -Wno-misleading-indentation -c -Iruntime -Ihost $PFLAG \
             -I"$WGPU/include" -I"$SDL2/include" "$f" -o "build/host/$(basename "$f" .c).o" || exit 1
     done
