@@ -136,9 +136,14 @@ int window_create(const char *title) {
         fprintf(stderr, "SDL_Init failed: %s\n", SDL_GetError());
         return 0;
     }
-    /* Android gives us one fullscreen surface; 0x0 means "whatever the display is". */
+    /* Android gives us one fullscreen surface; 0x0 means "whatever the display is".
+       SDL_WINDOW_VULKAN is not optional here. With no graphics flag at all, SDL_CreateWindow adds
+       SDL_WINDOW_OPENGL on Android (SDL_DefaultGraphicsBackends) and binds an EGL/GLES surface to
+       the ANativeWindow -- which render_wgpu.c then hands to vkCreateAndroidSurfaceKHR as well.
+       Two APIs on one surface segfaults inside the GL driver. SDL skips the EGL surface for a
+       Vulkan window for exactly this reason; this is window.c's SDL_WINDOW_METAL on desktop. */
     g_window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 0, 0,
-                                SDL_WINDOW_FULLSCREEN | SDL_WINDOW_SHOWN);
+                                SDL_WINDOW_VULKAN | SDL_WINDOW_FULLSCREEN | SDL_WINDOW_SHOWN);
     if (!g_window) { fprintf(stderr, "SDL_CreateWindow failed: %s\n", SDL_GetError()); return 0; }
 
     SDL_SysWMinfo info;
