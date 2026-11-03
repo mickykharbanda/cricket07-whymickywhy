@@ -1,0 +1,18 @@
+# The game itself: the executable, its Data/Audio archives and the extracted tree.
+# Not ours to redistribute, and 1.1 GB of it.
+game/
+*.cracked.exe
+*.big
+*.gob
+*.fsh
+Cricket 07.app/
+
+# Build output. The wasm engine is rebuilt from the sibling cricket07-public engine.
+build/
+userdata/
+__pycache__/
+
+# Built expansion packs. The sources and the build scripts that produce them are
+# tracked; the packed result is derived game data and is rebuildable from both.
+mods/**/*.bin
+mods/**/*.cdf

@@ -1,0 +1,953 @@
+{
+  "id": "5tH63wtpVTf0zMKRZ2pdTE",
+  "availableOnWeb": true,
+  "title": "Rajasthan Royals",
+  "slug": "rajasthan-royals",
+  "externalId": 1558,
+  "externalGid": "8343b9ca-b1ef-4d2f-82c2-63711eee5176",
+  "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Ficon-light.svg",
+  "teams": [
+    {
+      "id": "4Qa5YIjavk7RvKedQy6WeS",
+      "externalId": 1622,
+      "externalGid": "e81c9991-86af-4bf2-970a-5e715ae3a504",
+      "slug": "chennai-super-kings",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1622%2Ficon-light.svg",
+      "isActive": false
+    },
+    {
+      "id": "3FKJg2wV8RJdgPaF1kAG6w",
+      "externalId": 1396,
+      "externalGid": "d0297441-c567-485b-af7d-ce83a83a37ae",
+      "slug": "delhi-capitals",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1396%2Ficon-light.svg",
+      "isActive": false
+    },
+    {
+      "id": "1r4Sm3EF74gbirqGc3MQPK",
+      "externalId": 2879,
+      "externalGid": "94e21163-c6a8-4e53-80a1-a8889024840a",
+      "slug": "gujarat-titans",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F2879%2Ficon-light.svg",
+      "isActive": false
+    },
+    {
+      "id": "369uhPDcOi22c2GXFbzdFP",
+      "externalId": 1873,
+      "externalGid": "e0f56253-4987-41b5-9129-74e1affbf568",
+      "slug": "kolkata-knight-riders",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1873%2Ficon-light.svg",
+      "isActive": false
+    },
+    {
+      "id": "3ldgbpFR9Z6pDHzLQoyMmx",
+      "externalId": 2880,
+      "externalGid": "a5285116-4f8a-44db-881a-7601754e5b4e",
+      "slug": "lucknow-super-giants",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F2880%2Ficon-light.svg",
+      "isActive": false
+    },
+    {
+      "id": "RWiyanVwhOje7tw8fidU6",
+      "externalId": 1854,
+      "externalGid": "e5ba6e23-5045-48dc-a247-9afa0d92d32b",
+      "slug": "mumbai-indians",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1854%2Ficon-light.svg",
+      "isActive": false
+    },
+    {
+      "id": "4yU7pgZ1hF9Cy5YyPWrt04",
+      "externalId": 2040,
+      "externalGid": "407ff425-b351-4782-b5b9-19fad92bbe7b",
+      "slug": "punjab-kings",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F2040%2Ficon-light.svg",
+      "isActive": false
+    },
+    {
+      "id": "43rBFSyNhj9QBIO6gn7BeP",
+      "externalId": 1558,
+      "externalGid": "8343b9ca-b1ef-4d2f-82c2-63711eee5176",
+      "slug": "rajasthan-royals",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Ficon-light.svg",
+      "isActive": true
+    },
+    {
+      "id": "5MLRQQYAIAOOdfIGajRYYK",
+      "externalId": 2138,
+      "externalGid": "dc026d26-4afa-4f5b-aa98-7641233939de",
+      "slug": "royal-challengers-bengaluru",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F2138%2Ficon-light.svg",
+      "isActive": false
+    },
+    {
+      "id": "36pO0VNCA0yeo7VkaCvhig",
+      "externalId": 1153,
+      "externalGid": "659e97fe-1bc4-48e9-9a81-bab3e51a2a3a",
+      "slug": "sunrisers-hyderabad",
+      "teamCrestUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1153%2Ficon-light.svg",
+      "isActive": false
+    }
+  ],
+  "headerBackgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Frr-team-heading-bg-desktop.svg&brand=ipl",
+  "leagueWinsYears": [
+    "2008"
+  ],
+  "leagueWinsCount": 1,
+  "links": [
+    {
+      "id": "6o3DxEnSCFSFOOaUPkihUQ",
+      "availableOnWeb": true,
+      "text": "website - royals",
+      "href": "https://www.rajasthanroyals.com/",
+      "linkType": "external",
+      "imageUrl": "https://www.iplt20.com/cms/images/jot2qw8s50z1/4WYhbP0Ni93LruYWhV9MYH/964fb57f6b3276f74a36746aaf79b8c8/Trailing_Icon.png",
+      "openInNewTab": true
+    },
+    {
+      "id": "3sk4yI6Muwo13xGBe8eXSR",
+      "availableOnWeb": true,
+      "text": "facebook - royals",
+      "href": "https://www.facebook.com/RajasthanRoyals/",
+      "linkType": "external",
+      "imageUrl": "https://www.iplt20.com/cms/images/jot2qw8s50z1/38DVYMuV45PGm2spivnTlX/7b7d014a43c4fadd7ca88a21466a9275/Facebook.png",
+      "openInNewTab": true
+    },
+    {
+      "id": "1WOjRkxYHWZF4wLgtPr1LU",
+      "availableOnWeb": true,
+      "text": "instagram - royals",
+      "href": "https://www.instagram.com/rajasthanroyals/",
+      "linkType": "external",
+      "imageUrl": "https://www.iplt20.com/cms/images/jot2qw8s50z1/4NWcWlRFXKOk4bMxM1YSWQ/1d4815a351755d684c7c99f7a7613c13/Instagram.png",
+      "openInNewTab": true
+    },
+    {
+      "id": "uPrPjelhIhH3eyI5l7SoS",
+      "availableOnWeb": true,
+      "text": "x - royals",
+      "href": "https://x.com/rajasthanroyals",
+      "linkType": "external",
+      "imageUrl": "https://www.iplt20.com/cms/images/jot2qw8s50z1/7dskqJsMftLWi1AgYpX4nt/2272ccff9779adbb5d48473a78a1751d/Twitter_X.png",
+      "openInNewTab": true
+    }
+  ],
+  "tabs": [
+    {
+      "id": "j4ZmYe0HJQ15AxbyD6ioR",
+      "availableOnWeb": true,
+      "title": "Overview",
+      "key": "overview"
+    },
+    {
+      "id": "1h2yYwznbBZoeG2VHQ6paT",
+      "availableOnWeb": true,
+      "title": "Squad",
+      "key": "squad"
+    },
+    {
+      "id": "6YFrfOtwUYiFjlbvmLCRpC",
+      "availableOnWeb": true,
+      "title": "Matches",
+      "key": "matches"
+    },
+    {
+      "id": "18sKTTy47Sqnk9ogIsb48n",
+      "availableOnWeb": true,
+      "title": "News",
+      "key": "news"
+    },
+    {
+      "id": "5g6lQI4aVkOdGGQ0YZjIHU",
+      "availableOnWeb": true,
+      "title": "Videos",
+      "key": "videos"
+    }
+  ],
+  "defaultTabId": "j4ZmYe0HJQ15AxbyD6ioR",
+  "squad": {
+    "filters": {
+      "seasonYears": [
+        "2026",
+        "2025",
+        "2024",
+        "2023",
+        "2022",
+        "2021",
+        "2020",
+        "2019",
+        "2018",
+        "2017",
+        "2016",
+        "2015",
+        "2014",
+        "2013",
+        "2012",
+        "2011",
+        "2010",
+        "2009",
+        "2008"
+      ],
+      "defaultSeasonYear": "2026"
+    },
+    "players": [
+      {
+        "id": "player-28503",
+        "externalId": 28503,
+        "playerGid": "748cc426-3e63-409d-8965-2c90e93f73f3",
+        "slug": "jofra-archer",
+        "name": "Jofra Archer",
+        "role": "bowler",
+        "country": "England",
+        "countryCode": "gb-eng",
+        "isInternational": true,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "22",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F28503.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F28503.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F28503.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F28503.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F28503.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-70430",
+        "externalId": 70430,
+        "playerGid": "8adfc8aa-d61a-4324-abcf-9e07052e1ec9",
+        "slug": "ravi-bishnoi",
+        "name": "Ravi Bishnoi",
+        "role": "bowler",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "56",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F70430.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F70430.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F70430.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F70430.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F70430.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-52827",
+        "externalId": 52827,
+        "playerGid": "dcf7e515-d327-44d0-b9ba-d88f4fa28653",
+        "slug": "nandre-burger",
+        "name": "Nandre Burger",
+        "role": "bowler",
+        "country": "South Africa",
+        "countryCode": "za",
+        "isInternational": true,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "17",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F52827.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F52827.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F52827.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F52827.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F52827.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-87006",
+        "externalId": 87006,
+        "playerGid": "02c3d48a-5f7d-4854-94c5-946bd48ea26b",
+        "slug": "emanjot-singh-chahal",
+        "name": "Emanjot Singh Chahal",
+        "role": "bowler",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87006.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87006.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87006.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87006.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87006.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-72710",
+        "externalId": 72710,
+        "playerGid": "4b2a7361-7cdb-43fc-9692-f41284235064",
+        "slug": "yudhvir-singh-charak",
+        "name": "Yudhvir Singh Charak",
+        "role": "bowler",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "34",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F72710.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F72710.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F72710.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F72710.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F72710.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-21837",
+        "externalId": 21837,
+        "playerGid": "7e05ef83-dbbd-4ad5-80cb-2514984aa0db",
+        "slug": "sam-curran",
+        "name": "Sam Curran",
+        "role": "allrounder",
+        "country": "England",
+        "countryCode": "gb-eng",
+        "isInternational": true,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "58",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F21837.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F21837.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F21837.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F21837.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F21837.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-65476",
+        "externalId": 65476,
+        "playerGid": "4110ef80-2935-4035-81ba-0e7268f64175",
+        "slug": "riyan-parag",
+        "name": "Riyan Parag",
+        "role": "allrounder",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": true,
+        "isWicketKeeper": false,
+        "jerseyNumber": "5",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F65476.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F65476.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F65476.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F65476.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F65476.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-44044",
+        "externalId": 44044,
+        "playerGid": "d038687d-1087-4f5d-947a-60c07442830e",
+        "slug": "tushar-deshpande",
+        "name": "Tushar Deshpande",
+        "role": "bowler",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "24",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F44044.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F44044.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F44044.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F44044.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F44044.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-74047",
+        "externalId": 74047,
+        "playerGid": "8cf71e88-c634-4d40-93cf-0f68c50288f3",
+        "slug": "shubham-dubey",
+        "name": "Shubham Dubey",
+        "role": "batsman",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "27",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F74047.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F74047.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F74047.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F74047.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F74047.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-68473",
+        "externalId": 68473,
+        "playerGid": "b43efb1e-d925-45c4-b1b4-1c28b51c377d",
+        "slug": "donovan-ferreira",
+        "name": "Donovan Ferreira",
+        "role": "batsman",
+        "country": "South Africa",
+        "countryCode": "za",
+        "isInternational": true,
+        "isCaptain": false,
+        "isWicketKeeper": true,
+        "jerseyNumber": "2",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68473.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F68473.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F68473.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F68473.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F68473.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-23713",
+        "externalId": 23713,
+        "playerGid": "c7f6b263-8041-461f-8b3a-82c070d68510",
+        "slug": "shimron-hetmyer",
+        "name": "Shimron Hetmyer",
+        "role": "batsman",
+        "country": "West Indies",
+        "countryCode": "wi",
+        "isInternational": true,
+        "isCaptain": false,
+        "isWicketKeeper": true,
+        "jerseyNumber": "189",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F23713.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F23713.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F23713.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F23713.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F23713.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-13143",
+        "externalId": 13143,
+        "playerGid": "b2e76c0b-166c-4d7c-97df-a1503726e55c",
+        "slug": "ravindra-jadeja",
+        "name": "Ravindra Jadeja",
+        "role": "allrounder",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "8",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F13143.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F13143.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F13143.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F13143.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F13143.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-68314",
+        "externalId": 68314,
+        "playerGid": "786de32e-4a28-48d0-af87-775b1e4ce987",
+        "slug": "yashasvi-jaiswal",
+        "name": "Yashasvi Jaiswal",
+        "role": "batsman",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "64",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F68314.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F68314.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F68314.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F68314.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F68314.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-71456",
+        "externalId": 71456,
+        "playerGid": "9f342aec-ee47-48b1-b500-dc3f9757d28e",
+        "slug": "dhruv-jurel",
+        "name": "Dhruv Jurel",
+        "role": "wicketkeeper",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": true,
+        "jerseyNumber": "21",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F71456.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F71456.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F71456.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F71456.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F71456.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-76217",
+        "externalId": 76217,
+        "playerGid": "d2d60aff-246c-44fa-973f-e036b63071e2",
+        "slug": "kwena-maphaka",
+        "name": "Kwena Maphaka",
+        "role": "bowler",
+        "country": "South Africa",
+        "countryCode": "za",
+        "isInternational": true,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "11",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F76217.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F76217.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F76217.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F76217.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F76217.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-20007",
+        "externalId": 20007,
+        "playerGid": "13688f33-8fe1-4989-8dff-2124c28547e6",
+        "slug": "adam-milne",
+        "name": "Adam Milne",
+        "role": "bowler",
+        "country": "New Zealand",
+        "countryCode": "nz",
+        "isInternational": true,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "23",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F20007.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F20007.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F20007.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F20007.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F20007.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-71452",
+        "externalId": 71452,
+        "playerGid": "416c2cf1-335b-4242-8185-e5411ca7980f",
+        "slug": "sushant-mishra",
+        "name": "Sushant Mishra",
+        "role": "bowler",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "51",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F71452.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F71452.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F71452.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F71452.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F71452.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-87914",
+        "externalId": 87914,
+        "playerGid": "aab29480-8454-48bf-a16f-12f79228a320",
+        "slug": "aman-rao",
+        "name": "Aman Rao",
+        "role": "batsman",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87914.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87914.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87914.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87914.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87914.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-81719",
+        "externalId": 81719,
+        "playerGid": "7095ef19-ef2b-4199-9f28-6beda5fa3792",
+        "slug": "lhuan-dre-pretorius",
+        "name": "Lhuan-dr\u00e9 Pretorius",
+        "role": "batsman",
+        "country": "South Africa",
+        "countryCode": "za",
+        "isInternational": true,
+        "isCaptain": false,
+        "isWicketKeeper": true,
+        "jerseyNumber": "6",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F81719.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F81719.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F81719.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F81719.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F81719.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-92045",
+        "externalId": 92045,
+        "playerGid": "64cded09-418c-4b39-a1bb-590d66032d45",
+        "slug": "yash-punja",
+        "name": "Yash Punja",
+        "role": "batsman",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "14",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F92045.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F92045.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F92045.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F92045.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F92045.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-87852",
+        "externalId": 87852,
+        "playerGid": "b91c2efe-3c0b-4f84-b5aa-c3f628414481",
+        "slug": "vignesh-puthur",
+        "name": "Vignesh Puthur",
+        "role": "batsman",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "4",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F87852.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87852.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87852.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87852.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F87852.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-69043",
+        "externalId": 69043,
+        "playerGid": "2781c422-4201-4d31-9042-f7f02e6c72bf",
+        "slug": "kuldeep-sen",
+        "name": "Kuldeep Sen",
+        "role": "bowler",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "18",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F69043.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F69043.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F69043.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F69043.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F69043.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-16094",
+        "externalId": 16094,
+        "playerGid": "04ea76e2-4aa7-46f7-bc3f-dfde523e0374",
+        "slug": "dasun-shanaka",
+        "name": "Dasun Shanaka",
+        "role": "batsman",
+        "country": "Sri Lanka",
+        "countryCode": "lk",
+        "isInternational": true,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "7",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F16094.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F16094.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F16094.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F16094.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F16094.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-90896",
+        "externalId": 90896,
+        "playerGid": "718b6df9-e6c1-4c48-94e7-fbc4f32584ac",
+        "slug": "brijesh-sharma",
+        "name": "Brijesh Sharma",
+        "role": "bowler",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "16",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F90896.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F90896.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F90896.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F90896.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F90896.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-15660",
+        "externalId": 15660,
+        "playerGid": "dc7c68d4-19e4-459b-ae08-6f03b1ef8dd0",
+        "slug": "sandeep-sharma",
+        "name": "Sandeep Sharma",
+        "role": "bowler",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "20",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F15660.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F15660.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F15660.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F15660.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F15660.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-86608",
+        "externalId": 86608,
+        "playerGid": "48904fc9-0f07-4acd-8988-e83d6070dc97",
+        "slug": "ravi-singh",
+        "name": "Ravi Singh",
+        "role": "batsman",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "88",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F86608.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F86608.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F86608.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F86608.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F86608.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      },
+      {
+        "id": "player-83313",
+        "externalId": 83313,
+        "playerGid": "01e5004b-fa01-4450-8903-5009dbf1787b",
+        "slug": "vaibhav-sooryavanshi",
+        "name": "Vaibhav Sooryavanshi",
+        "role": "batsman",
+        "country": "India",
+        "countryCode": "in",
+        "isInternational": false,
+        "isCaptain": false,
+        "isWicketKeeper": false,
+        "jerseyNumber": "12",
+        "imageUrl": "https://www.iplt20.com/api/team-assets?pathname=player%2F8903%2F1558%2F83313.png&brand=ipl",
+        "imageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F83313.png%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F83313.png%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F83313.png%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dplayer%252F8903%252F1558%252F83313.png%26brand%3Dipl&w=1920&q=75"
+        },
+        "backgroundImageUrl": "https://www.iplt20.com/api/team-assets?pathname=static%2Fteams%2F1558%2Fplayer-bg.svg&brand=ipl",
+        "backgroundImageUrlSet": {
+          "small": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=384&q=75",
+          "medium": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=750&q=75",
+          "large": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1080&q=75",
+          "xlarge": "https://www.iplt20.com/_next/image?url=%2Fapi%2Fteam-assets%3Fpathname%3Dstatic%252Fteams%252F1558%252Fplayer-bg.svg%26brand%3Dipl&w=1920&q=75"
+        }
+      }
+    ]
+  },
+  "sourceUrl": "https://www.iplt20.com/api/bff/cms/teams/rajasthan-royals?tab=squad&season=2026",
+  "sourceSeason": "2026"
+}

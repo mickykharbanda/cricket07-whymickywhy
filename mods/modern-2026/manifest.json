@@ -1,0 +1,5164 @@
+{
+  "id": "modern-2026-v1",
+  "file": "modern-pack.bin",
+  "originalSize": 341202052,
+  "size": 13954571,
+  "sha256": "90e74e33e66675f460201fa8e6c4e65c569222d41ea2dff972ec9eb2819864a3",
+  "resources": [
+    {
+      "resource": "113964e05e69ab31d264fb8f15c58e5c.cdf",
+      "indexPosition": 10006,
+      "originalEntry": [
+        847872,
+        135843
+      ],
+      "offset": 0,
+      "size": 620140,
+      "sha256": "7047b6eb1e7e495d1e18283aa8e6840ec42018974c85b3b729d7b87065cb5783"
+    },
+    {
+      "resource": "be2970b0ada8e42cf891ce60ffe69575.xml",
+      "indexPosition": 14326,
+      "originalEntry": [
+        1798144,
+        2926
+      ],
+      "offset": 620140,
+      "size": 9145,
+      "sha256": "c27ec1e1376edaa32e00ad38e8f2de2161fe88fbecb42bcbd83300b9049c17d9"
+    },
+    {
+      "resource": "730eef3fd7726e43de955f21083ab000.xml",
+      "indexPosition": 94340,
+      "originalEntry": [
+        215500800,
+        5174
+      ],
+      "offset": 629285,
+      "size": 30792,
+      "sha256": "9784ece37682f00e2f5e27eb55f9bbe6cb00bde5bb90233f7de7a1584a5fe090"
+    },
+    {
+      "resource": "49ad277eb4663535abe0d4b1ec726023.xml",
+      "indexPosition": 12751,
+      "originalEntry": [
+        1691648,
+        3500
+      ],
+      "offset": 660077,
+      "size": 13246,
+      "sha256": "4183e64fb00a517fafde845d4547462209d7d69babe543845c01bad9831bc21a"
+    },
+    {
+      "resource": "43d0cad4d9bbad98eae6413793768df7.fsh",
+      "indexPosition": 101951,
+      "originalEntry": [
+        221499392,
+        111901
+      ],
+      "offset": 673323,
+      "size": 262304,
+      "sha256": "cf59ef7359a77d5ded8ca2e9b6928c95921ccee16be376cb5f6e0afc623bcb38"
+    },
+    {
+      "resource": "8ec8e653e3dc10f1b939e471dc6d23a1.fsh",
+      "indexPosition": 104921,
+      "originalEntry": [
+        229279744,
+        76663
+      ],
+      "offset": 935627,
+      "size": 262416,
+      "sha256": "4c10a6a04adca1748616920a28133595d025b0a4c1f10730dff4276babf6af19"
+    },
+    {
+      "resource": "2cbd1412b486dbbcd81a632b820f9314.fsh",
+      "indexPosition": 107891,
+      "originalEntry": [
+        235943936,
+        101832
+      ],
+      "offset": 1198043,
+      "size": 262400,
+      "sha256": "cd733fcd24f0ed2e6360eee2bb70c6f2233eec9a9dfe9f5f8bfd36f63c0378a3"
+    },
+    {
+      "resource": "bddd067df5965fc1ec0d6a28ca545c50.fsh",
+      "indexPosition": 110861,
+      "originalEntry": [
+        242520064,
+        105855
+      ],
+      "offset": 1460443,
+      "size": 262416,
+      "sha256": "2cb7eddd888a7a2b5f7b70bc9aa8d38dba25479e21e79ec035960b1f4413f093"
+    },
+    {
+      "resource": "1584f6e5778f4d84a64e4e48e714b84f.fsh",
+      "indexPosition": 98981,
+      "originalEntry": [
+        221052928,
+        4729
+      ],
+      "offset": 1722859,
+      "size": 16544,
+      "sha256": "db012853bd29c0c9f6fb28a2e77eef2574681444e88de255420000bdd8a70e5d"
+    },
+    {
+      "resource": "c12d34c0ca1c9d84519824e4b4003c56.fsh",
+      "indexPosition": 102851,
+      "originalEntry": [
+        223903744,
+        124028
+      ],
+      "offset": 1739403,
+      "size": 262304,
+      "sha256": "07b812d75048e98eaefbdcac9aa5e8fec88c18b4c09c7f5d35bc099dabae3721"
+    },
+    {
+      "resource": "1da9b42c96b4357cfc0ed1973958df06.fsh",
+      "indexPosition": 105821,
+      "originalEntry": [
+        231323648,
+        115569
+      ],
+      "offset": 2001707,
+      "size": 262416,
+      "sha256": "258f38e047136f6ff4db2e5a8dbdc18dd1f7d8d424467849738ee2af056c35e8"
+    },
+    {
+      "resource": "51e9f021f96390cb713d28f9ad182bc5.fsh",
+      "indexPosition": 108791,
+      "originalEntry": [
+        237953024,
+        116848
+      ],
+      "offset": 2264123,
+      "size": 262400,
+      "sha256": "b652a116476c90d5909606894ee6c30d5a92f3ac49d5a9737c21f3aa9d8111ab"
+    },
+    {
+      "resource": "436aff3bdba5613b9dd2a7431d86c462.fsh",
+      "indexPosition": 111761,
+      "originalEntry": [
+        244660224,
+        118898
+      ],
+      "offset": 2526523,
+      "size": 262416,
+      "sha256": "b0a4077072a9873bf65247fe10f23aa2d5da2087c774a22e3cf0f21d4cd3b6cc"
+    },
+    {
+      "resource": "260a5c29d5e659a2622ab47e020482f3.fsh",
+      "indexPosition": 99881,
+      "originalEntry": [
+        221173760,
+        4907
+      ],
+      "offset": 2788939,
+      "size": 16544,
+      "sha256": "dd798342ec5ea37ab244f80745b6fb0588a4465d3fcf20b745e3b647d73f0aee"
+    },
+    {
+      "resource": "d9372a82a5267562bf10901e45a0e046.fsh",
+      "indexPosition": 103706,
+      "originalEntry": [
+        226117632,
+        124327
+      ],
+      "offset": 2805483,
+      "size": 262304,
+      "sha256": "fe03ea67c8a6771408738d3ed92c931671ac48cecb0608fa86bede229e42be70"
+    },
+    {
+      "resource": "68f264e0258c636097b07b2967c217a4.fsh",
+      "indexPosition": 106676,
+      "originalEntry": [
+        233136128,
+        126207
+      ],
+      "offset": 3067787,
+      "size": 262416,
+      "sha256": "dfad2f6111f6963ef656f23a8669e076dfee1ba8ef9099d785138917d31dcb32"
+    },
+    {
+      "resource": "474f69f1076b25cf96ff2e71a05f2b82.fsh",
+      "indexPosition": 109646,
+      "originalEntry": [
+        239771648,
+        111568
+      ],
+      "offset": 3330203,
+      "size": 262400,
+      "sha256": "0337ad76a9df8932e2912d2f05a9d20e92f70cc043d587d0165516c1bba182c5"
+    },
+    {
+      "resource": "a9e6d8ca65d6606c4d0d91b58b74a4bf.fsh",
+      "indexPosition": 112616,
+      "originalEntry": [
+        246611968,
+        120703
+      ],
+      "offset": 3592603,
+      "size": 262416,
+      "sha256": "5410088ab2cebc6a8954e84006254f3eac0adae360c9a46d035bea7815f406b9"
+    },
+    {
+      "resource": "7479a4bb3a23da4679aa19c1ab7ffac0.fsh",
+      "indexPosition": 100736,
+      "originalEntry": [
+        221333504,
+        4826
+      ],
+      "offset": 3855019,
+      "size": 16544,
+      "sha256": "4ce9ae5baf954905de9b27218da2327055154c461f57858cfa25ba4f923c17a9"
+    },
+    {
+      "resource": "44b8f4413d5296e687c186afde1039a1.fsh",
+      "indexPosition": 104066,
+      "originalEntry": [
+        227063808,
+        121292
+      ],
+      "offset": 3871563,
+      "size": 262304,
+      "sha256": "4f5c743ba2f53f139f26bf3ccfe26402c2da1e5f88f2ea6d04a95dfb43625325"
+    },
+    {
+      "resource": "cc34f3fac4a5db86083758c67bcffb1e.fsh",
+      "indexPosition": 107036,
+      "originalEntry": [
+        234027008,
+        103499
+      ],
+      "offset": 4133867,
+      "size": 262416,
+      "sha256": "d70844cb3dfc4b78e58e550e0f014050b7d4c4a3d5302ceaf1042cd9f1c27f1a"
+    },
+    {
+      "resource": "87510b32e74ec2678d346be9ddca5b4f.fsh",
+      "indexPosition": 110006,
+      "originalEntry": [
+        240613376,
+        100291
+      ],
+      "offset": 4396283,
+      "size": 262400,
+      "sha256": "fe8fda34c45c8015bc80ad8db14d9e463a63c288bbbcac59f359d3a7b66a09e4"
+    },
+    {
+      "resource": "294796c8b0300bc78a06d660cf685b83.fsh",
+      "indexPosition": 112976,
+      "originalEntry": [
+        247513088,
+        116840
+      ],
+      "offset": 4658683,
+      "size": 262416,
+      "sha256": "97b1458bc86ad30d75898fb1abbb15e2a471cd2d61878c8e3b4421c84d80266b"
+    },
+    {
+      "resource": "2a3e7886c9dc7bc14c0ffb426425e52d.fsh",
+      "indexPosition": 101096,
+      "originalEntry": [
+        221382656,
+        4997
+      ],
+      "offset": 4921099,
+      "size": 16544,
+      "sha256": "d94f35c8131f7d773b7709b1076576303f67dd9e8b0f12e3fa1726c33d14b086"
+    },
+    {
+      "resource": "e344d56e2740fa20b401700730a79666.fsh",
+      "indexPosition": 104561,
+      "originalEntry": [
+        228366336,
+        124786
+      ],
+      "offset": 4937643,
+      "size": 262304,
+      "sha256": "5f0b6e519427013c0819e9fa59314ecdea9b288f5b79d5f5fdaec9b95842a69d"
+    },
+    {
+      "resource": "070ff852d24a1a904d40193ef73d2c4c.fsh",
+      "indexPosition": 107531,
+      "originalEntry": [
+        235132928,
+        136895
+      ],
+      "offset": 5199947,
+      "size": 262416,
+      "sha256": "ff81932bbde8145520bdeae53d11fd1b305de740af555f56b82a9caf06956811"
+    },
+    {
+      "resource": "d10acb6b509bb9c391b50eb7b50cd0e9.fsh",
+      "indexPosition": 110501,
+      "originalEntry": [
+        241737728,
+        152428
+      ],
+      "offset": 5462363,
+      "size": 262400,
+      "sha256": "32447325b7645c2c7259250460e7bcac0e6ee2754f4d6b2c650c785cd40fb354"
+    },
+    {
+      "resource": "a36bad6f7c4851004266e19412a25b66.fsh",
+      "indexPosition": 113471,
+      "originalEntry": [
+        248637440,
+        110929
+      ],
+      "offset": 5724763,
+      "size": 262416,
+      "sha256": "f9994baa57a492803e445a25011a370bb3bf4b37c4fb665bb7aa9c75cb6729d3"
+    },
+    {
+      "resource": "95d95c6fc1f219b89598e93575f14ef8.fsh",
+      "indexPosition": 101591,
+      "originalEntry": [
+        221450240,
+        4770
+      ],
+      "offset": 5987179,
+      "size": 16544,
+      "sha256": "c71d6ae3ebeb7c95f306301e51b14641c4f115687de6d050ac9801af6e8e640a"
+    },
+    {
+      "resource": "f08a6c41cc98da538ad5575e65fc15e5.fsh",
+      "indexPosition": 102311,
+      "originalEntry": [
+        222443520,
+        125436
+      ],
+      "offset": 6003723,
+      "size": 262304,
+      "sha256": "be5558c123b0b0a93f6e30e8eaa413bc798acd924c05003f52ce9708303b090b"
+    },
+    {
+      "resource": "0151b250bd628704231e81ba2c2bcad6.fsh",
+      "indexPosition": 105281,
+      "originalEntry": [
+        230074368,
+        131112
+      ],
+      "offset": 6266027,
+      "size": 262416,
+      "sha256": "4ea3c14d83ee8587b0881ef7f0f63dfd198c70396bcace2945db307a5c95489f"
+    },
+    {
+      "resource": "9567519009c93fe1007bc3ece4202b4c.fsh",
+      "indexPosition": 108251,
+      "originalEntry": [
+        236789760,
+        114028
+      ],
+      "offset": 6528443,
+      "size": 262400,
+      "sha256": "b98144691ac3f7dea6dbd4fcca6fca1fa659b61cadae0cc668f4ac60a3f06ea1"
+    },
+    {
+      "resource": "65173000b045e648cedb70484dfd55b6.fsh",
+      "indexPosition": 111221,
+      "originalEntry": [
+        243365888,
+        119954
+      ],
+      "offset": 6790843,
+      "size": 262416,
+      "sha256": "9537b97f5d33d3a3eb22ab79172580de1e1a6b04f7b9950d3f092c01795f8ddf"
+    },
+    {
+      "resource": "217d5bd31658a05a0ba24bf416e7ed6d.fsh",
+      "indexPosition": 99341,
+      "originalEntry": [
+        221102080,
+        4884
+      ],
+      "offset": 7053259,
+      "size": 16544,
+      "sha256": "9eecd6d373f6417da3cf06140b6da6e00698b4f42f54c860e59584c403ce76c7"
+    },
+    {
+      "resource": "2e3bde59c82ba793134d22da304428e1.fsh",
+      "indexPosition": 102221,
+      "originalEntry": [
+        222210048,
+        114702
+      ],
+      "offset": 7069803,
+      "size": 262304,
+      "sha256": "036da3c07cd7e2283031e0051706dde563131f17df1dfa1e751884f323031851"
+    },
+    {
+      "resource": "a494be9c4eeb13db2c679c5194903bde.fsh",
+      "indexPosition": 105191,
+      "originalEntry": [
+        229877760,
+        100877
+      ],
+      "offset": 7332107,
+      "size": 262416,
+      "sha256": "05fa4b070be89e524ad9526af82ee9decdbde0696c76ba545056b06f44851962"
+    },
+    {
+      "resource": "d2b55d758cf3c43547e0537d8f7d49c4.fsh",
+      "indexPosition": 108161,
+      "originalEntry": [
+        236591104,
+        97597
+      ],
+      "offset": 7594523,
+      "size": 262400,
+      "sha256": "918a9d21ec9be660d1d51a2ea64791354489c145cba9181cb991ef93710c8019"
+    },
+    {
+      "resource": "b5f92a681cccb2905b3b17863e438873.fsh",
+      "indexPosition": 111131,
+      "originalEntry": [
+        243169280,
+        104824
+      ],
+      "offset": 7856923,
+      "size": 262416,
+      "sha256": "735e6c23e5546c5062eb79e956fc1a88fd8c61b66ba66045f9efe84850eb66e6"
+    },
+    {
+      "resource": "e2d48a0e8ac8945a40bcf2990f11f136.fsh",
+      "indexPosition": 99251,
+      "originalEntry": [
+        221089792,
+        4809
+      ],
+      "offset": 8119339,
+      "size": 16544,
+      "sha256": "33661d867a9d975f64fb8acddd099c62e2b760bd6e2d9d0a752a9098ba83400d"
+    },
+    {
+      "resource": "ff4263bc1c73979663a708f71eecbe80.fsh",
+      "indexPosition": 102446,
+      "originalEntry": [
+        222810112,
+        122065
+      ],
+      "offset": 8135883,
+      "size": 262304,
+      "sha256": "77fcceae825c9b86d3bed394ebe3f23e12d0afcc5c7bd33e2eaa2079feacd970"
+    },
+    {
+      "resource": "226e7ae0decb040dcdbe5ab310fdf71c.fsh",
+      "indexPosition": 105416,
+      "originalEntry": [
+        230393856,
+        90148
+      ],
+      "offset": 8398187,
+      "size": 262416,
+      "sha256": "2bb91595bd1683c9763a5ebd2ac61c84e0999ed48a8111365720fa53faa46a30"
+    },
+    {
+      "resource": "411e55262dec85eef98350a6dc718fd5.fsh",
+      "indexPosition": 108386,
+      "originalEntry": [
+        237082624,
+        99291
+      ],
+      "offset": 8660603,
+      "size": 262400,
+      "sha256": "84c08a5a8f918342d140ad261250eef053d446136a207a8c9158d6bd3b4677cc"
+    },
+    {
+      "resource": "a7cb477b2a9c96ab6470f0e38f60c11e.fsh",
+      "indexPosition": 111356,
+      "originalEntry": [
+        243707904,
+        117173
+      ],
+      "offset": 8923003,
+      "size": 262416,
+      "sha256": "8acaf9dd0c9f7dd1dec2855306fc03700eaf2a46abadb696de37961db07d73e7"
+    },
+    {
+      "resource": "d9b4ad42447a459abde4d61bec76fa26.fsh",
+      "indexPosition": 99476,
+      "originalEntry": [
+        221120512,
+        4965
+      ],
+      "offset": 9185419,
+      "size": 16544,
+      "sha256": "880c3bb3d49f678cca4b6c877322f64feaba59ad1855681a5c8b40c9971590cb"
+    },
+    {
+      "resource": "b66ce7a79f556f69f0d7f5eed492a596.fsh",
+      "indexPosition": 102761,
+      "originalEntry": [
+        223660032,
+        126064
+      ],
+      "offset": 9201963,
+      "size": 262304,
+      "sha256": "5476eeba7bcad63dd12ee5db0cec2db4b859f1494df1c8881be94755421f0e43"
+    },
+    {
+      "resource": "8144d8c52975c09dcb68815510b49836.fsh",
+      "indexPosition": 105731,
+      "originalEntry": [
+        231106560,
+        118679
+      ],
+      "offset": 9464267,
+      "size": 262416,
+      "sha256": "619e63f70c4dc6b6f7f8ccf6a1c0699da57044388cacde660539c0c0a487c7fb"
+    },
+    {
+      "resource": "40c2be9f3a1949a104dd1d86237f7cb5.fsh",
+      "indexPosition": 108701,
+      "originalEntry": [
+        237756416,
+        106778
+      ],
+      "offset": 9726683,
+      "size": 262400,
+      "sha256": "72ae1ac3a975ff82326b82b9515515ed57688d79aa835812cf1ff0560d36656d"
+    },
+    {
+      "resource": "eb1b39bbed208507afea2eda2eba69de.fsh",
+      "indexPosition": 111671,
+      "originalEntry": [
+        244447232,
+        121021
+      ],
+      "offset": 9989083,
+      "size": 262416,
+      "sha256": "f9c301089313f03178695838faf7d60254090c1dc1bbd5c6d2d8a3092046a892"
+    },
+    {
+      "resource": "cc56e8a7e559c0da975fa9f3937bbff8.fsh",
+      "indexPosition": 99791,
+      "originalEntry": [
+        221161472,
+        4919
+      ],
+      "offset": 10251499,
+      "size": 16544,
+      "sha256": "f5e4c1f50dccbc38e36cfaf1c92b3acb2b80b6b41d487d4d8d165d9e11526811"
+    },
+    {
+      "resource": "4b58bb4842464db52d80310fb955df20.fsh",
+      "indexPosition": 103751,
+      "originalEntry": [
+        226242560,
+        126528
+      ],
+      "offset": 10268043,
+      "size": 262304,
+      "sha256": "e3a154d8e113fd02b73dc3ca90fc109508e729c4889d66f747658d606b77110c"
+    },
+    {
+      "resource": "1b955f4e583968f50793ad9d94df8190.fsh",
+      "indexPosition": 106721,
+      "originalEntry": [
+        233263104,
+        128938
+      ],
+      "offset": 10530347,
+      "size": 262416,
+      "sha256": "2961e93170c6e14108a3f4f3abc5ff411bd7fa0cd0e9f59de14154a9f97d9895"
+    },
+    {
+      "resource": "b8b2b82e797fb34fc47634d81ed0d308.fsh",
+      "indexPosition": 109691,
+      "originalEntry": [
+        239884288,
+        105897
+      ],
+      "offset": 10792763,
+      "size": 262400,
+      "sha256": "a598dfe9b4c7b3a67ba96566985409c1954dbbdc81833017603df6783546f89a"
+    },
+    {
+      "resource": "fba05bdfbd0950a0f966e188069f9c13.fsh",
+      "indexPosition": 112661,
+      "originalEntry": [
+        246732800,
+        113758
+      ],
+      "offset": 11055163,
+      "size": 262416,
+      "sha256": "2d49528433ca6b64770d4fb84e98ed87ec116a56ff4b3fbfd9570cf64fe090bc"
+    },
+    {
+      "resource": "3135b350fa507dbf18661451e8a3f505.fsh",
+      "indexPosition": 100781,
+      "originalEntry": [
+        221339648,
+        4856
+      ],
+      "offset": 11317579,
+      "size": 16544,
+      "sha256": "8bff00a1eda5d98cda9d49dbd8ef68346e034d0c652951831a305e613cc3c70d"
+    },
+    {
+      "resource": "ab8c45b9b9b897779700096a09116803.fsh",
+      "indexPosition": 104426,
+      "originalEntry": [
+        228014080,
+        124513
+      ],
+      "offset": 11334123,
+      "size": 262304,
+      "sha256": "c49877c7bce1813821869b4b1e34cb05495f7b19abb0adc529de6d1d712b09ee"
+    },
+    {
+      "resource": "3bcc2658d842d2ba717c4dbddc890dd7.fsh",
+      "indexPosition": 107396,
+      "originalEntry": [
+        234803200,
+        104585
+      ],
+      "offset": 11596427,
+      "size": 262416,
+      "sha256": "0a3b9e760addd73d883f1e052bd0be2546bf5340ecacee20e0da7c21104b2e3d"
+    },
+    {
+      "resource": "0869ff9cbd776a3ffa982ccd52f6347e.fsh",
+      "indexPosition": 110366,
+      "originalEntry": [
+        241436672,
+        103923
+      ],
+      "offset": 11858843,
+      "size": 262400,
+      "sha256": "dfff38500c8d5774a2eb0a9cbd838b3df5dfd4f5c479a9c32675beae352620fe"
+    },
+    {
+      "resource": "955e82997d6a4f96085c3f487b9f3661.fsh",
+      "indexPosition": 113336,
+      "originalEntry": [
+        248313856,
+        109815
+      ],
+      "offset": 12121243,
+      "size": 262416,
+      "sha256": "f5017ac98b7378d5263f5b28ad2ec56adc3915b55281847b912e31aaea3736e2"
+    },
+    {
+      "resource": "0d77bd0cec74ff6b15ea0d3502b47b3a.fsh",
+      "indexPosition": 101456,
+      "originalEntry": [
+        221431808,
+        4836
+      ],
+      "offset": 12383659,
+      "size": 16544,
+      "sha256": "ee3476ae64db1d3e1c43041f0201dc249b8cb9f9f24591a4531118fcc2715163"
+    },
+    {
+      "resource": "97a96c0b7d61af237764622f9270a98f.fsh",
+      "indexPosition": 154164,
+      "originalEntry": [
+        339441664,
+        21881
+      ],
+      "offset": 12400203,
+      "size": 71264,
+      "sha256": "be410ee09bb0ece9f3ed974145089cef7ec1602e1b0f569a95459692a7f6c980"
+    },
+    {
+      "resource": "347986af1f0d2d3c159198bce503c044.fsh",
+      "indexPosition": 57254,
+      "originalEntry": [
+        11356160,
+        22077
+      ],
+      "offset": 12471467,
+      "size": 70624,
+      "sha256": "65a01e478a1fc0603f20d46f788ea3c82c0eb25cd333e5f91ce17495f4c44e3f"
+    },
+    {
+      "resource": "a628e5117ae1ee272a0fe780ef0cf138.fsh",
+      "indexPosition": 155244,
+      "originalEntry": [
+        340129792,
+        16238
+      ],
+      "offset": 12542091,
+      "size": 70624,
+      "sha256": "46f07a23d3660fce88a9f9e0a326698b097efa786376f2e3feed694ce416db26"
+    },
+    {
+      "resource": "363cdac6feb14eb5f6b233dc32ce3c2d.fsh",
+      "indexPosition": 58109,
+      "originalEntry": [
+        11810816,
+        16083
+      ],
+      "offset": 12612715,
+      "size": 70624,
+      "sha256": "46f07a23d3660fce88a9f9e0a326698b097efa786376f2e3feed694ce416db26"
+    },
+    {
+      "resource": "3dcf7b6d60f1a4e4301b700d8691cd94.fsh",
+      "indexPosition": 156099,
+      "originalEntry": [
+        340682752,
+        16574
+      ],
+      "offset": 12683339,
+      "size": 70624,
+      "sha256": "9c8235ff9aab5f87ab26a9bd6dd0367f95764163071ab6f6615b7e1ec93f5395"
+    },
+    {
+      "resource": "44666c65a2bd896e1950f07cbc995428.fsh",
+      "indexPosition": 58919,
+      "originalEntry": [
+        12220416,
+        16542
+      ],
+      "offset": 12753963,
+      "size": 70624,
+      "sha256": "7ff4b63144f6b81c74788191ec3cf4f65dd555e0dce2bdf2fb394476cbef1c41"
+    },
+    {
+      "resource": "dde67a6da2b56afccd36bbaa7a0be1d0.fsh",
+      "indexPosition": 156459,
+      "originalEntry": [
+        340811776,
+        18858
+      ],
+      "offset": 12824587,
+      "size": 70624,
+      "sha256": "94e05f193d5e9a41f4088bf0daa131fa166d7818f843fb1a5ef19683aa8ad824"
+    },
+    {
+      "resource": "e89f65d8dc0604244e74bbd4882f35a4.fsh",
+      "indexPosition": 59234,
+      "originalEntry": [
+        12337152,
+        19700
+      ],
+      "offset": 12895211,
+      "size": 70624,
+      "sha256": "94e05f193d5e9a41f4088bf0daa131fa166d7818f843fb1a5ef19683aa8ad824"
+    },
+    {
+      "resource": "31d7bcd65d82fb4e1dd4c675b7010808.fsh",
+      "indexPosition": 156954,
+      "originalEntry": [
+        341063680,
+        16412
+      ],
+      "offset": 12965835,
+      "size": 70624,
+      "sha256": "35113dbb23438def238ba84a826a79342fe291f7b51d17770308489c565f053b"
+    },
+    {
+      "resource": "8f3ad539dcd5aba7c1672f4d9f0420a8.fsh",
+      "indexPosition": 59729,
+      "originalEntry": [
+        12591104,
+        16245
+      ],
+      "offset": 13036459,
+      "size": 70624,
+      "sha256": "35113dbb23438def238ba84a826a79342fe291f7b51d17770308489c565f053b"
+    },
+    {
+      "resource": "ea3a49108eabd63b0fc08f66e1281d6b.fsh",
+      "indexPosition": 154479,
+      "originalEntry": [
+        339560448,
+        12147
+      ],
+      "offset": 13107083,
+      "size": 70624,
+      "sha256": "d66202e76337307c7a785fa507b45f5060330eba5c84a2a24f60430c20c6b13f"
+    },
+    {
+      "resource": "6c6d87d85a76b34c3056bef75a940376.fsh",
+      "indexPosition": 57569,
+      "originalEntry": [
+        11474944,
+        12009
+      ],
+      "offset": 13177707,
+      "size": 70624,
+      "sha256": "d66202e76337307c7a785fa507b45f5060330eba5c84a2a24f60430c20c6b13f"
+    },
+    {
+      "resource": "c541751e6839f51943572fe291f4b6ab.fsh",
+      "indexPosition": 154389,
+      "originalEntry": [
+        339533824,
+        14239
+      ],
+      "offset": 13248331,
+      "size": 70624,
+      "sha256": "839a1702b906e89d8045e222275e7cbd1c579f478c0af408c19edf1a8d2a6881"
+    },
+    {
+      "resource": "c2e6c21559bd3dcb9ee001c9f850cd26.fsh",
+      "indexPosition": 57479,
+      "originalEntry": [
+        11448320,
+        13981
+      ],
+      "offset": 13318955,
+      "size": 70624,
+      "sha256": "839a1702b906e89d8045e222275e7cbd1c579f478c0af408c19edf1a8d2a6881"
+    },
+    {
+      "resource": "dadb5fe4d1e1c242ed28bddce202bbf0.fsh",
+      "indexPosition": 154704,
+      "originalEntry": [
+        339726336,
+        17585
+      ],
+      "offset": 13389579,
+      "size": 70624,
+      "sha256": "4f08ae6c0790458757ae2a790e82de38a7186124ffd90b93bbbf1d0a79e84332"
+    },
+    {
+      "resource": "06fe897fa4ac10ddabed02d7660e8046.fsh",
+      "indexPosition": 57704,
+      "originalEntry": [
+        11524096,
+        17446
+      ],
+      "offset": 13460203,
+      "size": 70624,
+      "sha256": "4f08ae6c0790458757ae2a790e82de38a7186124ffd90b93bbbf1d0a79e84332"
+    },
+    {
+      "resource": "4683e94d8beb50e9d37a87ef91af0be1.fsh",
+      "indexPosition": 155154,
+      "originalEntry": [
+        340056064,
+        18714
+      ],
+      "offset": 13530827,
+      "size": 70624,
+      "sha256": "be45874b7ec7196061c11f8b4f75e38ea0dc157f24725b074c44fe1f91100906"
+    },
+    {
+      "resource": "e49fcaf11babf4389da08229aeb4abd9.fsh",
+      "indexPosition": 58019,
+      "originalEntry": [
+        11737088,
+        18751
+      ],
+      "offset": 13601451,
+      "size": 70624,
+      "sha256": "be45874b7ec7196061c11f8b4f75e38ea0dc157f24725b074c44fe1f91100906"
+    },
+    {
+      "resource": "56ab1b4f274a04641ea28ae34296ace9.fsh",
+      "indexPosition": 156144,
+      "originalEntry": [
+        340701184,
+        12774
+      ],
+      "offset": 13672075,
+      "size": 70624,
+      "sha256": "522378f4576bc3782735756edc6abd5603dbd6e86c2dea2cc8b44f7b76496ebf"
+    },
+    {
+      "resource": "980f0b1e0cd9c70945fcd1edee3b94fe.fsh",
+      "indexPosition": 58964,
+      "originalEntry": [
+        12238848,
+        12326
+      ],
+      "offset": 13742699,
+      "size": 70624,
+      "sha256": "522378f4576bc3782735756edc6abd5603dbd6e86c2dea2cc8b44f7b76496ebf"
+    },
+    {
+      "resource": "12b8d5a9f072511b502f322f2372bbbb.fsh",
+      "indexPosition": 156819,
+      "originalEntry": [
+        341014528,
+        14080
+      ],
+      "offset": 13813323,
+      "size": 70624,
+      "sha256": "ef2a6cbb80d82e98f8c6e2ed529d1e3e3cb5b1e61df0f1388daf5490f22c67a3"
+    },
+    {
+      "resource": "4b84b177e4486fde8780da5045d4a931.fsh",
+      "indexPosition": 59594,
+      "originalEntry": [
+        12541952,
+        13901
+      ],
+      "offset": 13883947,
+      "size": 70624,
+      "sha256": "ef2a6cbb80d82e98f8c6e2ed529d1e3e3cb5b1e61df0f1388daf5490f22c67a3"
+    }
+  ],
+  "previousLayouts": [
+    {
+      "size": 5902469,
+      "resources": [
+        {
+          "resource": "113964e05e69ab31d264fb8f15c58e5c.cdf",
+          "offset": 0,
+          "size": 620140
+        },
+        {
+          "resource": "be2970b0ada8e42cf891ce60ffe69575.xml",
+          "offset": 620140,
+          "size": 9155
+        },
+        {
+          "resource": "730eef3fd7726e43de955f21083ab000.xml",
+          "offset": 629295,
+          "size": 30792
+        },
+        {
+          "resource": "49ad277eb4663535abe0d4b1ec726023.xml",
+          "offset": 660087,
+          "size": 13246
+        },
+        {
+          "resource": "43d0cad4d9bbad98eae6413793768df7.fsh",
+          "offset": 673333,
+          "size": 262192
+        },
+        {
+          "resource": "8ec8e653e3dc10f1b939e471dc6d23a1.fsh",
+          "offset": 935525,
+          "size": 65584
+        },
+        {
+          "resource": "2cbd1412b486dbbcd81a632b820f9314.fsh",
+          "offset": 1001109,
+          "size": 65584
+        },
+        {
+          "resource": "bddd067df5965fc1ec0d6a28ca545c50.fsh",
+          "offset": 1066693,
+          "size": 65584
+        },
+        {
+          "resource": "1584f6e5778f4d84a64e4e48e714b84f.fsh",
+          "offset": 1132277,
+          "size": 16432
+        },
+        {
+          "resource": "c12d34c0ca1c9d84519824e4b4003c56.fsh",
+          "offset": 1148709,
+          "size": 262192
+        },
+        {
+          "resource": "1da9b42c96b4357cfc0ed1973958df06.fsh",
+          "offset": 1410901,
+          "size": 65584
+        },
+        {
+          "resource": "51e9f021f96390cb713d28f9ad182bc5.fsh",
+          "offset": 1476485,
+          "size": 65584
+        },
+        {
+          "resource": "436aff3bdba5613b9dd2a7431d86c462.fsh",
+          "offset": 1542069,
+          "size": 65584
+        },
+        {
+          "resource": "260a5c29d5e659a2622ab47e020482f3.fsh",
+          "offset": 1607653,
+          "size": 16432
+        },
+        {
+          "resource": "d9372a82a5267562bf10901e45a0e046.fsh",
+          "offset": 1624085,
+          "size": 262192
+        },
+        {
+          "resource": "68f264e0258c636097b07b2967c217a4.fsh",
+          "offset": 1886277,
+          "size": 65584
+        },
+        {
+          "resource": "474f69f1076b25cf96ff2e71a05f2b82.fsh",
+          "offset": 1951861,
+          "size": 65584
+        },
+        {
+          "resource": "a9e6d8ca65d6606c4d0d91b58b74a4bf.fsh",
+          "offset": 2017445,
+          "size": 65584
+        },
+        {
+          "resource": "7479a4bb3a23da4679aa19c1ab7ffac0.fsh",
+          "offset": 2083029,
+          "size": 16432
+        },
+        {
+          "resource": "44b8f4413d5296e687c186afde1039a1.fsh",
+          "offset": 2099461,
+          "size": 262192
+        },
+        {
+          "resource": "cc34f3fac4a5db86083758c67bcffb1e.fsh",
+          "offset": 2361653,
+          "size": 65584
+        },
+        {
+          "resource": "87510b32e74ec2678d346be9ddca5b4f.fsh",
+          "offset": 2427237,
+          "size": 65584
+        },
+        {
+          "resource": "294796c8b0300bc78a06d660cf685b83.fsh",
+          "offset": 2492821,
+          "size": 65584
+        },
+        {
+          "resource": "2a3e7886c9dc7bc14c0ffb426425e52d.fsh",
+          "offset": 2558405,
+          "size": 16432
+        },
+        {
+          "resource": "e344d56e2740fa20b401700730a79666.fsh",
+          "offset": 2574837,
+          "size": 262192
+        },
+        {
+          "resource": "070ff852d24a1a904d40193ef73d2c4c.fsh",
+          "offset": 2837029,
+          "size": 65584
+        },
+        {
+          "resource": "d10acb6b509bb9c391b50eb7b50cd0e9.fsh",
+          "offset": 2902613,
+          "size": 65584
+        },
+        {
+          "resource": "a36bad6f7c4851004266e19412a25b66.fsh",
+          "offset": 2968197,
+          "size": 65584
+        },
+        {
+          "resource": "95d95c6fc1f219b89598e93575f14ef8.fsh",
+          "offset": 3033781,
+          "size": 16432
+        },
+        {
+          "resource": "f08a6c41cc98da538ad5575e65fc15e5.fsh",
+          "offset": 3050213,
+          "size": 262192
+        },
+        {
+          "resource": "0151b250bd628704231e81ba2c2bcad6.fsh",
+          "offset": 3312405,
+          "size": 65584
+        },
+        {
+          "resource": "9567519009c93fe1007bc3ece4202b4c.fsh",
+          "offset": 3377989,
+          "size": 65584
+        },
+        {
+          "resource": "65173000b045e648cedb70484dfd55b6.fsh",
+          "offset": 3443573,
+          "size": 65584
+        },
+        {
+          "resource": "217d5bd31658a05a0ba24bf416e7ed6d.fsh",
+          "offset": 3509157,
+          "size": 16432
+        },
+        {
+          "resource": "2e3bde59c82ba793134d22da304428e1.fsh",
+          "offset": 3525589,
+          "size": 262192
+        },
+        {
+          "resource": "a494be9c4eeb13db2c679c5194903bde.fsh",
+          "offset": 3787781,
+          "size": 65584
+        },
+        {
+          "resource": "d2b55d758cf3c43547e0537d8f7d49c4.fsh",
+          "offset": 3853365,
+          "size": 65584
+        },
+        {
+          "resource": "b5f92a681cccb2905b3b17863e438873.fsh",
+          "offset": 3918949,
+          "size": 65584
+        },
+        {
+          "resource": "e2d48a0e8ac8945a40bcf2990f11f136.fsh",
+          "offset": 3984533,
+          "size": 16432
+        },
+        {
+          "resource": "ff4263bc1c73979663a708f71eecbe80.fsh",
+          "offset": 4000965,
+          "size": 262192
+        },
+        {
+          "resource": "226e7ae0decb040dcdbe5ab310fdf71c.fsh",
+          "offset": 4263157,
+          "size": 65584
+        },
+        {
+          "resource": "411e55262dec85eef98350a6dc718fd5.fsh",
+          "offset": 4328741,
+          "size": 65584
+        },
+        {
+          "resource": "a7cb477b2a9c96ab6470f0e38f60c11e.fsh",
+          "offset": 4394325,
+          "size": 65584
+        },
+        {
+          "resource": "d9b4ad42447a459abde4d61bec76fa26.fsh",
+          "offset": 4459909,
+          "size": 16432
+        },
+        {
+          "resource": "b66ce7a79f556f69f0d7f5eed492a596.fsh",
+          "offset": 4476341,
+          "size": 262192
+        },
+        {
+          "resource": "8144d8c52975c09dcb68815510b49836.fsh",
+          "offset": 4738533,
+          "size": 65584
+        },
+        {
+          "resource": "40c2be9f3a1949a104dd1d86237f7cb5.fsh",
+          "offset": 4804117,
+          "size": 65584
+        },
+        {
+          "resource": "eb1b39bbed208507afea2eda2eba69de.fsh",
+          "offset": 4869701,
+          "size": 65584
+        },
+        {
+          "resource": "cc56e8a7e559c0da975fa9f3937bbff8.fsh",
+          "offset": 4935285,
+          "size": 16432
+        },
+        {
+          "resource": "4b58bb4842464db52d80310fb955df20.fsh",
+          "offset": 4951717,
+          "size": 262192
+        },
+        {
+          "resource": "1b955f4e583968f50793ad9d94df8190.fsh",
+          "offset": 5213909,
+          "size": 65584
+        },
+        {
+          "resource": "b8b2b82e797fb34fc47634d81ed0d308.fsh",
+          "offset": 5279493,
+          "size": 65584
+        },
+        {
+          "resource": "fba05bdfbd0950a0f966e188069f9c13.fsh",
+          "offset": 5345077,
+          "size": 65584
+        },
+        {
+          "resource": "3135b350fa507dbf18661451e8a3f505.fsh",
+          "offset": 5410661,
+          "size": 16432
+        },
+        {
+          "resource": "ab8c45b9b9b897779700096a09116803.fsh",
+          "offset": 5427093,
+          "size": 262192
+        },
+        {
+          "resource": "3bcc2658d842d2ba717c4dbddc890dd7.fsh",
+          "offset": 5689285,
+          "size": 65584
+        },
+        {
+          "resource": "0869ff9cbd776a3ffa982ccd52f6347e.fsh",
+          "offset": 5754869,
+          "size": 65584
+        },
+        {
+          "resource": "955e82997d6a4f96085c3f487b9f3661.fsh",
+          "offset": 5820453,
+          "size": 65584
+        },
+        {
+          "resource": "0d77bd0cec74ff6b15ea0d3502b47b3a.fsh",
+          "offset": 5886037,
+          "size": 16432
+        }
+      ]
+    },
+    {
+      "size": 7448109,
+      "resources": [
+        {
+          "resource": "113964e05e69ab31d264fb8f15c58e5c.cdf",
+          "offset": 0,
+          "size": 620140
+        },
+        {
+          "resource": "be2970b0ada8e42cf891ce60ffe69575.xml",
+          "offset": 620140,
+          "size": 9155
+        },
+        {
+          "resource": "730eef3fd7726e43de955f21083ab000.xml",
+          "offset": 629295,
+          "size": 30792
+        },
+        {
+          "resource": "49ad277eb4663535abe0d4b1ec726023.xml",
+          "offset": 660087,
+          "size": 13246
+        },
+        {
+          "resource": "43d0cad4d9bbad98eae6413793768df7.fsh",
+          "offset": 673333,
+          "size": 262192
+        },
+        {
+          "resource": "8ec8e653e3dc10f1b939e471dc6d23a1.fsh",
+          "offset": 935525,
+          "size": 65584
+        },
+        {
+          "resource": "2cbd1412b486dbbcd81a632b820f9314.fsh",
+          "offset": 1001109,
+          "size": 65584
+        },
+        {
+          "resource": "bddd067df5965fc1ec0d6a28ca545c50.fsh",
+          "offset": 1066693,
+          "size": 65584
+        },
+        {
+          "resource": "1584f6e5778f4d84a64e4e48e714b84f.fsh",
+          "offset": 1132277,
+          "size": 16432
+        },
+        {
+          "resource": "c12d34c0ca1c9d84519824e4b4003c56.fsh",
+          "offset": 1148709,
+          "size": 262192
+        },
+        {
+          "resource": "1da9b42c96b4357cfc0ed1973958df06.fsh",
+          "offset": 1410901,
+          "size": 65584
+        },
+        {
+          "resource": "51e9f021f96390cb713d28f9ad182bc5.fsh",
+          "offset": 1476485,
+          "size": 65584
+        },
+        {
+          "resource": "436aff3bdba5613b9dd2a7431d86c462.fsh",
+          "offset": 1542069,
+          "size": 65584
+        },
+        {
+          "resource": "260a5c29d5e659a2622ab47e020482f3.fsh",
+          "offset": 1607653,
+          "size": 16432
+        },
+        {
+          "resource": "d9372a82a5267562bf10901e45a0e046.fsh",
+          "offset": 1624085,
+          "size": 262192
+        },
+        {
+          "resource": "68f264e0258c636097b07b2967c217a4.fsh",
+          "offset": 1886277,
+          "size": 65584
+        },
+        {
+          "resource": "474f69f1076b25cf96ff2e71a05f2b82.fsh",
+          "offset": 1951861,
+          "size": 65584
+        },
+        {
+          "resource": "a9e6d8ca65d6606c4d0d91b58b74a4bf.fsh",
+          "offset": 2017445,
+          "size": 65584
+        },
+        {
+          "resource": "7479a4bb3a23da4679aa19c1ab7ffac0.fsh",
+          "offset": 2083029,
+          "size": 16432
+        },
+        {
+          "resource": "44b8f4413d5296e687c186afde1039a1.fsh",
+          "offset": 2099461,
+          "size": 262192
+        },
+        {
+          "resource": "cc34f3fac4a5db86083758c67bcffb1e.fsh",
+          "offset": 2361653,
+          "size": 65584
+        },
+        {
+          "resource": "87510b32e74ec2678d346be9ddca5b4f.fsh",
+          "offset": 2427237,
+          "size": 65584
+        },
+        {
+          "resource": "294796c8b0300bc78a06d660cf685b83.fsh",
+          "offset": 2492821,
+          "size": 65584
+        },
+        {
+          "resource": "2a3e7886c9dc7bc14c0ffb426425e52d.fsh",
+          "offset": 2558405,
+          "size": 16432
+        },
+        {
+          "resource": "e344d56e2740fa20b401700730a79666.fsh",
+          "offset": 2574837,
+          "size": 262192
+        },
+        {
+          "resource": "070ff852d24a1a904d40193ef73d2c4c.fsh",
+          "offset": 2837029,
+          "size": 65584
+        },
+        {
+          "resource": "d10acb6b509bb9c391b50eb7b50cd0e9.fsh",
+          "offset": 2902613,
+          "size": 65584
+        },
+        {
+          "resource": "a36bad6f7c4851004266e19412a25b66.fsh",
+          "offset": 2968197,
+          "size": 65584
+        },
+        {
+          "resource": "95d95c6fc1f219b89598e93575f14ef8.fsh",
+          "offset": 3033781,
+          "size": 16432
+        },
+        {
+          "resource": "f08a6c41cc98da538ad5575e65fc15e5.fsh",
+          "offset": 3050213,
+          "size": 262192
+        },
+        {
+          "resource": "0151b250bd628704231e81ba2c2bcad6.fsh",
+          "offset": 3312405,
+          "size": 65584
+        },
+        {
+          "resource": "9567519009c93fe1007bc3ece4202b4c.fsh",
+          "offset": 3377989,
+          "size": 65584
+        },
+        {
+          "resource": "65173000b045e648cedb70484dfd55b6.fsh",
+          "offset": 3443573,
+          "size": 65584
+        },
+        {
+          "resource": "217d5bd31658a05a0ba24bf416e7ed6d.fsh",
+          "offset": 3509157,
+          "size": 16432
+        },
+        {
+          "resource": "2e3bde59c82ba793134d22da304428e1.fsh",
+          "offset": 3525589,
+          "size": 262192
+        },
+        {
+          "resource": "a494be9c4eeb13db2c679c5194903bde.fsh",
+          "offset": 3787781,
+          "size": 65584
+        },
+        {
+          "resource": "d2b55d758cf3c43547e0537d8f7d49c4.fsh",
+          "offset": 3853365,
+          "size": 65584
+        },
+        {
+          "resource": "b5f92a681cccb2905b3b17863e438873.fsh",
+          "offset": 3918949,
+          "size": 65584
+        },
+        {
+          "resource": "e2d48a0e8ac8945a40bcf2990f11f136.fsh",
+          "offset": 3984533,
+          "size": 16432
+        },
+        {
+          "resource": "ff4263bc1c73979663a708f71eecbe80.fsh",
+          "offset": 4000965,
+          "size": 262192
+        },
+        {
+          "resource": "226e7ae0decb040dcdbe5ab310fdf71c.fsh",
+          "offset": 4263157,
+          "size": 65584
+        },
+        {
+          "resource": "411e55262dec85eef98350a6dc718fd5.fsh",
+          "offset": 4328741,
+          "size": 65584
+        },
+        {
+          "resource": "a7cb477b2a9c96ab6470f0e38f60c11e.fsh",
+          "offset": 4394325,
+          "size": 65584
+        },
+        {
+          "resource": "d9b4ad42447a459abde4d61bec76fa26.fsh",
+          "offset": 4459909,
+          "size": 16432
+        },
+        {
+          "resource": "b66ce7a79f556f69f0d7f5eed492a596.fsh",
+          "offset": 4476341,
+          "size": 262192
+        },
+        {
+          "resource": "8144d8c52975c09dcb68815510b49836.fsh",
+          "offset": 4738533,
+          "size": 65584
+        },
+        {
+          "resource": "40c2be9f3a1949a104dd1d86237f7cb5.fsh",
+          "offset": 4804117,
+          "size": 65584
+        },
+        {
+          "resource": "eb1b39bbed208507afea2eda2eba69de.fsh",
+          "offset": 4869701,
+          "size": 65584
+        },
+        {
+          "resource": "cc56e8a7e559c0da975fa9f3937bbff8.fsh",
+          "offset": 4935285,
+          "size": 16432
+        },
+        {
+          "resource": "4b58bb4842464db52d80310fb955df20.fsh",
+          "offset": 4951717,
+          "size": 262192
+        },
+        {
+          "resource": "1b955f4e583968f50793ad9d94df8190.fsh",
+          "offset": 5213909,
+          "size": 65584
+        },
+        {
+          "resource": "b8b2b82e797fb34fc47634d81ed0d308.fsh",
+          "offset": 5279493,
+          "size": 65584
+        },
+        {
+          "resource": "fba05bdfbd0950a0f966e188069f9c13.fsh",
+          "offset": 5345077,
+          "size": 65584
+        },
+        {
+          "resource": "3135b350fa507dbf18661451e8a3f505.fsh",
+          "offset": 5410661,
+          "size": 16432
+        },
+        {
+          "resource": "ab8c45b9b9b897779700096a09116803.fsh",
+          "offset": 5427093,
+          "size": 262192
+        },
+        {
+          "resource": "3bcc2658d842d2ba717c4dbddc890dd7.fsh",
+          "offset": 5689285,
+          "size": 65584
+        },
+        {
+          "resource": "0869ff9cbd776a3ffa982ccd52f6347e.fsh",
+          "offset": 5754869,
+          "size": 65584
+        },
+        {
+          "resource": "955e82997d6a4f96085c3f487b9f3661.fsh",
+          "offset": 5820453,
+          "size": 65584
+        },
+        {
+          "resource": "0d77bd0cec74ff6b15ea0d3502b47b3a.fsh",
+          "offset": 5886037,
+          "size": 16432
+        },
+        {
+          "resource": "97a96c0b7d61af237764622f9270a98f.fsh",
+          "offset": 5902469,
+          "size": 70768
+        },
+        {
+          "resource": "347986af1f0d2d3c159198bce503c044.fsh",
+          "offset": 5973237,
+          "size": 70232
+        },
+        {
+          "resource": "a628e5117ae1ee272a0fe780ef0cf138.fsh",
+          "offset": 6043469,
+          "size": 70232
+        },
+        {
+          "resource": "363cdac6feb14eb5f6b233dc32ce3c2d.fsh",
+          "offset": 6113701,
+          "size": 70232
+        },
+        {
+          "resource": "3dcf7b6d60f1a4e4301b700d8691cd94.fsh",
+          "offset": 6183933,
+          "size": 70232
+        },
+        {
+          "resource": "44666c65a2bd896e1950f07cbc995428.fsh",
+          "offset": 6254165,
+          "size": 70232
+        },
+        {
+          "resource": "dde67a6da2b56afccd36bbaa7a0be1d0.fsh",
+          "offset": 6324397,
+          "size": 70232
+        },
+        {
+          "resource": "e89f65d8dc0604244e74bbd4882f35a4.fsh",
+          "offset": 6394629,
+          "size": 70232
+        },
+        {
+          "resource": "31d7bcd65d82fb4e1dd4c675b7010808.fsh",
+          "offset": 6464861,
+          "size": 70232
+        },
+        {
+          "resource": "8f3ad539dcd5aba7c1672f4d9f0420a8.fsh",
+          "offset": 6535093,
+          "size": 70232
+        },
+        {
+          "resource": "ea3a49108eabd63b0fc08f66e1281d6b.fsh",
+          "offset": 6605325,
+          "size": 70232
+        },
+        {
+          "resource": "6c6d87d85a76b34c3056bef75a940376.fsh",
+          "offset": 6675557,
+          "size": 70232
+        },
+        {
+          "resource": "c541751e6839f51943572fe291f4b6ab.fsh",
+          "offset": 6745789,
+          "size": 70232
+        },
+        {
+          "resource": "c2e6c21559bd3dcb9ee001c9f850cd26.fsh",
+          "offset": 6816021,
+          "size": 70232
+        },
+        {
+          "resource": "dadb5fe4d1e1c242ed28bddce202bbf0.fsh",
+          "offset": 6886253,
+          "size": 70232
+        },
+        {
+          "resource": "06fe897fa4ac10ddabed02d7660e8046.fsh",
+          "offset": 6956485,
+          "size": 70232
+        },
+        {
+          "resource": "4683e94d8beb50e9d37a87ef91af0be1.fsh",
+          "offset": 7026717,
+          "size": 70232
+        },
+        {
+          "resource": "e49fcaf11babf4389da08229aeb4abd9.fsh",
+          "offset": 7096949,
+          "size": 70232
+        },
+        {
+          "resource": "56ab1b4f274a04641ea28ae34296ace9.fsh",
+          "offset": 7167181,
+          "size": 70232
+        },
+        {
+          "resource": "980f0b1e0cd9c70945fcd1edee3b94fe.fsh",
+          "offset": 7237413,
+          "size": 70232
+        },
+        {
+          "resource": "12b8d5a9f072511b502f322f2372bbbb.fsh",
+          "offset": 7307645,
+          "size": 70232
+        },
+        {
+          "resource": "4b84b177e4486fde8780da5045d4a931.fsh",
+          "offset": 7377877,
+          "size": 70232
+        }
+      ]
+    },
+    {
+      "size": 7448099,
+      "resources": [
+        {
+          "resource": "113964e05e69ab31d264fb8f15c58e5c.cdf",
+          "offset": 0,
+          "size": 620140
+        },
+        {
+          "resource": "be2970b0ada8e42cf891ce60ffe69575.xml",
+          "offset": 620140,
+          "size": 9145
+        },
+        {
+          "resource": "730eef3fd7726e43de955f21083ab000.xml",
+          "offset": 629285,
+          "size": 30792
+        },
+        {
+          "resource": "49ad277eb4663535abe0d4b1ec726023.xml",
+          "offset": 660077,
+          "size": 13246
+        },
+        {
+          "resource": "43d0cad4d9bbad98eae6413793768df7.fsh",
+          "offset": 673323,
+          "size": 262192
+        },
+        {
+          "resource": "8ec8e653e3dc10f1b939e471dc6d23a1.fsh",
+          "offset": 935515,
+          "size": 65584
+        },
+        {
+          "resource": "2cbd1412b486dbbcd81a632b820f9314.fsh",
+          "offset": 1001099,
+          "size": 65584
+        },
+        {
+          "resource": "bddd067df5965fc1ec0d6a28ca545c50.fsh",
+          "offset": 1066683,
+          "size": 65584
+        },
+        {
+          "resource": "1584f6e5778f4d84a64e4e48e714b84f.fsh",
+          "offset": 1132267,
+          "size": 16432
+        },
+        {
+          "resource": "c12d34c0ca1c9d84519824e4b4003c56.fsh",
+          "offset": 1148699,
+          "size": 262192
+        },
+        {
+          "resource": "1da9b42c96b4357cfc0ed1973958df06.fsh",
+          "offset": 1410891,
+          "size": 65584
+        },
+        {
+          "resource": "51e9f021f96390cb713d28f9ad182bc5.fsh",
+          "offset": 1476475,
+          "size": 65584
+        },
+        {
+          "resource": "436aff3bdba5613b9dd2a7431d86c462.fsh",
+          "offset": 1542059,
+          "size": 65584
+        },
+        {
+          "resource": "260a5c29d5e659a2622ab47e020482f3.fsh",
+          "offset": 1607643,
+          "size": 16432
+        },
+        {
+          "resource": "d9372a82a5267562bf10901e45a0e046.fsh",
+          "offset": 1624075,
+          "size": 262192
+        },
+        {
+          "resource": "68f264e0258c636097b07b2967c217a4.fsh",
+          "offset": 1886267,
+          "size": 65584
+        },
+        {
+          "resource": "474f69f1076b25cf96ff2e71a05f2b82.fsh",
+          "offset": 1951851,
+          "size": 65584
+        },
+        {
+          "resource": "a9e6d8ca65d6606c4d0d91b58b74a4bf.fsh",
+          "offset": 2017435,
+          "size": 65584
+        },
+        {
+          "resource": "7479a4bb3a23da4679aa19c1ab7ffac0.fsh",
+          "offset": 2083019,
+          "size": 16432
+        },
+        {
+          "resource": "44b8f4413d5296e687c186afde1039a1.fsh",
+          "offset": 2099451,
+          "size": 262192
+        },
+        {
+          "resource": "cc34f3fac4a5db86083758c67bcffb1e.fsh",
+          "offset": 2361643,
+          "size": 65584
+        },
+        {
+          "resource": "87510b32e74ec2678d346be9ddca5b4f.fsh",
+          "offset": 2427227,
+          "size": 65584
+        },
+        {
+          "resource": "294796c8b0300bc78a06d660cf685b83.fsh",
+          "offset": 2492811,
+          "size": 65584
+        },
+        {
+          "resource": "2a3e7886c9dc7bc14c0ffb426425e52d.fsh",
+          "offset": 2558395,
+          "size": 16432
+        },
+        {
+          "resource": "e344d56e2740fa20b401700730a79666.fsh",
+          "offset": 2574827,
+          "size": 262192
+        },
+        {
+          "resource": "070ff852d24a1a904d40193ef73d2c4c.fsh",
+          "offset": 2837019,
+          "size": 65584
+        },
+        {
+          "resource": "d10acb6b509bb9c391b50eb7b50cd0e9.fsh",
+          "offset": 2902603,
+          "size": 65584
+        },
+        {
+          "resource": "a36bad6f7c4851004266e19412a25b66.fsh",
+          "offset": 2968187,
+          "size": 65584
+        },
+        {
+          "resource": "95d95c6fc1f219b89598e93575f14ef8.fsh",
+          "offset": 3033771,
+          "size": 16432
+        },
+        {
+          "resource": "f08a6c41cc98da538ad5575e65fc15e5.fsh",
+          "offset": 3050203,
+          "size": 262192
+        },
+        {
+          "resource": "0151b250bd628704231e81ba2c2bcad6.fsh",
+          "offset": 3312395,
+          "size": 65584
+        },
+        {
+          "resource": "9567519009c93fe1007bc3ece4202b4c.fsh",
+          "offset": 3377979,
+          "size": 65584
+        },
+        {
+          "resource": "65173000b045e648cedb70484dfd55b6.fsh",
+          "offset": 3443563,
+          "size": 65584
+        },
+        {
+          "resource": "217d5bd31658a05a0ba24bf416e7ed6d.fsh",
+          "offset": 3509147,
+          "size": 16432
+        },
+        {
+          "resource": "2e3bde59c82ba793134d22da304428e1.fsh",
+          "offset": 3525579,
+          "size": 262192
+        },
+        {
+          "resource": "a494be9c4eeb13db2c679c5194903bde.fsh",
+          "offset": 3787771,
+          "size": 65584
+        },
+        {
+          "resource": "d2b55d758cf3c43547e0537d8f7d49c4.fsh",
+          "offset": 3853355,
+          "size": 65584
+        },
+        {
+          "resource": "b5f92a681cccb2905b3b17863e438873.fsh",
+          "offset": 3918939,
+          "size": 65584
+        },
+        {
+          "resource": "e2d48a0e8ac8945a40bcf2990f11f136.fsh",
+          "offset": 3984523,
+          "size": 16432
+        },
+        {
+          "resource": "ff4263bc1c73979663a708f71eecbe80.fsh",
+          "offset": 4000955,
+          "size": 262192
+        },
+        {
+          "resource": "226e7ae0decb040dcdbe5ab310fdf71c.fsh",
+          "offset": 4263147,
+          "size": 65584
+        },
+        {
+          "resource": "411e55262dec85eef98350a6dc718fd5.fsh",
+          "offset": 4328731,
+          "size": 65584
+        },
+        {
+          "resource": "a7cb477b2a9c96ab6470f0e38f60c11e.fsh",
+          "offset": 4394315,
+          "size": 65584
+        },
+        {
+          "resource": "d9b4ad42447a459abde4d61bec76fa26.fsh",
+          "offset": 4459899,
+          "size": 16432
+        },
+        {
+          "resource": "b66ce7a79f556f69f0d7f5eed492a596.fsh",
+          "offset": 4476331,
+          "size": 262192
+        },
+        {
+          "resource": "8144d8c52975c09dcb68815510b49836.fsh",
+          "offset": 4738523,
+          "size": 65584
+        },
+        {
+          "resource": "40c2be9f3a1949a104dd1d86237f7cb5.fsh",
+          "offset": 4804107,
+          "size": 65584
+        },
+        {
+          "resource": "eb1b39bbed208507afea2eda2eba69de.fsh",
+          "offset": 4869691,
+          "size": 65584
+        },
+        {
+          "resource": "cc56e8a7e559c0da975fa9f3937bbff8.fsh",
+          "offset": 4935275,
+          "size": 16432
+        },
+        {
+          "resource": "4b58bb4842464db52d80310fb955df20.fsh",
+          "offset": 4951707,
+          "size": 262192
+        },
+        {
+          "resource": "1b955f4e583968f50793ad9d94df8190.fsh",
+          "offset": 5213899,
+          "size": 65584
+        },
+        {
+          "resource": "b8b2b82e797fb34fc47634d81ed0d308.fsh",
+          "offset": 5279483,
+          "size": 65584
+        },
+        {
+          "resource": "fba05bdfbd0950a0f966e188069f9c13.fsh",
+          "offset": 5345067,
+          "size": 65584
+        },
+        {
+          "resource": "3135b350fa507dbf18661451e8a3f505.fsh",
+          "offset": 5410651,
+          "size": 16432
+        },
+        {
+          "resource": "ab8c45b9b9b897779700096a09116803.fsh",
+          "offset": 5427083,
+          "size": 262192
+        },
+        {
+          "resource": "3bcc2658d842d2ba717c4dbddc890dd7.fsh",
+          "offset": 5689275,
+          "size": 65584
+        },
+        {
+          "resource": "0869ff9cbd776a3ffa982ccd52f6347e.fsh",
+          "offset": 5754859,
+          "size": 65584
+        },
+        {
+          "resource": "955e82997d6a4f96085c3f487b9f3661.fsh",
+          "offset": 5820443,
+          "size": 65584
+        },
+        {
+          "resource": "0d77bd0cec74ff6b15ea0d3502b47b3a.fsh",
+          "offset": 5886027,
+          "size": 16432
+        },
+        {
+          "resource": "97a96c0b7d61af237764622f9270a98f.fsh",
+          "offset": 5902459,
+          "size": 70768
+        },
+        {
+          "resource": "347986af1f0d2d3c159198bce503c044.fsh",
+          "offset": 5973227,
+          "size": 70232
+        },
+        {
+          "resource": "a628e5117ae1ee272a0fe780ef0cf138.fsh",
+          "offset": 6043459,
+          "size": 70232
+        },
+        {
+          "resource": "363cdac6feb14eb5f6b233dc32ce3c2d.fsh",
+          "offset": 6113691,
+          "size": 70232
+        },
+        {
+          "resource": "3dcf7b6d60f1a4e4301b700d8691cd94.fsh",
+          "offset": 6183923,
+          "size": 70232
+        },
+        {
+          "resource": "44666c65a2bd896e1950f07cbc995428.fsh",
+          "offset": 6254155,
+          "size": 70232
+        },
+        {
+          "resource": "dde67a6da2b56afccd36bbaa7a0be1d0.fsh",
+          "offset": 6324387,
+          "size": 70232
+        },
+        {
+          "resource": "e89f65d8dc0604244e74bbd4882f35a4.fsh",
+          "offset": 6394619,
+          "size": 70232
+        },
+        {
+          "resource": "31d7bcd65d82fb4e1dd4c675b7010808.fsh",
+          "offset": 6464851,
+          "size": 70232
+        },
+        {
+          "resource": "8f3ad539dcd5aba7c1672f4d9f0420a8.fsh",
+          "offset": 6535083,
+          "size": 70232
+        },
+        {
+          "resource": "ea3a49108eabd63b0fc08f66e1281d6b.fsh",
+          "offset": 6605315,
+          "size": 70232
+        },
+        {
+          "resource": "6c6d87d85a76b34c3056bef75a940376.fsh",
+          "offset": 6675547,
+          "size": 70232
+        },
+        {
+          "resource": "c541751e6839f51943572fe291f4b6ab.fsh",
+          "offset": 6745779,
+          "size": 70232
+        },
+        {
+          "resource": "c2e6c21559bd3dcb9ee001c9f850cd26.fsh",
+          "offset": 6816011,
+          "size": 70232
+        },
+        {
+          "resource": "dadb5fe4d1e1c242ed28bddce202bbf0.fsh",
+          "offset": 6886243,
+          "size": 70232
+        },
+        {
+          "resource": "06fe897fa4ac10ddabed02d7660e8046.fsh",
+          "offset": 6956475,
+          "size": 70232
+        },
+        {
+          "resource": "4683e94d8beb50e9d37a87ef91af0be1.fsh",
+          "offset": 7026707,
+          "size": 70232
+        },
+        {
+          "resource": "e49fcaf11babf4389da08229aeb4abd9.fsh",
+          "offset": 7096939,
+          "size": 70232
+        },
+        {
+          "resource": "56ab1b4f274a04641ea28ae34296ace9.fsh",
+          "offset": 7167171,
+          "size": 70232
+        },
+        {
+          "resource": "980f0b1e0cd9c70945fcd1edee3b94fe.fsh",
+          "offset": 7237403,
+          "size": 70232
+        },
+        {
+          "resource": "12b8d5a9f072511b502f322f2372bbbb.fsh",
+          "offset": 7307635,
+          "size": 70232
+        },
+        {
+          "resource": "4b84b177e4486fde8780da5045d4a931.fsh",
+          "offset": 7377867,
+          "size": 70232
+        }
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "name": "India ODI 2026",
+      "slug": "india-odi-2026",
+      "slot": 44,
+      "replaces": "Australia A",
+      "code": "aua",
+      "captain": "Shubman Gill",
+      "source": "https://www.bcci.tv/news/article/indias-odi-and-test-squads-for-new-zealand-tour-announced",
+      "selectedPlayers": [
+        "Shubman Gill",
+        "Rohit Sharma",
+        "Virat Kohli",
+        "Shreyas Iyer",
+        "KL Rahul",
+        "Nitish Kumar Reddy",
+        "Axar Patel",
+        "Anshul Kamboj",
+        "Kuldeep Yadav",
+        "Mohammed Siraj",
+        "Arshdeep Singh",
+        "Naman Dhir",
+        "Gurnoor Brar",
+        "Ruturaj Gaikwad",
+        "Ishan Kishan",
+        "Prasidh Krishna"
+      ]
+    },
+    {
+      "name": "Chennai Super Kings",
+      "slug": "chennai-super-kings",
+      "slot": 45,
+      "replaces": "India A",
+      "code": "ida",
+      "captain": "Ruturaj Gaikwad",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/chennai-super-kings?tab=squad&season=2026",
+      "selectedPlayers": [
+        "Ruturaj Gaikwad",
+        "Sanju Samson",
+        "Ayush Mhatre",
+        "Dewald Brevis",
+        "Shivam Dube",
+        "MS Dhoni",
+        "Jamie Overton",
+        "Noor Ahmad",
+        "Anshul Kamboj",
+        "Khaleel Ahmed",
+        "Rahul Chahar",
+        "Urvil Patel",
+        "Sarfaraz Khan",
+        "Matthew Short",
+        "Akeal Hosein",
+        "Matt Henry",
+        "Mukesh Choudhary",
+        "Shreyas Gopal",
+        "Prashant Veer",
+        "Kartik Sharma"
+      ]
+    },
+    {
+      "name": "Delhi Capitals",
+      "slug": "delhi-capitals",
+      "slot": 46,
+      "replaces": "Pakistan A",
+      "code": "pka",
+      "captain": "Axar Patel",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/delhi-capitals?tab=squad&season=2026",
+      "selectedPlayers": [
+        "KL Rahul",
+        "Prithvi Shaw",
+        "Pathum Nissanka",
+        "Karun Nair",
+        "Tristan Stubbs",
+        "Axar Patel",
+        "Ashutosh Sharma",
+        "Vipraj Nigam",
+        "Mitchell Starc",
+        "Kuldeep Yadav",
+        "Mukesh Kumar",
+        "Abishek Porel",
+        "David Miller",
+        "Nitish Rana",
+        "Sameer Rizvi",
+        "T Natarajan",
+        "Lungi Ngidi",
+        "Auqib Nabi",
+        "Dushmantha Chameera",
+        "Kyle Jamieson"
+      ]
+    },
+    {
+      "name": "Gujarat Titans",
+      "slug": "gujarat-titans",
+      "slot": 47,
+      "replaces": "South Africa A",
+      "code": "sfa",
+      "captain": "Shubman Gill",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/gujarat-titans?tab=squad&season=2026",
+      "selectedPlayers": [
+        "Shubman Gill",
+        "Sai Sudharsan",
+        "Jos Buttler",
+        "Glenn Phillips",
+        "Shahrukh Khan",
+        "Rahul Tewatia",
+        "Washington Sundar",
+        "Rashid Khan",
+        "Kagiso Rabada",
+        "Mohammed Siraj",
+        "Prasidh Krishna",
+        "Jason Holder",
+        "Kumar Kushagra",
+        "Anuj Rawat",
+        "Sai Kishore",
+        "Gurnoor Brar",
+        "Ishant Sharma",
+        "Ashok Sharma",
+        "Manav Suthar",
+        "Luke Wood"
+      ]
+    },
+    {
+      "name": "Kolkata Knight Riders",
+      "slug": "kolkata-knight-riders",
+      "slot": 48,
+      "replaces": "West Indies A",
+      "code": "wia",
+      "captain": "Ajinkya Rahane",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/kolkata-knight-riders?tab=squad&season=2026",
+      "selectedPlayers": [
+        "Finn Allen",
+        "Sunil Narine",
+        "Ajinkya Rahane",
+        "Angkrish Raghuvanshi",
+        "Cameron Green",
+        "Rinku Singh",
+        "Ramandeep Singh",
+        "Varun Chakaravarthy",
+        "Harshit Rana",
+        "Vaibhav Arora",
+        "Matheesha Pathirana",
+        "Tim Seifert",
+        "Rovman Powell",
+        "Rachin Ravindra",
+        "Manish Pandey",
+        "Anukul Roy",
+        "Akash Deep",
+        "Umran Malik",
+        "Kartik Tyagi",
+        "Rahul Tripathi"
+      ]
+    },
+    {
+      "name": "Lucknow Super Giants",
+      "slug": "lucknow-super-giants",
+      "slot": 49,
+      "replaces": "Chairman's XI",
+      "code": "cax",
+      "captain": "Rishabh Pant",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/lucknow-super-giants?tab=squad&season=2026",
+      "selectedPlayers": [
+        "Mitchell Marsh",
+        "Aiden Markram",
+        "Rishabh Pant",
+        "Nicholas Pooran",
+        "Ayush Badoni",
+        "Abdul Samad",
+        "Shahbaz Ahmed",
+        "Wanindu Hasaranga",
+        "Mohammed Shami",
+        "Avesh Khan",
+        "Prince Yadav",
+        "Josh Inglis",
+        "Arshin Kulkarni",
+        "Digvesh Singh Rathi",
+        "Anrich Nortje",
+        "Mohsin Khan",
+        "Mayank Yadav",
+        "Manimaran Siddharth",
+        "Arjun Tendulkar",
+        "Mukul Choudhary"
+      ]
+    },
+    {
+      "name": "Mumbai Indians",
+      "slug": "mumbai-indians",
+      "slot": 50,
+      "replaces": "B. President's XI",
+      "code": "bpx",
+      "captain": "Hardik Pandya",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/mumbai-indians?tab=squad&season=2026",
+      "selectedPlayers": [
+        "Rohit Sharma",
+        "Quinton de Kock",
+        "Suryakumar Yadav",
+        "Tilak Varma",
+        "Hardik Pandya",
+        "Naman Dhir",
+        "Will Jacks",
+        "Mitchell Santner",
+        "Deepak Chahar",
+        "Jasprit Bumrah",
+        "Trent Boult",
+        "Ryan Rickelton",
+        "Sherfane Rutherford",
+        "Shardul Thakur",
+        "Corbin Bosch",
+        "AM Ghazanfar",
+        "Ashwani Kumar",
+        "Mayank Markande",
+        "Robin Minz",
+        "Raj Bawa"
+      ]
+    },
+    {
+      "name": "Punjab Kings",
+      "slug": "punjab-kings",
+      "slot": 51,
+      "replaces": "Duke's XI",
+      "code": "dnx",
+      "captain": "Shreyas Iyer",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/punjab-kings?tab=squad&season=2026",
+      "selectedPlayers": [
+        "Priyansh Arya",
+        "Prabhsimran Singh",
+        "Shreyas Iyer",
+        "Nehal Wadhera",
+        "Shashank Singh",
+        "Marcus Stoinis",
+        "Marco Jansen",
+        "Harpreet Brar",
+        "Arshdeep Singh",
+        "Yuzvendra Chahal",
+        "Lockie Ferguson",
+        "Cooper Connolly",
+        "Azmatullah Omarzai",
+        "Xavier Bartlett",
+        "Vijaykumar Vyshak",
+        "Yash Thakur",
+        "Vishnu Vinod",
+        "Musheer Khan",
+        "Suryansh Shedge",
+        "Mitchell Owen"
+      ]
+    },
+    {
+      "name": "Rajasthan Royals",
+      "slug": "rajasthan-royals",
+      "slot": 52,
+      "replaces": "Governor's XI",
+      "code": "gvx",
+      "captain": "Riyan Parag",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/rajasthan-royals?tab=squad&season=2026",
+      "selectedPlayers": [
+        "Yashasvi Jaiswal",
+        "Vaibhav Sooryavanshi",
+        "Riyan Parag",
+        "Dhruv Jurel",
+        "Shimron Hetmyer",
+        "Ravindra Jadeja",
+        "Sam Curran",
+        "Jofra Archer",
+        "Ravi Bishnoi",
+        "Tushar Deshpande",
+        "Sandeep Sharma",
+        "Donovan Ferreira",
+        "Lhuan-dre Pretorius",
+        "Shubham Dubey",
+        "Nandre Burger",
+        "Kwena Maphaka",
+        "Kuldeep Sen",
+        "Dasun Shanaka",
+        "Yudhvir Singh Charak",
+        "Vignesh Puthur"
+      ]
+    },
+    {
+      "name": "Royal Challengers Bengaluru",
+      "slug": "royal-challengers-bengaluru",
+      "slot": 53,
+      "replaces": "Minister's XI",
+      "code": "pmx",
+      "captain": "Rajat Patidar",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/royal-challengers-bengaluru?tab=squad&season=2026",
+      "selectedPlayers": [
+        "Phil Salt",
+        "Virat Kohli",
+        "Devdutt Padikkal",
+        "Rajat Patidar",
+        "Venkatesh Iyer",
+        "Jitesh Sharma",
+        "Tim David",
+        "Krunal Pandya",
+        "Bhuvneshwar Kumar",
+        "Josh Hazlewood",
+        "Suyash Sharma",
+        "Romario Shepherd",
+        "Jacob Bethell",
+        "Rasikh Dar",
+        "Yash Dayal",
+        "Jacob Duffy",
+        "Mangesh Yadav",
+        "Nuwan Thushara",
+        "Jordan Cox",
+        "Swapnil Singh"
+      ]
+    },
+    {
+      "name": "Sunrisers Hyderabad",
+      "slug": "sunrisers-hyderabad",
+      "slot": 54,
+      "replaces": "V. Chancellor's XI",
+      "code": "vcx",
+      "captain": "Pat Cummins",
+      "source": "https://www.iplt20.com/api/bff/cms/teams/sunrisers-hyderabad?tab=squad&season=2026",
+      "selectedPlayers": [
+        "Travis Head",
+        "Abhishek Sharma",
+        "Ishan Kishan",
+        "Heinrich Klaasen",
+        "Nitish Kumar Reddy",
+        "Aniket Verma",
+        "Liam Livingstone",
+        "Pat Cummins",
+        "Harshal Patel",
+        "Jaydev Unadkat",
+        "Eshan Malinga",
+        "Kamindu Mendis",
+        "Harsh Dubey",
+        "Zeeshan Ansari",
+        "Brydon Carse",
+        "Shivam Mavi",
+        "Praful Hinge",
+        "Salil Arora",
+        "Sakib Hussain",
+        "Shivang Kumar"
+      ]
+    }
+  ],
+  "players": [
+    {
+      "name": "Shubman Gill",
+      "displayName": "S.Gill",
+      "id": 30000,
+      "row": 1198,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rohit Sharma",
+      "displayName": "R.Sharma",
+      "id": 30001,
+      "row": 1197,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Virat Kohli",
+      "displayName": "V.Kohli",
+      "id": 30002,
+      "row": 1196,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shreyas Iyer",
+      "displayName": "S.Iyer",
+      "id": 30003,
+      "row": 1195,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "KL Rahul",
+      "displayName": "KL.Rahul",
+      "id": 30004,
+      "row": 1194,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Nitish Kumar Reddy",
+      "displayName": "NK.Reddy",
+      "id": 30005,
+      "row": 1193,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Axar Patel",
+      "displayName": "A.Patel",
+      "id": 30006,
+      "row": 1192,
+      "templateRow": 554,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Anshul Kamboj",
+      "displayName": "A.Kamboj",
+      "id": 30007,
+      "row": 1191,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Kuldeep Yadav",
+      "displayName": "K.Yadav",
+      "id": 30008,
+      "row": 1190,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mohammed Siraj",
+      "displayName": "M.Siraj",
+      "id": 30009,
+      "row": 1189,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Arshdeep Singh",
+      "displayName": "A.Singh",
+      "id": 30010,
+      "row": 1188,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Naman Dhir",
+      "displayName": "N.Dhir",
+      "id": 30011,
+      "row": 1187,
+      "templateRow": 530,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Gurnoor Brar",
+      "displayName": "G.Brar",
+      "id": 30012,
+      "row": 1186,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ruturaj Gaikwad",
+      "displayName": "R.Gaikwad",
+      "id": 30013,
+      "row": 1185,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ishan Kishan",
+      "displayName": "I.Kishan",
+      "id": 30014,
+      "row": 1184,
+      "templateRow": 552,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Prasidh Krishna",
+      "displayName": "P.Krishna",
+      "id": 30015,
+      "row": 1183,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Sanju Samson",
+      "displayName": "S.Samson",
+      "id": 30016,
+      "row": 1182,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Ayush Mhatre",
+      "displayName": "A.Mhatre",
+      "id": 30017,
+      "row": 1181,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Dewald Brevis",
+      "displayName": "D.Brevis",
+      "id": 30018,
+      "row": 1180,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shivam Dube",
+      "displayName": "S.Dube",
+      "id": 30019,
+      "row": 1179,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "MS Dhoni",
+      "displayName": "MS.Dhoni",
+      "id": 30020,
+      "row": 1178,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Jamie Overton",
+      "displayName": "J.Overton",
+      "id": 30021,
+      "row": 1177,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Noor Ahmad",
+      "displayName": "N.Ahmad",
+      "id": 30022,
+      "row": 1176,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Khaleel Ahmed",
+      "displayName": "K.Ahmed",
+      "id": 30023,
+      "row": 1175,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rahul Chahar",
+      "displayName": "R.Chahar",
+      "id": 30024,
+      "row": 1174,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Urvil Patel",
+      "displayName": "U.Patel",
+      "id": 30025,
+      "row": 1173,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Sarfaraz Khan",
+      "displayName": "S.Khan",
+      "id": 30026,
+      "row": 1172,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Matthew Short",
+      "displayName": "M.Short",
+      "id": 30027,
+      "row": 1171,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Akeal Hosein",
+      "displayName": "A.Hosein",
+      "id": 30028,
+      "row": 1170,
+      "templateRow": 554,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Matt Henry",
+      "displayName": "M.Henry",
+      "id": 30029,
+      "row": 1169,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mukesh Choudhary",
+      "displayName": "M.Choudhary",
+      "id": 30030,
+      "row": 1168,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shreyas Gopal",
+      "displayName": "S.Gopal",
+      "id": 30031,
+      "row": 1167,
+      "templateRow": 539,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Prashant Veer",
+      "displayName": "P.Veer",
+      "id": 30032,
+      "row": 1166,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Kartik Sharma",
+      "displayName": "K.Sharma",
+      "id": 30033,
+      "row": 1165,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Prithvi Shaw",
+      "displayName": "P.Shaw",
+      "id": 30034,
+      "row": 1164,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Pathum Nissanka",
+      "displayName": "P.Nissanka",
+      "id": 30035,
+      "row": 1163,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Karun Nair",
+      "displayName": "K.Nair",
+      "id": 30036,
+      "row": 1162,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Tristan Stubbs",
+      "displayName": "T.Stubbs",
+      "id": 30037,
+      "row": 1161,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Ashutosh Sharma",
+      "displayName": "A.Sharma",
+      "id": 30038,
+      "row": 1160,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Vipraj Nigam",
+      "displayName": "V.Nigam",
+      "id": 30039,
+      "row": 1159,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mitchell Starc",
+      "displayName": "M.Starc",
+      "id": 30040,
+      "row": 1158,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mukesh Kumar",
+      "displayName": "M.Kumar",
+      "id": 30041,
+      "row": 1157,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Abishek Porel",
+      "displayName": "A.Porel",
+      "id": 30042,
+      "row": 1156,
+      "templateRow": 552,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "David Miller",
+      "displayName": "D.Miller",
+      "id": 30043,
+      "row": 1155,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Nitish Rana",
+      "displayName": "N.Rana",
+      "id": 30044,
+      "row": 1154,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Sameer Rizvi",
+      "displayName": "S.Rizvi",
+      "id": 30045,
+      "row": 1153,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "T Natarajan",
+      "displayName": "T.Natarajan",
+      "id": 30046,
+      "row": 1152,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Lungi Ngidi",
+      "displayName": "L.Ngidi",
+      "id": 30047,
+      "row": 1151,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Auqib Nabi",
+      "displayName": "A.Nabi",
+      "id": 30048,
+      "row": 1150,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Dushmantha Chameera",
+      "displayName": "D.Chameera",
+      "id": 30050,
+      "row": 1149,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Kyle Jamieson",
+      "displayName": "K.Jamieson",
+      "id": 30051,
+      "row": 1148,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Sai Sudharsan",
+      "displayName": "S.Sudharsan",
+      "id": 30052,
+      "row": 1147,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Jos Buttler",
+      "displayName": "J.Buttler",
+      "id": 30053,
+      "row": 1146,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Glenn Phillips",
+      "displayName": "G.Phillips",
+      "id": 30054,
+      "row": 1145,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Shahrukh Khan",
+      "displayName": "S.Khan",
+      "id": 30055,
+      "row": 1144,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rahul Tewatia",
+      "displayName": "R.Tewatia",
+      "id": 30056,
+      "row": 1143,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Washington Sundar",
+      "displayName": "W.Sundar",
+      "id": 30057,
+      "row": 1142,
+      "templateRow": 530,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rashid Khan",
+      "displayName": "R.Khan",
+      "id": 30058,
+      "row": 1141,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Kagiso Rabada",
+      "displayName": "K.Rabada",
+      "id": 30059,
+      "row": 1140,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Jason Holder",
+      "displayName": "J.Holder",
+      "id": 30060,
+      "row": 1139,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Kumar Kushagra",
+      "displayName": "K.Kushagra",
+      "id": 30061,
+      "row": 1138,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Anuj Rawat",
+      "displayName": "A.Rawat",
+      "id": 30062,
+      "row": 1137,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Sai Kishore",
+      "displayName": "S.Kishore",
+      "id": 30063,
+      "row": 1136,
+      "templateRow": 554,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ishant Sharma",
+      "displayName": "I.Sharma",
+      "id": 30064,
+      "row": 1135,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ashok Sharma",
+      "displayName": "A.Sharma",
+      "id": 30065,
+      "row": 1134,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Manav Suthar",
+      "displayName": "M.Suthar",
+      "id": 30066,
+      "row": 1133,
+      "templateRow": 554,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Luke Wood",
+      "displayName": "L.Wood",
+      "id": 30067,
+      "row": 1132,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Finn Allen",
+      "displayName": "F.Allen",
+      "id": 30068,
+      "row": 1131,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Sunil Narine",
+      "displayName": "S.Narine",
+      "id": 30069,
+      "row": 1130,
+      "templateRow": 530,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ajinkya Rahane",
+      "displayName": "A.Rahane",
+      "id": 30070,
+      "row": 1129,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Angkrish Raghuvanshi",
+      "displayName": "A.Raghuvanshi",
+      "id": 30071,
+      "row": 1128,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Cameron Green",
+      "displayName": "C.Green",
+      "id": 30072,
+      "row": 1127,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rinku Singh",
+      "displayName": "R.Singh",
+      "id": 30073,
+      "row": 1126,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ramandeep Singh",
+      "displayName": "R.Singh",
+      "id": 30074,
+      "row": 1125,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Varun Chakaravarthy",
+      "displayName": "V.Chakaravarthy",
+      "id": 30075,
+      "row": 1124,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Harshit Rana",
+      "displayName": "H.Rana",
+      "id": 30076,
+      "row": 1123,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Vaibhav Arora",
+      "displayName": "V.Arora",
+      "id": 30077,
+      "row": 1122,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Matheesha Pathirana",
+      "displayName": "M.Pathirana",
+      "id": 30078,
+      "row": 1121,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Tim Seifert",
+      "displayName": "T.Seifert",
+      "id": 30079,
+      "row": 1120,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Rovman Powell",
+      "displayName": "R.Powell",
+      "id": 30080,
+      "row": 1119,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rachin Ravindra",
+      "displayName": "R.Ravindra",
+      "id": 30081,
+      "row": 1118,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Manish Pandey",
+      "displayName": "M.Pandey",
+      "id": 30082,
+      "row": 1117,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Anukul Roy",
+      "displayName": "A.Roy",
+      "id": 30083,
+      "row": 1116,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Akash Deep",
+      "displayName": "A.Deep",
+      "id": 30084,
+      "row": 1115,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Umran Malik",
+      "displayName": "U.Malik",
+      "id": 30085,
+      "row": 1114,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Kartik Tyagi",
+      "displayName": "K.Tyagi",
+      "id": 30086,
+      "row": 1113,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rahul Tripathi",
+      "displayName": "R.Tripathi",
+      "id": 30087,
+      "row": 1112,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mitchell Marsh",
+      "displayName": "M.Marsh",
+      "id": 30088,
+      "row": 1111,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Aiden Markram",
+      "displayName": "A.Markram",
+      "id": 30089,
+      "row": 1110,
+      "templateRow": 530,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rishabh Pant",
+      "displayName": "R.Pant",
+      "id": 30090,
+      "row": 1109,
+      "templateRow": 552,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Nicholas Pooran",
+      "displayName": "N.Pooran",
+      "id": 30091,
+      "row": 1108,
+      "templateRow": 552,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Ayush Badoni",
+      "displayName": "A.Badoni",
+      "id": 30092,
+      "row": 1107,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Abdul Samad",
+      "displayName": "A.Samad",
+      "id": 30093,
+      "row": 1106,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shahbaz Ahmed",
+      "displayName": "S.Ahmed",
+      "id": 30094,
+      "row": 1105,
+      "templateRow": 554,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Wanindu Hasaranga",
+      "displayName": "W.Hasaranga",
+      "id": 30095,
+      "row": 1104,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mohammed Shami",
+      "displayName": "M.Shami",
+      "id": 30096,
+      "row": 1103,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Avesh Khan",
+      "displayName": "A.Khan",
+      "id": 30097,
+      "row": 1102,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Prince Yadav",
+      "displayName": "P.Yadav",
+      "id": 30098,
+      "row": 1101,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Josh Inglis",
+      "displayName": "J.Inglis",
+      "id": 30099,
+      "row": 1100,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Arshin Kulkarni",
+      "displayName": "A.Kulkarni",
+      "id": 30100,
+      "row": 1099,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Digvesh Singh Rathi",
+      "displayName": "DS.Rathi",
+      "id": 30101,
+      "row": 1098,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Anrich Nortje",
+      "displayName": "A.Nortje",
+      "id": 30102,
+      "row": 1097,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mohsin Khan",
+      "displayName": "M.Khan",
+      "id": 30103,
+      "row": 1096,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mayank Yadav",
+      "displayName": "M.Yadav",
+      "id": 30104,
+      "row": 43,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Manimaran Siddharth",
+      "displayName": "M.Siddharth",
+      "id": 30105,
+      "row": 42,
+      "templateRow": 554,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Arjun Tendulkar",
+      "displayName": "A.Tendulkar",
+      "id": 30106,
+      "row": 41,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mukul Choudhary",
+      "displayName": "M.Choudhary",
+      "id": 30107,
+      "row": 40,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Quinton de Kock",
+      "displayName": "Qd.Kock",
+      "id": 30108,
+      "row": 39,
+      "templateRow": 552,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Suryakumar Yadav",
+      "displayName": "S.Yadav",
+      "id": 30109,
+      "row": 38,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Tilak Varma",
+      "displayName": "T.Varma",
+      "id": 30110,
+      "row": 37,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Hardik Pandya",
+      "displayName": "H.Pandya",
+      "id": 30111,
+      "row": 36,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Will Jacks",
+      "displayName": "W.Jacks",
+      "id": 30112,
+      "row": 35,
+      "templateRow": 530,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mitchell Santner",
+      "displayName": "M.Santner",
+      "id": 30113,
+      "row": 34,
+      "templateRow": 554,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Deepak Chahar",
+      "displayName": "D.Chahar",
+      "id": 30114,
+      "row": 33,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Jasprit Bumrah",
+      "displayName": "J.Bumrah",
+      "id": 30115,
+      "row": 32,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Trent Boult",
+      "displayName": "T.Boult",
+      "id": 30116,
+      "row": 31,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ryan Rickelton",
+      "displayName": "R.Rickelton",
+      "id": 30118,
+      "row": 30,
+      "templateRow": 552,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Sherfane Rutherford",
+      "displayName": "S.Rutherford",
+      "id": 30119,
+      "row": 29,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shardul Thakur",
+      "displayName": "S.Thakur",
+      "id": 30120,
+      "row": 28,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Corbin Bosch",
+      "displayName": "C.Bosch",
+      "id": 30121,
+      "row": 27,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "AM Ghazanfar",
+      "displayName": "A.Ghazanfar",
+      "id": 30122,
+      "row": 26,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ashwani Kumar",
+      "displayName": "A.Kumar",
+      "id": 30123,
+      "row": 25,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mayank Markande",
+      "displayName": "M.Markande",
+      "id": 30124,
+      "row": 24,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Robin Minz",
+      "displayName": "R.Minz",
+      "id": 30125,
+      "row": 23,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Raj Bawa",
+      "displayName": "R.Bawa",
+      "id": 30126,
+      "row": 22,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Priyansh Arya",
+      "displayName": "P.Arya",
+      "id": 30127,
+      "row": 21,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Prabhsimran Singh",
+      "displayName": "P.Singh",
+      "id": 30128,
+      "row": 20,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Nehal Wadhera",
+      "displayName": "N.Wadhera",
+      "id": 30129,
+      "row": 19,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shashank Singh",
+      "displayName": "S.Singh",
+      "id": 30130,
+      "row": 18,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Marcus Stoinis",
+      "displayName": "M.Stoinis",
+      "id": 30131,
+      "row": 17,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Marco Jansen",
+      "displayName": "M.Jansen",
+      "id": 30132,
+      "row": 16,
+      "templateRow": 562,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Harpreet Brar",
+      "displayName": "H.Brar",
+      "id": 30133,
+      "row": 15,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Yuzvendra Chahal",
+      "displayName": "Y.Chahal",
+      "id": 30134,
+      "row": 14,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Lockie Ferguson",
+      "displayName": "L.Ferguson",
+      "id": 30135,
+      "row": 13,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Cooper Connolly",
+      "displayName": "C.Connolly",
+      "id": 30136,
+      "row": 12,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Azmatullah Omarzai",
+      "displayName": "A.Omarzai",
+      "id": 30137,
+      "row": 11,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Xavier Bartlett",
+      "displayName": "X.Bartlett",
+      "id": 30138,
+      "row": 10,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Vijaykumar Vyshak",
+      "displayName": "V.Vyshak",
+      "id": 30139,
+      "row": 9,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Yash Thakur",
+      "displayName": "Y.Thakur",
+      "id": 30140,
+      "row": 8,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Vishnu Vinod",
+      "displayName": "V.Vinod",
+      "id": 30141,
+      "row": 7,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Musheer Khan",
+      "displayName": "M.Khan",
+      "id": 30142,
+      "row": 6,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Suryansh Shedge",
+      "displayName": "S.Shedge",
+      "id": 30143,
+      "row": 5,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mitchell Owen",
+      "displayName": "M.Owen",
+      "id": 30144,
+      "row": 4,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Yashasvi Jaiswal",
+      "displayName": "Y.Jaiswal",
+      "id": 30145,
+      "row": 3,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Vaibhav Sooryavanshi",
+      "displayName": "V.Sooryavanshi",
+      "id": 30146,
+      "row": 2,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Riyan Parag",
+      "displayName": "R.Parag",
+      "id": 30148,
+      "row": 1,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Dhruv Jurel",
+      "displayName": "D.Jurel",
+      "id": 30149,
+      "row": 1090,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Shimron Hetmyer",
+      "displayName": "S.Hetmyer",
+      "id": 30150,
+      "row": 1088,
+      "templateRow": 552,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Ravindra Jadeja",
+      "displayName": "R.Jadeja",
+      "id": 30151,
+      "row": 1087,
+      "templateRow": 554,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Sam Curran",
+      "displayName": "S.Curran",
+      "id": 30152,
+      "row": 1083,
+      "templateRow": 562,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Jofra Archer",
+      "displayName": "J.Archer",
+      "id": 30153,
+      "row": 1078,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ravi Bishnoi",
+      "displayName": "R.Bishnoi",
+      "id": 30154,
+      "row": 1077,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Tushar Deshpande",
+      "displayName": "T.Deshpande",
+      "id": 30155,
+      "row": 1056,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Sandeep Sharma",
+      "displayName": "S.Sharma",
+      "id": 30156,
+      "row": 1052,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Donovan Ferreira",
+      "displayName": "D.Ferreira",
+      "id": 30157,
+      "row": 1048,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Lhuan-dre Pretorius",
+      "displayName": "L.Pretorius",
+      "id": 30158,
+      "row": 1047,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Shubham Dubey",
+      "displayName": "S.Dubey",
+      "id": 30159,
+      "row": 1043,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Nandre Burger",
+      "displayName": "N.Burger",
+      "id": 30160,
+      "row": 1042,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Kwena Maphaka",
+      "displayName": "K.Maphaka",
+      "id": 30161,
+      "row": 1040,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Kuldeep Sen",
+      "displayName": "K.Sen",
+      "id": 30162,
+      "row": 1039,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Dasun Shanaka",
+      "displayName": "D.Shanaka",
+      "id": 30163,
+      "row": 1037,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Yudhvir Singh Charak",
+      "displayName": "YS.Charak",
+      "id": 30164,
+      "row": 1035,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Vignesh Puthur",
+      "displayName": "V.Puthur",
+      "id": 30165,
+      "row": 1034,
+      "templateRow": 539,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Phil Salt",
+      "displayName": "P.Salt",
+      "id": 30166,
+      "row": 1021,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Devdutt Padikkal",
+      "displayName": "D.Padikkal",
+      "id": 30167,
+      "row": 1018,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rajat Patidar",
+      "displayName": "R.Patidar",
+      "id": 30168,
+      "row": 1016,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Venkatesh Iyer",
+      "displayName": "V.Iyer",
+      "id": 30169,
+      "row": 1011,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Jitesh Sharma",
+      "displayName": "J.Sharma",
+      "id": 30170,
+      "row": 1003,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Tim David",
+      "displayName": "T.David",
+      "id": 30171,
+      "row": 1002,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Krunal Pandya",
+      "displayName": "K.Pandya",
+      "id": 30172,
+      "row": 1001,
+      "templateRow": 554,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Bhuvneshwar Kumar",
+      "displayName": "B.Kumar",
+      "id": 30173,
+      "row": 994,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Josh Hazlewood",
+      "displayName": "J.Hazlewood",
+      "id": 30174,
+      "row": 983,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Suyash Sharma",
+      "displayName": "S.Sharma",
+      "id": 30175,
+      "row": 975,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Romario Shepherd",
+      "displayName": "R.Shepherd",
+      "id": 30176,
+      "row": 974,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Jacob Bethell",
+      "displayName": "J.Bethell",
+      "id": 30177,
+      "row": 967,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Rasikh Dar",
+      "displayName": "R.Dar",
+      "id": 30178,
+      "row": 965,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Yash Dayal",
+      "displayName": "Y.Dayal",
+      "id": 30179,
+      "row": 964,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Jacob Duffy",
+      "displayName": "J.Duffy",
+      "id": 30180,
+      "row": 960,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mangesh Yadav",
+      "displayName": "M.Yadav",
+      "id": 30181,
+      "row": 957,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Nuwan Thushara",
+      "displayName": "N.Thushara",
+      "id": 30182,
+      "row": 947,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Jordan Cox",
+      "displayName": "J.Cox",
+      "id": 30183,
+      "row": 944,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Swapnil Singh",
+      "displayName": "S.Singh",
+      "id": 30184,
+      "row": 941,
+      "templateRow": 554,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Travis Head",
+      "displayName": "T.Head",
+      "id": 30185,
+      "row": 939,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Abhishek Sharma",
+      "displayName": "A.Sharma",
+      "id": 30186,
+      "row": 938,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Heinrich Klaasen",
+      "displayName": "H.Klaasen",
+      "id": 30187,
+      "row": 937,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Aniket Verma",
+      "displayName": "A.Verma",
+      "id": 30188,
+      "row": 926,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Liam Livingstone",
+      "displayName": "L.Livingstone",
+      "id": 30189,
+      "row": 925,
+      "templateRow": 530,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Pat Cummins",
+      "displayName": "P.Cummins",
+      "id": 30190,
+      "row": 921,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Harshal Patel",
+      "displayName": "H.Patel",
+      "id": 30191,
+      "row": 849,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Jaydev Unadkat",
+      "displayName": "J.Unadkat",
+      "id": 30192,
+      "row": 730,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Eshan Malinga",
+      "displayName": "E.Malinga",
+      "id": 30193,
+      "row": 722,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Kamindu Mendis",
+      "displayName": "K.Mendis",
+      "id": 30194,
+      "row": 719,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Harsh Dubey",
+      "displayName": "H.Dubey",
+      "id": 30195,
+      "row": 675,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Zeeshan Ansari",
+      "displayName": "Z.Ansari",
+      "id": 30196,
+      "row": 653,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Brydon Carse",
+      "displayName": "B.Carse",
+      "id": 30197,
+      "row": 623,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shivam Mavi",
+      "displayName": "S.Mavi",
+      "id": 30198,
+      "row": 402,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Praful Hinge",
+      "displayName": "P.Hinge",
+      "id": 30199,
+      "row": 401,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Salil Arora",
+      "displayName": "S.Arora",
+      "id": 30200,
+      "row": 398,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Sakib Hussain",
+      "displayName": "S.Hussain",
+      "id": 30201,
+      "row": 397,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shivang Kumar",
+      "displayName": "S.Kumar",
+      "id": 30202,
+      "row": 395,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    }
+  ],
+  "preservedTeamSlots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+  ],
+  "protectedPlayerRows": [
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    178,
+    179,
+    180,
+    182,
+    183,
+    184,
+    185,
+    187,
+    188,
+    189,
+    190,
+    191,
+    194,
+    196,
+    197,
+    199,
+    202,
+    203,
+    205,
+    206,
+    208,
+    210,
+    211,
+    212,
+    213,
+    215,
+    217,
+    218,
+    219,
+    220,
+    222,
+    223,
+    224,
+    225,
+    226,
+    229,
+    230,
+    232,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    258,
+    259,
+    262,
+    263,
+    264,
+    265,
+    267,
+    268,
+    269,
+    270,
+    271,
+    274,
+    276,
+    278,
+    279,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    309,
+    310,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    339,
+    340,
+    341,
+    342,
+    344,
+    345,
+    347,
+    348,
+    349,
+    350,
+    351,
+    353,
+    355,
+    357,
+    358,
+    359,
+    364,
+    365,
+    367,
+    368,
+    370,
+    372,
+    373,
+    375,
+    376,
+    378,
+    379,
+    381,
+    382,
+    383,
+    385,
+    386,
+    388,
+    389,
+    390,
+    393,
+    394,
+    396,
+    399,
+    400,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418,
+    419,
+    420,
+    421,
+    422,
+    423,
+    424,
+    425,
+    426,
+    427,
+    428,
+    429,
+    430,
+    431,
+    432,
+    433,
+    434,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    449,
+    450,
+    451,
+    452,
+    453,
+    454,
+    455,
+    456,
+    457,
+    458,
+    459,
+    460,
+    461,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467,
+    468,
+    469,
+    470,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    491,
+    492,
+    493,
+    494,
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563,
+    564,
+    565,
+    566,
+    567,
+    568,
+    569,
+    570,
+    571,
+    572,
+    573,
+    574,
+    575,
+    576,
+    577,
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587,
+    588,
+    589,
+    590,
+    591,
+    592,
+    593,
+    594,
+    595,
+    596,
+    597,
+    598,
+    599,
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618,
+    619,
+    620,
+    621,
+    622,
+    624,
+    625,
+    626,
+    627,
+    628,
+    629,
+    630,
+    631,
+    632,
+    633,
+    634,
+    635,
+    636,
+    637,
+    638,
+    639,
+    640,
+    641,
+    642,
+    643,
+    644,
+    645,
+    646,
+    647,
+    648,
+    649,
+    650,
+    651,
+    652,
+    654,
+    655,
+    656,
+    657,
+    658,
+    659,
+    660,
+    661,
+    662,
+    663,
+    664,
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    671,
+    672,
+    673,
+    674,
+    676,
+    677,
+    678,
+    679,
+    680,
+    681,
+    682,
+    683,
+    684,
+    685,
+    686,
+    687,
+    688,
+    689,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695,
+    696,
+    697,
+    698,
+    699,
+    700,
+    701,
+    702,
+    703,
+    704,
+    705,
+    706,
+    707,
+    708,
+    709,
+    710,
+    711,
+    712,
+    713,
+    714,
+    715,
+    716,
+    717,
+    718,
+    720,
+    721,
+    723,
+    724,
+    725,
+    726,
+    727,
+    728,
+    729,
+    731,
+    732,
+    733,
+    734,
+    735,
+    736,
+    737,
+    738,
+    739,
+    740,
+    741,
+    742,
+    743,
+    744,
+    745,
+    746,
+    747,
+    748,
+    749,
+    750,
+    751,
+    752,
+    753,
+    754,
+    755,
+    756,
+    757,
+    758,
+    759,
+    760,
+    761,
+    762,
+    763,
+    764,
+    765,
+    766,
+    767,
+    768,
+    769,
+    770,
+    771,
+    772,
+    773,
+    774,
+    775,
+    776,
+    777,
+    778,
+    779,
+    780,
+    781,
+    782,
+    783,
+    784,
+    785,
+    786,
+    787,
+    788,
+    789,
+    790,
+    791,
+    792,
+    793,
+    794,
+    795,
+    796,
+    797,
+    798,
+    799,
+    800,
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807,
+    808,
+    809,
+    810,
+    811,
+    812,
+    813,
+    814,
+    815,
+    816,
+    817,
+    818,
+    819,
+    820,
+    821,
+    822,
+    823,
+    824,
+    825,
+    826,
+    827,
+    828,
+    829,
+    830,
+    831,
+    832,
+    833,
+    834,
+    835,
+    836,
+    837,
+    838,
+    839,
+    840,
+    841,
+    842,
+    843,
+    844,
+    845,
+    846,
+    847,
+    848,
+    850,
+    851,
+    852,
+    853,
+    854,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860,
+    861,
+    862,
+    863,
+    864,
+    865,
+    866,
+    867,
+    868,
+    869,
+    870,
+    871,
+    872,
+    873,
+    874,
+    875,
+    876,
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
+    916,
+    917,
+    918,
+    919,
+    920,
+    922,
+    923,
+    924,
+    927,
+    928,
+    929,
+    930,
+    931,
+    932,
+    933,
+    934,
+    935,
+    936,
+    940,
+    942,
+    943,
+    945,
+    946,
+    948,
+    949,
+    950,
+    951,
+    952,
+    953,
+    954,
+    955,
+    956,
+    958,
+    959,
+    961,
+    962,
+    963,
+    966,
+    968,
+    969,
+    970,
+    971,
+    972,
+    973,
+    976,
+    977,
+    978,
+    979,
+    980,
+    981,
+    982,
+    984,
+    985,
+    986,
+    987,
+    988,
+    989,
+    990,
+    991,
+    992,
+    993,
+    995,
+    996,
+    997,
+    998,
+    999,
+    1000,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1012,
+    1013,
+    1014,
+    1015,
+    1017,
+    1019,
+    1020,
+    1022,
+    1023,
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1032,
+    1033,
+    1036,
+    1038,
+    1041,
+    1044,
+    1045,
+    1046,
+    1049,
+    1050,
+    1051,
+    1053,
+    1054,
+    1055,
+    1057,
+    1058,
+    1059,
+    1060,
+    1061,
+    1062,
+    1063,
+    1064,
+    1065,
+    1066,
+    1067,
+    1068,
+    1069,
+    1070,
+    1071,
+    1072,
+    1073,
+    1074,
+    1075,
+    1076,
+    1079,
+    1080,
+    1081,
+    1082,
+    1084,
+    1085,
+    1086,
+    1089,
+    1091,
+    1092,
+    1093,
+    1094,
+    1095
+  ],
+  "kitNote": "Fan recreations from official 2026 player-shirt references; not official downloadable game skins.",
+  "ratingNote": "Playable proxy attributes and generic faces; career stats reset; not official ratings."
+}

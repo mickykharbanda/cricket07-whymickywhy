@@ -1,0 +1,149 @@
+{
+  "id": "india-odi-2026-v1",
+  "title": "India ODI 2026 (roster trial)",
+  "source": "https://www.bcci.tv/news/article/indias-odi-and-test-squads-for-new-zealand-tour-announced",
+  "squadDate": "2026-10-16",
+  "scope": "New Zealand tour, first three ODIs",
+  "limitations": "Names, 16-player squad and captain updated. Original models, kits, abilities, handedness and career statistics remain placeholders.",
+  "resource": "113964e05e69ab31d264fb8f15c58e5c.cdf",
+  "archive": "Data/data.gob",
+  "originalSize": 341202052,
+  "indexPosition": 10006,
+  "originalEntry": [
+    847872,
+    135843
+  ],
+  "file": "india-odi-2026.cdf",
+  "size": 620140,
+  "sha256": "a1c2b3348387dc0f457e961ca305692e62efbfdc115f2d12aed823c7d7a99aba",
+  "players": [
+    {
+      "name": "S.Gill",
+      "role": "Captain",
+      "playerId": 18058,
+      "row": 525,
+      "originalName": "R.Dravia",
+      "donor": "R.Dravia"
+    },
+    {
+      "name": "R.Sharma",
+      "role": "Batter",
+      "playerId": 13319,
+      "row": 530,
+      "originalName": "V.Seway",
+      "donor": "V.Seway"
+    },
+    {
+      "name": "V.Kohli",
+      "role": "Batter",
+      "playerId": 929,
+      "row": 527,
+      "originalName": "S.Tendehar",
+      "donor": "S.Tendehar"
+    },
+    {
+      "name": "S.Iyer",
+      "role": "Vice-captain",
+      "playerId": 10052,
+      "row": 544,
+      "originalName": "M.Keph",
+      "donor": "M.Keph"
+    },
+    {
+      "name": "KL.Rahul",
+      "role": "Wicketkeeper",
+      "playerId": 32749,
+      "row": 545,
+      "originalName": "D.Dhenier",
+      "donor": "D.Dhenier"
+    },
+    {
+      "name": "N.K.Reddy",
+      "role": "All-rounder",
+      "playerId": 31639,
+      "row": 547,
+      "originalName": "R.Soithi",
+      "donor": "R.Soithi"
+    },
+    {
+      "name": "A.Patel",
+      "role": "All-rounder",
+      "playerId": 1064,
+      "row": 554,
+      "originalName": "Yevray Singh",
+      "donor": "Yevray Singh"
+    },
+    {
+      "name": "A.Kamboj",
+      "role": "Bowler",
+      "playerId": 5140,
+      "row": 541,
+      "originalName": "L.Balije",
+      "donor": "L.Balije"
+    },
+    {
+      "name": "K.Yadav",
+      "role": "Bowler",
+      "playerId": 178,
+      "row": 524,
+      "originalName": "J.Krumble",
+      "donor": "J.Krumble"
+    },
+    {
+      "name": "M.Siraj",
+      "role": "Bowler",
+      "playerId": 18217,
+      "row": 536,
+      "originalName": "A.Agercker",
+      "donor": "A.Agercker"
+    },
+    {
+      "name": "A.Singh",
+      "role": "Bowler",
+      "playerId": 179,
+      "row": 558,
+      "originalName": "Z.Kalm",
+      "donor": "Z.Kalm"
+    },
+    {
+      "name": "G.Brar",
+      "role": "Bowler",
+      "playerId": 19594,
+      "row": 553,
+      "originalName": "S.Bengel",
+      "donor": "S.Bengel"
+    },
+    {
+      "name": "R.Gaikwad",
+      "role": "Batter",
+      "playerId": 15675,
+      "row": 548,
+      "originalName": "A.Charpa",
+      "donor": "A.Charpa"
+    },
+    {
+      "name": "N.Dhir",
+      "role": "All-rounder",
+      "playerId": 24412,
+      "row": 529,
+      "originalName": "A.Bender",
+      "donor": "A.Bender"
+    },
+    {
+      "name": "I.Kishan",
+      "role": "Wicketkeeper",
+      "playerId": 2130,
+      "row": 552,
+      "originalName": "P.Partell",
+      "donor": "P.Partell"
+    },
+    {
+      "name": "P.Krishna",
+      "role": "Bowler; subject to fitness",
+      "playerId": 678,
+      "row": 538,
+      "originalName": "Serindeap Singh",
+      "donor": "Serindeap Singh"
+    }
+  ]
+}
