@@ -7,24 +7,24 @@
     return response.json();
   });
   manifest.catch(error => { status.textContent = error.message; });
-  // Never carry forward the retired prototype that replaced OG India.
-  const remembered = localStorage.getItem('c07-roster');
-  select.value = remembered === 'original' ? 'original' : 'modern-2026';
-  const update = () => {
-    localStorage.setItem('c07-roster', select.value);
-    document.getElementById('go-online').disabled = select.value !== 'original';
-    status.textContent = select.value === 'original'
-      ? 'All OG teams, squads and uniforms. Your existing saves.'
-      : 'OG India and senior teams stay. India 2026 + ten IPL teams replace the A-sides and invitational XIs under Other. New kits, separate saves; solo play.';
-  };
-  select.onchange = update;
-  update();
+  // The 2026 teams are the game now, not a choice. The selector is left in the markup so nothing
+  // else that reaches for it breaks, but it is pinned and hidden.
+  //
+  // Multiplayer used to require the original squads, because a peer on the pack and a peer without
+  // it hold different game data and lockstep cannot survive that. With one roster for everyone the
+  // mismatch cannot arise, so the restriction goes with it.
+  select.value = 'modern-2026';
+  localStorage.setItem('c07-roster', 'modern-2026');
+  const field = select.closest('label') || select.parentElement;
+  if (field) field.hidden = true;
+  const online = document.getElementById('go-online');
+  if (online) online.disabled = false;
+  status.textContent = 'India 2026 and all ten IPL sides, with the OG national teams kept alongside them.';
   window.C07Roster = {
     async prepare(session) {
-      const enabled = select.value === 'modern-2026';
-      if (session && enabled) throw new Error('Choose Original teams before starting multiplayer.');
+      const enabled = true;
       const data = await manifest;
-      status.textContent = enabled ? 'Preparing the 2026 teams and kits…' : 'Restoring OG teams…';
+      status.textContent = 'Preparing the 2026 teams and kits…';
       await new Promise((resolve, reject) => {
         const worker = new Worker('modern-worker.js');
         worker.onmessage = ({ data }) => { worker.terminate(); data.error ? reject(new Error(data.error)) : resolve(); };
