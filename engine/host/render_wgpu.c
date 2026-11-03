@@ -160,6 +160,22 @@ static WGPUDevice g_dev;
 static WGPUQueue g_queue;
 static WGPUSurface g_surface;
 static WGPUTextureFormat g_surf_fmt;
+/* How much we want a given surface format. D3D8 blends in gamma space, so the game's colours are
+   ALREADY gamma-encoded; an _Srgb surface encodes them a second time and the picture comes out pale
+   and milky -- white where it should be bright. This used to name BGRA8Unorm alone and take
+   formats[0] otherwise. Metal always offers BGRA8Unorm, so the desktop never noticed, but this
+   phone's surface offers [RGBA8UnormSrgb, RGBA8Unorm, RGBA16Float, RGB10A2Unorm] and so took
+   formats[0] -- the sRGB one -- for every Android frame ever drawn. */
+static int format_rank(WGPUTextureFormat f) {
+    switch (f) {
+    case WGPUTextureFormat_BGRA8Unorm: return 3;        /* what the desktop has always used */
+    case WGPUTextureFormat_RGBA8Unorm: return 2;        /* the same thing, channels swapped */
+    case WGPUTextureFormat_RGBA8UnormSrgb:
+    case WGPUTextureFormat_BGRA8UnormSrgb: return 0;    /* double gamma; only if nothing else exists */
+    default: return 1;                                  /* wider formats store linearly and are fine */
+    }
+}
+
 /* Chosen from the surface's own capabilities in create_resources(), not assumed: configure_surface()
    runs again on every resize and must not re-derive them. */
 static WGPUTextureUsage g_surf_usage = WGPUTextureUsage_RenderAttachment | WGPUTextureUsage_CopyDst;
@@ -321,8 +337,8 @@ static void create_resources(void) {
     wgpuSurfaceGetCapabilities(g_surface, g_adapter, &caps);
 
     g_surf_fmt = caps.formatCount ? caps.formats[0] : WGPUTextureFormat_BGRA8Unorm;
-    for (size_t i = 0; i < caps.formatCount; i++)   /* prefer a non-sRGB format: D3D8 blends in gamma space */
-        if (caps.formats[i] == WGPUTextureFormat_BGRA8Unorm) g_surf_fmt = caps.formats[i];
+    for (size_t i = 0; i < caps.formatCount; i++)
+        if (format_rank(caps.formats[i]) > format_rank(g_surf_fmt)) g_surf_fmt = caps.formats[i];
 
     /* CopyDst is required: exec_present blits the back buffer into the swapchain image. Do NOT gate
        it on caps.usages -- Metal reports only 0x11 (RenderAttachment | CopySrc) here and yet accepts

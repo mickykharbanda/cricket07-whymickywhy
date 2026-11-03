@@ -347,8 +347,18 @@ class FunctionTranslator:
                         and op is not None and op.type == CS_OP_IMM and inside(op.imm):
                     todo.append(op.imm)
                 if m == "jmp" and op is not None and op.type != CS_OP_IMM:
-                    if not self.p.jumptables.get(a):  # Ghidra lists unresolved jumps with no targets
-                        self.p.jumptables[a] = self.recover_table(op, inside)
+                    # Ghidra lists unresolved jumps with no targets, and -- worse, because it looks
+                    # resolved -- sometimes recovers a switch only PARTIALLY. It found 5 of the 12
+                    # cases of the one at 0x763768, inside the CRT's string-to-double parser, so the
+                    # other 7 dispatched to jump_indirect and atof() aborted the process ("indirect
+                    # jump to unknown target") for every input but its own error path.
+                    # Reading the table here stops at the first entry that leaves the function, so
+                    # trust that read only when it covers everything Ghidra found: then it is the
+                    # same table read to the end. If it does not, it is looking somewhere else.
+                    known = self.p.jumptables.get(a) or []
+                    recovered = self.recover_table(op, inside)
+                    if set(known) <= set(recovered):
+                        self.p.jumptables[a] = recovered or known
                     todo.extend(t for t in self.p.jumptables.get(a, []) if inside(t))
                 if self.is_terminator(ins):
                     break

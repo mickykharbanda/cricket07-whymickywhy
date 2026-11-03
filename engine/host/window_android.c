@@ -38,10 +38,27 @@ static SDL_Joystick *g_joy[PAD_SLOTS];
 /* raw button n -> standard-layout bit that host/dinput.c turns back into DirectInput button n */
 static const int g_std_for_raw[12] = { 2, 0, 1, 3, 4, 5, 6, 7, 9, 8, 10, 11 };
 
+/* The shoulder buttons are the loft modifier, matching the on-screen LOFT button and Shift on a
+   keyboard. Cricket takes a lofted shot from Shift and the pad layout has no button of its own for
+   it, so L1 and L2 are mirrored onto the key; the game's own Controller Reassign screen still maps
+   every pad button as before, this only adds the modifier on top.
+
+   Held per slot so two pads cannot cancel each other, and sent only when the combined state
+   changes -- otherwise every poll while L2 is held would re-send the key. */
+static uint32_t g_loft_pads;
+static void pad_loft(int slot, int down) {
+    uint32_t before = g_loft_pads;
+    if (down) g_loft_pads |= 1u << slot; else g_loft_pads &= ~(1u << slot);
+    if (!before != !g_loft_pads) input_key_hid(225 /* USB HID usage: Left Shift */, g_loft_pads != 0);
+}
+
+/* Standard-gamepad bits (see input.c): 4 = LB / L1, 6 = LT / L2. */
+#define PAD_LOFT_BITS ((1u << 4) | (1u << 6))
+
 static void pad_report(int slot) {
     SDL_GameController *gc = g_pad[slot];
     SDL_Joystick *js = g_joy[slot];
-    if (!js) { input_gamepad(slot, 0, 0, 0, 0, 0, 0); return; }
+    if (!js) { pad_loft(slot, 0); input_gamepad(slot, 0, 0, 0, 0, 0, 0); return; }
     uint32_t b = 0;
     if (!gc) {
         int nb = SDL_JoystickNumButtons(js), na = SDL_JoystickNumAxes(js);
@@ -56,6 +73,7 @@ static void pad_report(int slot) {
         }
         int ax[4] = { 0, 0, 0, 0 };
         for (int i = 0; i < na && i < 4; i++) ax[i] = SDL_JoystickGetAxis(js, i);
+        pad_loft(slot, (b & PAD_LOFT_BITS) != 0);
         input_gamepad(slot, 1, b, ax[0], ax[1], ax[2], ax[3]);
         return;
     }
@@ -71,6 +89,7 @@ static void pad_report(int slot) {
         if (order[i] != SDL_CONTROLLER_BUTTON_INVALID && SDL_GameControllerGetButton(gc, order[i])) b |= 1u << i;
     if (SDL_GameControllerGetAxis(gc, SDL_CONTROLLER_AXIS_TRIGGERLEFT) > 10000) b |= 1u << 6;
     if (SDL_GameControllerGetAxis(gc, SDL_CONTROLLER_AXIS_TRIGGERRIGHT) > 10000) b |= 1u << 7;
+    pad_loft(slot, (b & PAD_LOFT_BITS) != 0);
     input_gamepad(slot, 1, b, SDL_GameControllerGetAxis(gc, SDL_CONTROLLER_AXIS_LEFTX),
                   SDL_GameControllerGetAxis(gc, SDL_CONTROLLER_AXIS_LEFTY),
                   SDL_GameControllerGetAxis(gc, SDL_CONTROLLER_AXIS_RIGHTX),
@@ -121,6 +140,32 @@ Java_com_micky_games_CricketActivity_nativeKey(JNIEnv *env, jclass cls, jint usa
     input_key_hid((int)usage, down ? 1 : 0);
 }
 
+/* ---------------------------------------------------------------- touch as mouse
+
+   A finger on the surface itself acts as the mouse the menus expect (the overlay's own buttons are
+   consumed by Java and never reach here). Two rules the first version got wrong, both of which made
+   the front end activate widgets nobody touched:
+
+     - Only the FIRST finger drives the mouse. Every finger used to press and release the same
+       button and drag the cursor, so the other hand on the on-screen pad, or a thumb resting on the
+       glass, clicked whatever the cursor happened to be over.
+     - The click lands on LIFT, and only if the finger barely moved. Pressing on touch-down made it
+       impossible to aim the cursor -- it is relative, as DirectInput reports it -- without clicking
+       first: every attempt to move it was a press on the widget under the old position. A drag now
+       aims, a tap clicks. The press and release go out back to back; dinput.c holds a click for
+       MIN_HOLD so a frame cannot fall between them. */
+#define TAP_SLOP_PX 24                     /* total motion still counted as a tap, not a drag */
+static SDL_FingerID g_touch_id;
+static int g_touch_down, g_touch_moved;
+
+/* Back is trapped as a key (SDL_HINT_ANDROID_TRAP_BACK_BUTTON in window_create) and arrives as
+   SDL_SCANCODE_AC_BACK -- a browser key, not a PC scancode, so host/input.c's table had nothing to
+   map it onto and it did nothing at all. The game's menus go back on Escape, so that is what it
+   becomes; without it the overlay's ESC button is the only way out of a menu. */
+static int key_usage(SDL_Scancode sc) {
+    return sc == SDL_SCANCODE_AC_BACK ? 41 /* USB HID usage: Escape */ : (int)sc;
+}
+
 /* ---------------------------------------------------------------- window */
 
 static void read_drawable_size(void) {
@@ -132,6 +177,12 @@ static void read_drawable_size(void) {
 int window_create(const char *title) {
     SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
     SDL_SetHint(SDL_HINT_ANDROID_TRAP_BACK_BUTTON, "1");   /* Back reaches us as a key, not a finish() */
+    /* SDL presents Android's accelerometer as a joystick by default, and it enumerates first -- so
+       pad 0, the only pad the game is handed (dinput.c's RC_PADS defaults to 1), was the tilt
+       sensor. Two faults in one: a real Bluetooth pad opened into slot 1 where the game could never
+       see it, and gravity held the left stick deflected, which this pad type reports to the game as
+       a held direction for as long as the phone is in your hands. */
+    SDL_SetHint(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, "0");
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS | SDL_INIT_GAMECONTROLLER) != 0) {
         fprintf(stderr, "SDL_Init failed: %s\n", SDL_GetError());
         return 0;
@@ -172,15 +223,28 @@ void window_event_loop(void) {
         case SDL_QUIT:
             fprintf(stderr, "window closed\n");
             exit(0);
-        case SDL_KEYDOWN: if (!e.key.repeat) input_key_hid((int)e.key.keysym.scancode, 1); break;
-        case SDL_KEYUP: input_key_hid((int)e.key.keysym.scancode, 0); break;
-        /* A finger on the surface itself acts as the mouse the menus expect; the overlay buttons
-           come in through nativeKey() above and never reach here. */
-        case SDL_FINGERMOTION:
-            dinput_mouse_move((int)(e.tfinger.dx * g_window_w), (int)(e.tfinger.dy * g_window_h));
+        case SDL_KEYDOWN: if (!e.key.repeat) input_key_hid(key_usage(e.key.keysym.scancode), 1); break;
+        case SDL_KEYUP: input_key_hid(key_usage(e.key.keysym.scancode), 0); break;
+        case SDL_FINGERDOWN:
+            if (g_touch_down) break;                   /* a second finger is not a second mouse */
+            g_touch_id = e.tfinger.fingerId;
+            g_touch_down = 1;
+            g_touch_moved = 0;
             break;
-        case SDL_FINGERDOWN: case SDL_FINGERUP:
-            input_mouse_button(0, e.type == SDL_FINGERDOWN);
+        case SDL_FINGERMOTION: {
+            if (!g_touch_down || e.tfinger.fingerId != g_touch_id) break;
+            int dx = (int)(e.tfinger.dx * g_window_w), dy = (int)(e.tfinger.dy * g_window_h);
+            g_touch_moved += (dx < 0 ? -dx : dx) + (dy < 0 ? -dy : dy);
+            dinput_mouse_move(dx, dy);
+            break;
+        }
+        case SDL_FINGERUP:
+            if (!g_touch_down || e.tfinger.fingerId != g_touch_id) break;
+            g_touch_down = 0;
+            if (g_touch_moved <= TAP_SLOP_PX) {        /* a tap clicks; a drag only aimed */
+                input_mouse_button(0, 1);
+                input_mouse_button(0, 0);
+            }
             break;
         case SDL_JOYDEVICEADDED: pad_added(e.jdevice.which); break;
         case SDL_JOYDEVICEREMOVED: pad_removed(e.jdevice.which); break;

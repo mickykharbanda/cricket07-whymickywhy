@@ -35,8 +35,17 @@ for f in extra.get("functions", []):
 base["functions"].sort(key=lambda f: f["entry"])
 
 for j in extra.get("jumptables", []):
-    if not any(x["at"] == j["at"] for x in base["jumptables"]):
-        base["jumptables"].append(j)
+    existing = next((x for x in base["jumptables"] if x["at"] == j["at"]), None)
+    if existing is None:
+        base["jumptables"].append({k: v for k, v in j.items() if k != "why"})
+        continue
+    # An overlay entry EXTENDS a partial Ghidra table instead of being dropped. Ghidra sometimes
+    # recovers only some cases of a switch, and skipping the overlay on a matching address left the
+    # remaining cases dispatching to jump_indirect -> guest_trap, which aborts the process.
+    added = [t for t in j["targets"] if t not in existing["targets"]]
+    if added:
+        existing["targets"] = existing["targets"] + added
+        print(f"  extra-functions: jumptable 0x{j['at']:08x} extended by {len(added)} target(s)")
 
 json.dump(base, open(out_path, "w"))
 print(f"  extra-functions: {added} hand-recovered function(s) merged in")
