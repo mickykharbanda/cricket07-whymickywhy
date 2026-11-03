@@ -411,7 +411,9 @@ async function boot() {
   if (!navigator.storage?.getDirectory) { status('This browser has no Origin Private File System.'); return; }
   let onlineReady = false;
   const goOnline = () => {
-    if (window.C07_PUBLIC) { status("This public edition supports solo/local play."); return; }
+    // This used to refuse on the published site, which is why the room server could be live and
+    // working while nobody could reach it. The gate is only lifted for multiplayer: C07_PUBLIC
+    // still governs the hosted-files message and the host diagnostics further down.
     if (!onlineReady) { setupOnline(); onlineReady = true; }
     show('online');
     ($('np-code').value ? $('np-join') : $('np-name')).focus();
@@ -419,7 +421,8 @@ async function boot() {
   const ready = () => {
     show('home');
     readMarker().then(marker => { if (marker?.compact) $('save-status').textContent = 'Compact install: intro/tutorial movies omitted to save storage. Saved games are kept.'; });
-    if (!window.C07_PUBLIC && params.get('join')) goOnline();   // an invite link goes straight to joining
+    if (params.get('join')) goOnline();        // an invite link goes straight to joining
+    else if (params.has('online')) goOnline();  // and ?online opens the lobby, for the Online tile
     if (params.has('autoplay')) $('play').click();
   };
   $('play').onclick = () => run().catch(fail);
