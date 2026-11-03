@@ -58,7 +58,7 @@ async function existingSize(dir, relPath) {
 }
 
 // Download in a worker so writes land directly in the file instead of a temporary copy.
-function downloadFile(rel, size, onBytes) {
+function downloadFile(rel, size, onBytes, chunks) {
   return new Promise((resolve, reject) => {
     const worker = new Worker('install-worker.js');
     const finish = (error) => { worker.terminate(); error ? reject(error) : resolve(); };
@@ -68,7 +68,7 @@ function downloadFile(rel, size, onBytes) {
       else onBytes(data.bytes);
     };
     worker.onerror = (event) => finish(new Error(event.message || 'Game download worker failed.'));
-    worker.postMessage({ base: GAME_BASE, directory: OPFS_DIR, path: rel, size });
+    worker.postMessage({ base: GAME_BASE, directory: OPFS_DIR, path: rel, size, chunks });
   });
 }
 
@@ -96,9 +96,9 @@ async function syncFromServer(manifest, compact = false) {
     for (let attempt = 1; ; attempt++) {
       try {
         await downloadFile(file.path, file.size, (bytes) => {
-          status(`Installing game: ${mb(done + bytes)} / ${mb(total)} MB`);
+          status(`Downloading game files: ${mb(done + bytes)} / ${mb(total)} MB. Saved in this browser for next time.`);
           $('progress').value = (done + bytes) / total;
-        });
+        }, file.chunks);
         done += file.size;
         break;
       } catch (error) {
@@ -131,14 +131,14 @@ async function fetchManifest() {
 function wanted(rel) {
   const l = rel.toLowerCase();
   if (l.startsWith('data/') || l.startsWith('audio/')) return rel;
-  if (l === 'cricket07.cracked.exe' || l === 'crack/cricket07.exe') return EXE;
+  if (l === 'cricket07.exe' || l === 'cricket07.cracked.exe' || l === 'crack/cricket07.exe') return EXE;
   return null;
 }
 
 async function importFromPicker(fileList) {
   const list = [...fileList].map((f) => ({ f, dest: wanted(f.webkitRelativePath.split('/').slice(1).join('/')) }))
     .filter((e) => e.dest);
-  if (!list.some((e) => e.dest === EXE)) throw new Error('No game executable (Cricket07.cracked.exe or Crack/cricket07.exe) in that folder.');
+  if (!list.some((e) => e.dest === EXE)) throw new Error('No compatible game executable (Cricket07.exe) in that folder.');
   if (!list.some((e) => e.dest.toLowerCase() === 'data/data.gob')) throw new Error('No Data/data.gob in that folder.');
   const root = await navigator.storage.getDirectory();
   try { await root.removeEntry(OPFS_DIR, { recursive: true }); } catch {}
@@ -411,6 +411,9 @@ async function boot() {
   if (!navigator.storage?.getDirectory) { status('This browser has no Origin Private File System.'); return; }
   let onlineReady = false;
   const goOnline = () => {
+    // This used to refuse on the published site, which is why the room server could be live and
+    // working while nobody could reach it. The gate is only lifted for multiplayer: C07_PUBLIC
+    // still governs the hosted-files message and the host diagnostics further down.
     if (!onlineReady) { setupOnline(); onlineReady = true; }
     show('online');
     ($('np-code').value ? $('np-join') : $('np-name')).focus();
@@ -418,7 +421,8 @@ async function boot() {
   const ready = () => {
     show('home');
     readMarker().then(marker => { if (marker?.compact) $('save-status').textContent = 'Compact install: intro/tutorial movies omitted to save storage. Saved games are kept.'; });
-    if (params.get('join')) goOnline();   // an invite link goes straight to joining
+    if (params.get('join')) goOnline();        // an invite link goes straight to joining
+    else if (params.has('online')) goOnline();  // and ?online opens the lobby, for the Online tile
     if (params.has('autoplay')) $('play').click();
   };
   $('play').onclick = () => run().catch(fail);
@@ -437,6 +441,10 @@ async function boot() {
 
   const marker = await readMarker();
   const manifest = await fetchManifest();
+  if (window.C07_PUBLIC && !manifest && !marker) {
+    status('The hosted game files could not be reached. Check your connection and reload to try again.');
+    return;
+  }
   if (manifest && marker?.version !== manifest.version) {
     // first visit on this device (or the hosted files changed): download, resuming any partial copy
     try { await syncFromServer(manifest); }
@@ -675,5 +683,5 @@ function setupHostInfo() {
 
 setupFullscreen();
 setupKbdHelp();
-setupHostInfo();
+if (!window.C07_PUBLIC) setupHostInfo();
 boot();
