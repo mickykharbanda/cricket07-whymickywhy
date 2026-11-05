@@ -181,6 +181,12 @@ static int format_rank(WGPUTextureFormat f) {
 static WGPUTextureUsage g_surf_usage = WGPUTextureUsage_RenderAttachment | WGPUTextureUsage_CopyDst;
 static WGPUCompositeAlphaMode g_surf_alpha = WGPUCompositeAlphaMode_Opaque;
 static int g_surf_w, g_surf_h;   /* back buffer: the largest 4:3 area that fits the window */
+/* 1 = stretch that 4:3 picture across the whole window instead of letterboxing it. The game
+   is 4:3 and does not know about this, so the shapes come out wide -- which is the trade the
+   player is making when they switch it on. Written from the Android settings dialog (see
+   Java_com_micky_games_CricketActivity_nativeSetFill); begin_frame() picks the change up. */
+int g_fill_screen = 0;
+static int g_fill_applied = 0;
 static int g_win_w, g_win_h;     /* window (swap chain) size; the back buffer is centred in it */
 static WGPUTexture g_depth;
 static WGPUTextureView g_depth_view;
@@ -279,8 +285,11 @@ static void make_depth(void) {
 static void configure_surface(void) {
     g_win_w = g_window_w > 0 ? g_window_w : 1024;
     g_win_h = g_window_h > 0 ? g_window_h : 768;
-    /* the game is 4:3: render at the largest 4:3 size that fits, letterboxed (no stretching) */
-    if (g_win_w * 3 > g_win_h * 4) { g_surf_h = g_win_h; g_surf_w = g_win_h * 4 / 3; }
+    /* the game is 4:3: render at the largest 4:3 size that fits, letterboxed (no stretching) --
+       unless the player has asked for the picture to fill the window instead, shapes and all */
+    g_fill_applied = g_fill_screen;
+    if (g_fill_screen) { g_surf_w = g_win_w; g_surf_h = g_win_h; }
+    else if (g_win_w * 3 > g_win_h * 4) { g_surf_h = g_win_h; g_surf_w = g_win_h * 4 / 3; }
     else { g_surf_w = g_win_w; g_surf_h = g_win_w * 3 / 4; }
     WGPUSurfaceConfiguration sc = WGPU_SURFACE_CONFIGURATION_INIT;
     sc.device = g_dev;
@@ -748,7 +757,7 @@ static void submit(void) {
 
 static void begin_frame(void) {
     if (g_frame_open) return;
-    if (g_window_w != g_win_w || g_window_h != g_win_h) {
+    if (g_window_w != g_win_w || g_window_h != g_win_h || g_fill_applied != g_fill_screen) {
         end_pass();
         configure_surface();
         g_tgt_color = g_tgt_depth = NULL;
