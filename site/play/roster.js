@@ -24,8 +24,15 @@
   const stored = (() => { try { return localStorage.getItem('c07-roster'); } catch { return null; } })();
   // Anyone who had the pinned modern-2026 roster before this option existed gets the new one once.
   const seen = (() => { try { return localStorage.getItem('c07-roster-world-seen'); } catch { return null; } })();
-  select.value = (stored && (stored in PACKS || stored === 'original') && seen) ? stored : DEFAULT;
+  // A link or an app tile can name the roster (?roster=world-2026). The app passes its tile's pack,
+  // so its "Cricket 07" and "Cricket 07 · 2026" tiles open different games, and the picker is
+  // locked there because the tile already made the choice.
+  const asked = new URLSearchParams(location.search).get('roster');
+  const valid = id => id in PACKS || id === 'original';
+  select.value = valid(asked) ? asked : (stored && valid(stored) && seen) ? stored : DEFAULT;
   try { localStorage.setItem('c07-roster-world-seen', '1'); } catch {}
+  const pinned = valid(asked) && new URLSearchParams(location.search).has('mobile');
+  if (pinned) for (const card of cards) card.hidden = card.dataset.roster !== select.value;
 
   function describe() {
     const id = select.value;
@@ -35,7 +42,7 @@
   }
   for (const card of cards) {
     card.onclick = () => {
-      if (select.disabled) return;
+      if (select.disabled || pinned) return;
       select.value = card.dataset.roster;
       select.dispatchEvent(new Event('change'));
     };
