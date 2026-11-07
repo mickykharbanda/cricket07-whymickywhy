@@ -554,7 +554,8 @@ function setupOnline() {
     invite.search = `?join=${code}`;
     $('np-room').textContent = code;
     $('invite').textContent = invite.href;
-    const version = await buildVersion();
+    // The team pack is part of the version: the room will not start players on different rosters.
+    const version = `${await buildVersion()}|teams:${window.C07RosterId?.() || 'original'}`;
     let session = null;
     const left = new Set();
     const me = client = C07Netplay.connect({

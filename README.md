@@ -9,6 +9,7 @@ This extends [Dhaiwat Pandya's Cricket 07 browser port](https://github.com/Dhaiw
 - `site/`: responsive landing page and browser launcher. The public launcher downloads hosted game resources automatically into OPFS browser storage, using resumable, SHA-256 verified chunks.
 - `engine/`: the upstream translator, host, runtime and build tools, pinned by the included source snapshot.
 - `mods/modern-2026/`: eleven teams, 200 distinct player records, native-resource manifest, fan kit sources and official squad-reference snapshots.
+- `mods/world-2026/` (**NEW**): the 2026 Teams roster. Every nation's latest ODI/T20I squad, the ten IPL sides, World XI 2026 and the OG World, All-Time Test, ODI and T20 XIs. Built by `mod-tools/build_world_2026.py`; see its README.
 - `mod-tools/`: archive/texture helpers and roster builder. The builder reads `game/Data/data.gob` from your own copy. Python dependencies: Pillow (DDS encoding), CairoSVG and a working Cairo library.
 - `tools/`: publication packaging and local serving.
 - `content/`: copyable prompts and local-play instructions.
@@ -17,7 +18,7 @@ Original EA executables, Data/Audio archives, generated game C code and compiled
 
 ## Play
 
-Use a desktop/laptop with keyboard/controller and a WebGPU-capable browser. Game files download automatically on first launch (about 1.17 GB), resume after interruptions and remain cached in that browser. No folder picker is required. For the modern pack, find India ODI 2026 and the IPL teams in **Other**. OG India remains in **International**. Eleven A-team/invitational slots are repurposed in expanded mode; Original teams restores every secondary side too.
+Use a desktop/laptop with keyboard/controller and a WebGPU-capable browser. Game files download automatically on first launch (about 1.17 GB), resume after interruptions and remain cached in that browser. No folder picker is required. The launcher offers three rosters: **2026 Teams** (new, the default), **OG + IPL** and **Original**. In 2026 Teams the nations are in **International**, and the IPL sides and dream XIs are in **Other**. In OG + IPL, India ODI 2026 and the IPL teams are in **Other**. Eleven A-team/invitational slots are repurposed in expanded mode; Original teams restores every secondary side too.
 
 Native save files are retained locally with backup/restore controls. There is no instant save-state system or new save-anywhere feature. The public edition is solo/local play; upstream multiplayer requires deploying its own room service. Do not expose the local tunnel server or proxy someone else's assets or signaling endpoint as a substitute.
 

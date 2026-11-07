@@ -37,10 +37,21 @@ self.onmessage = async ({ data: { directory, manifest, enabled, base } }) => {
     validated = true;
     if (!enabled) restore();
     else {
-      const response = await fetch(base + manifest.file, { cache: 'no-store' });
-      if (!response.ok) throw new Error('Could not download the modern-team pack.');
-      const bytes = new Uint8Array(await response.arrayBuffer());
-      if (bytes.length !== manifest.size || await hash(bytes) !== manifest.sha256) throw new Error('Modern-team pack integrity check failed.');
+      // A large pack is published as parts (static hosts cap a file's size); each part is checked
+      // on its own, and the joined bytes against the pack's hash below.
+      const pieces = manifest.parts || [{ file: manifest.file, size: manifest.size }];
+      const bytes = new Uint8Array(manifest.size);
+      let filled = 0;
+      for (const piece of pieces) {
+        const response = await fetch(base + piece.file, { cache: 'no-store' });
+        if (!response.ok) throw new Error('Could not download the team pack.');
+        const chunk = new Uint8Array(await response.arrayBuffer());
+        if (chunk.length !== piece.size || filled + chunk.length > bytes.length || (piece.sha256 && await hash(chunk) !== piece.sha256))
+          throw new Error('Team pack integrity check failed.');
+        bytes.set(chunk, filled); filled += chunk.length;
+      }
+      if (filled !== bytes.length) throw new Error('Team pack integrity check failed.');
+      if (bytes.length !== manifest.size || await hash(bytes) !== manifest.sha256) throw new Error('Team pack integrity check failed.');
       write(bytes, manifest.originalSize);
       handle.truncate(manifest.originalSize + bytes.length);
       handle.flush();

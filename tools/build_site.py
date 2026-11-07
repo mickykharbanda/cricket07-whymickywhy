@@ -83,16 +83,20 @@ def main():
     for license_file in (ROOT / 'LICENSES').glob('*.txt'):
         shutil.copy2(license_file, DIST / 'assets/fonts' / license_file.name)
     game_manifest = stage_game_assets(args.game_dir)
-    target = DIST / 'play/mods/modern-2026'
-    target.mkdir(parents=True)
-    for name in ['manifest.json', 'modern-pack.bin']:
-        shutil.copy2(ROOT / 'mods/modern-2026' / name, target / name)
-    manifest = json.loads((target / 'manifest.json').read_text())
-    payload = (target / 'modern-pack.bin').read_bytes()
-    assert len(payload) == manifest['size'] and hashlib.sha256(payload).hexdigest() == manifest['sha256']
-    for resource in manifest['resources']:
-        body = payload[resource['offset']:resource['offset'] + resource['size']]
-        assert hashlib.sha256(body).hexdigest() == resource['sha256']
+    for pack, blob in [('modern-2026', 'modern-pack.bin'), ('world-2026', 'world-pack.bin')]:
+        target = DIST / 'play/mods' / pack
+        target.mkdir(parents=True)
+        manifest = json.loads((ROOT / 'mods' / pack / 'manifest.json').read_text())
+        # A pack with parts ships only its parts: no file over the host's 25 MiB limit.
+        names = [p['file'] for p in manifest['parts']] if manifest.get('parts') else [blob]
+        for name in ['manifest.json'] + names:
+            shutil.copy2(ROOT / 'mods' / pack / name, target / name)
+        payload = b''.join((target / name).read_bytes() for name in names)
+        assert manifest['file'] == blob
+        assert len(payload) == manifest['size'] and hashlib.sha256(payload).hexdigest() == manifest['sha256']
+        for resource in manifest['resources']:
+            body = payload[resource['offset']:resource['offset'] + resource['size']]
+            assert hashlib.sha256(body).hexdigest() == resource['sha256']
     downloads = DIST / 'downloads'
     downloads.mkdir()
     shutil.copy2(executable, downloads / 'Cricket07.exe')

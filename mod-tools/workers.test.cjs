@@ -130,6 +130,46 @@ test('modern pack rejects corrupt downloads and unknown resource pointers', asyn
   assert.deepEqual(runner.bytes(), unknown);
 });
 
+test('switching packs: the other pack refuses to restore, the installed one restores, then the new one applies', async () => {
+  // Two packs over the same index entries, with different sizes: the launcher's switch order.
+  const modernData = Uint8Array.from([1, 2, 3, 4, 5, 6]), modern = await expansionManifest(modernData);
+  const worldData = Uint8Array.from([9, 9, 8, 8, 7, 7, 6, 6, 5, 5]), world = await expansionManifest(worldData);
+  const apply = harness('modern-worker.js', expansionFixture(), { ok: true, arrayBuffer: async () => modernData.buffer });
+  await apply.send({ directory: 'test', manifest: modern, enabled: true, base: 'mods/' });
+  assert.equal(apply.messages.at(-1).done, true);
+  const wrong = harness('modern-worker.js', apply.bytes(), {});
+  await wrong.send({ directory: 'test', manifest: world, enabled: false, base: 'mods/' });
+  assert.match(wrong.messages.at(-1).error, /unrecognised|does not match/);
+  assert.deepEqual(wrong.bytes(), apply.bytes());
+  const restore = harness('modern-worker.js', wrong.bytes(), {});
+  await restore.send({ directory: 'test', manifest: modern, enabled: false, base: 'mods/' });
+  assert.deepEqual(restore.bytes(), expansionFixture());
+  const next = harness('modern-worker.js', restore.bytes(), { ok: true, arrayBuffer: async () => worldData.buffer });
+  await next.send({ directory: 'test', manifest: world, enabled: true, base: 'mods/' });
+  assert.equal(next.messages.at(-1).done, true);
+  assert.equal(next.bytes().length, 64 + worldData.length);
+  const back = harness('modern-worker.js', next.bytes(), {});
+  await back.send({ directory: 'test', manifest: world, enabled: false, base: 'mods/' });
+  assert.deepEqual(back.bytes(), expansionFixture());
+});
+
+test('a pack published as parts is joined, each part checked, and a bad part rejected', async () => {
+  const data = Uint8Array.from([1, 2, 3, 4, 5, 6]), manifest = await expansionManifest(data);
+  const sha = async bytes => Buffer.from(await webcrypto.subtle.digest('SHA-256', bytes)).toString('hex');
+  const a = data.slice(0, 4), b = data.slice(4);
+  manifest.parts = [{ file: 'p0.bin', size: 4, sha256: await sha(a) }, { file: 'p1.bin', size: 2, sha256: await sha(b) }];
+  const serve = (parts) => (url) => ({ ok: true, arrayBuffer: async () => parts[url.split('/').pop()].buffer });
+  const runner = harness('modern-worker.js', expansionFixture(), serve({ 'p0.bin': a, 'p1.bin': b }));
+  await runner.send({ directory: 'test', manifest, enabled: true, base: 'mods/' });
+  assert.equal(runner.messages.at(-1).done, true);
+  assert.deepEqual(runner.requests.map(r => r.url), ['mods/p0.bin', 'mods/p1.bin']);
+  assert.equal(runner.bytes().length, 70);
+  const bad = harness('modern-worker.js', expansionFixture(), serve({ 'p0.bin': a, 'p1.bin': Uint8Array.from([9, 9]) }));
+  await bad.send({ directory: 'test', manifest, enabled: true, base: 'mods/' });
+  assert.match(bad.messages.at(-1).error, /integrity/);
+  assert.deepEqual(bad.bytes(), expansionFixture());
+});
+
 function streamed(bytes, status = 206, range = 'bytes 2-3/4') {
   let done = false;
   return { ok: true, status, headers: { get: () => range }, body: { getReader: () => ({ read: async () => {

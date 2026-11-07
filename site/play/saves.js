@@ -1,8 +1,11 @@
 // Portable backups of native game saves. This does not snapshot a running match.
 (() => {
   const message = document.getElementById('save-status');
-  const saveKey = () => document.getElementById('roster-mode')?.value === 'modern-2026' ? 'c07-modern-save-directory' : 'c07-save-directory';
-  const current = () => localStorage.getItem(saveKey()) || (saveKey() === 'c07-modern-save-directory' ? 'userdata-modern-2026-v1' : 'userdata');
+  // Each roster keeps its own save folder: a season saved with one squad list cannot load with another.
+  const FOLDERS = { 'world-2026': ['c07-world-save-directory', 'userdata-world-2026-v1'], 'modern-2026': ['c07-modern-save-directory', 'userdata-modern-2026-v1'] };
+  const folder = () => FOLDERS[document.getElementById('roster-mode')?.value] || ['c07-save-directory', 'userdata'];
+  const saveKey = () => folder()[0];
+  const current = () => localStorage.getItem(saveKey()) || folder()[1];
   async function collect(dir, prefix = '') {
     const files = [];
     for await (const [name, handle] of dir.entries()) {
@@ -33,7 +36,7 @@
       buttons.forEach(button => button.disabled = false);
       document.getElementById('roster-mode').disabled = false;
       document.getElementById('play').disabled = false;
-      document.getElementById('go-online').disabled = document.getElementById('roster-mode')?.value === 'modern-2026';
+      document.getElementById('go-online').disabled = false;
     }
   }
   document.getElementById('save-export').onclick = () => exclusive(async () => {

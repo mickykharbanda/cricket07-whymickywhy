@@ -50,6 +50,19 @@
   p { margin: 8px 0; }
 
   /* home: the two big choices */
+  .rosters { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 10px; margin: 0 0 8px; }
+  @media (max-width: 620px) { .rosters { grid-template-columns: 1fr; } }
+  .roster { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 14px 14px 13px;
+    text-align: left; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); color: var(--fg);
+    font: inherit; cursor: pointer; transition: background .12s ease, border-color .12s ease; }
+  .roster:hover { background: var(--card-hi); }
+  .roster[aria-checked="true"] { border-color: var(--accent); background: rgba(52, 184, 102, .12); box-shadow: inset 0 0 0 1px var(--accent); }
+  .roster[aria-disabled="true"] { cursor: default; opacity: .7; }
+  .roster b { font-size: 16px; }
+  .roster span { color: var(--muted); font-size: 13px; line-height: 1.35; }
+  .roster .new-tag { position: absolute; top: -9px; right: 12px; padding: 2px 8px; border-radius: 999px; background: var(--ball);
+    color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .08em; }
+  .roster-status { margin: 0 0 20px; min-height: 18px; }
   .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 520px) { .choices { grid-template-columns: 1fr; } }
   .choice { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 20px 18px; text-align: left;
@@ -202,14 +215,27 @@
       <section id="view-home" class="view hidden">
         <div class="brand"><img src="cricket07-logo.png" width="520" height="306" alt="EA Sports Cricket 07"></div>
         <p class="tagline">Pick how you want to play.</p>
-        <div style="margin:12px 0">
-          <label for="roster-mode">Teams</label>
-          <select id="roster-mode" style="margin-left:8px;padding:8px">
-            <option value="modern-2026">OG + India 2026 + IPL teams</option>
-            <option value="original">Original teams</option>
+        <div class="rosters" role="radiogroup" aria-label="Teams">
+          <button type="button" class="roster" role="radio" data-roster="world-2026" aria-checked="true">
+            <span class="new-tag">NEW</span>
+            <b>2026 Teams</b>
+            <span>Every nation's latest ODI &amp; T20 squad, IPL, World XI and all-time XIs</span>
+          </button>
+          <button type="button" class="roster" role="radio" data-roster="modern-2026" aria-checked="false">
+            <b>OG + IPL</b>
+            <span>2006 nations with India 2026 and the ten IPL sides</span>
+          </button>
+          <button type="button" class="roster" role="radio" data-roster="original" aria-checked="false">
+            <b>Original</b>
+            <span>The 2006 game exactly as shipped</span>
+          </button>
+          <select id="roster-mode" hidden aria-hidden="true" tabindex="-1">
+            <option value="world-2026">2026 Teams</option>
+            <option value="modern-2026">OG + IPL</option>
+            <option value="original">Original</option>
           </select>
-          <p id="roster-status" class="small" role="status"></p>
         </div>
+        <p id="roster-status" class="small roster-status" role="status"></p>
         <div class="choices">
           <button id="play" class="choice">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
