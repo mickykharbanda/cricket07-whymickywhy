@@ -57,6 +57,63 @@ h1{font-size:36px;letter-spacing:-2px}
 @media(max-width:350px){
   .doodle{right:calc(50% - 104px)}
 }
+/* ---- Cricket, compacted ----
+ * The card had a prompt line, three buttons each carrying a caption, and a three-sentence
+ * footnote: most of the first screen spent explaining three links. The buttons say which machine
+ * they are for, which is the whole decision, so the captions and two of those sentences are gone
+ * and the caveats are one line under them. */
+.game-feature{padding:16px 15px}
+.game-feature h2{font-size:32px;letter-spacing:-1.2px}
+.game-feature .game-art{width:62px;height:62px}
+.game-feature .feature-copy p{font-size:10.5px}
+.game-actions.tri{grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.game-actions.tri a{flex-direction:row;align-items:center;justify-content:center;gap:6px;min-height:38px;padding:9px 6px;text-align:center;font:600 12px 'DM Sans',Arial,sans-serif}
+.game-actions.tri a.act-iphone{grid-column:auto;min-height:38px;padding:9px 6px;font-size:12px}
+.game-actions.tri a span{font-size:12px}
+.game-help{margin-top:11px!important;font-size:9.5px!important}
+.game-help button span+span{margin-left:5px}
+@media(max-width:540px){.game-feature h2{font-size:30px}.game-feature .game-art{width:58px;height:58px}}
+@media(max-width:380px){.game-actions.tri{gap:6px}.game-actions.tri a,.game-actions.tri a.act-iphone{font-size:11px;padding:9px 4px}}
+
+/* ---- the request board, on the homepage ----
+ * It was a link to a leaderboard. A leaderboard explains itself better than a sentence about one
+ * does, so the real top of the board is here, with a search box over the whole of it and one
+ * button into the full page. The only light card in the stack, because this one is read rather
+ * than looked at. Nothing here casts a star: a star belongs with the sheet that follows it, so a
+ * row hands its game over to /request/ and the star happens there. */
+.boardcard{display:block;margin-top:13px;padding:16px 15px 14px;background:#fbfaf5;border:2px solid var(--ink);border-radius:16px;box-shadow:0 6px 0 #dce1ce}
+.boardcard-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.boardcard-label{display:block;font-size:8px;letter-spacing:.12em;font-weight:600;color:var(--red);margin-bottom:6px}
+.boardcard h2{font:700 25px/1.05 var(--display);letter-spacing:-1px;margin:0;color:var(--ink)}
+.boardcard h2 span{color:var(--red)}
+.boardcard-open{flex:none;display:flex;align-items:center;gap:5px;padding:9px 12px;border-radius:9px;background:var(--ink);color:var(--paper);font-size:11px;font-weight:600;white-space:nowrap;transition:transform .15s}
+.boardcard-open:hover{transform:translateY(-2px)}
+.boardcard-open:active{transform:scale(.97)}
+.boardcard-find{display:flex;align-items:center;gap:8px;margin:13px 0 9px;padding:0 11px;border:1px solid var(--line);border-radius:9px;background:#fff}
+.boardcard-find:focus-within{border-color:var(--ink)}
+.boardcard-find svg{width:15px;height:15px;flex:none;fill:none;stroke:var(--muted);stroke-width:1.9;stroke-linecap:round}
+.boardcard-find input{flex:1;min-width:0;border:0;background:none;padding:11px 0;font:500 13px 'DM Sans',Arial,sans-serif;color:var(--ink);-webkit-appearance:none}
+.boardcard-find input:focus{outline:none}
+.boardcard-find input::-webkit-search-cancel-button{-webkit-appearance:none}
+.boardcard-rows{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.boardcard-rows li.skel{height:50px;border-radius:9px;background:#f1efe5;border:1px solid var(--line)}
+.boardcard-rows a{display:flex;align-items:center;gap:10px;padding:7px 9px;border-radius:9px;background:#fff;border:1px solid var(--line);transition:border-color .15s,transform .15s}
+.boardcard-rows a:hover{border-color:#a6b29b}
+.boardcard-rows a:active{transform:scale(.99)}
+.boardcard .rank{flex:none;width:14px;text-align:center;font:700 12px var(--display);color:var(--muted)}
+.boardcard .plate{flex:none;width:34px;height:34px;border-radius:7px;overflow:hidden;display:grid;place-items:center;background:var(--line)}
+.boardcard .plate img{width:100%;height:100%;object-fit:cover;display:block}
+.boardcard .plate .tile{width:100%;height:100%;display:grid;place-items:center;font:700 11px var(--display);letter-spacing:-.3px}
+.boardcard .who{flex:1;min-width:0}
+.boardcard .who b{display:block;font:600 13px/1.25 'DM Sans',Arial,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.boardcard .who small{display:block;font-size:9.5px;line-height:1.4;color:var(--muted)}
+.boardcard .chip{flex:none;display:flex;align-items:center;gap:4px;padding:5px 9px;border-radius:99px;background:#f1f0e6;font:700 11px 'DM Sans',Arial,sans-serif;color:var(--ink)}
+.boardcard .chip i{font-style:normal;color:#e0a52a}
+.boardcard .chip.playable{background:var(--yellow)}
+.boardcard-note{padding:8px 2px;font-size:11px;color:var(--muted)}
+.boardcard-miss{font-size:11px;line-height:1.5;color:var(--muted);margin:9px 2px 0}
+.boardcard-miss a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:380px){.boardcard{padding:14px 13px 12px}.boardcard h2{font-size:22px}.boardcard-open{padding:8px 10px;font-size:10px}.boardcard .who b{font-size:12.5px}}
 </style>
 </head>
 <body>
@@ -66,10 +123,15 @@ h1{font-size:36px;letter-spacing:-2px}
 <nav class="links" aria-label="Micky’s links">
 <section class="feature game-feature" aria-labelledby="game-title">
 <a class="game-lead" href="https://cricket07-whymickywhy.netlify.app/" aria-label="Open Cricket 07"><div class="feature-copy"><span class="label"><b style="background:#d86046;color:#fff;border-radius:99px;padding:1px 7px;margin-right:6px;letter-spacing:.08em">NEW</b>2026 TEAMS ARE IN</span><h2 id="game-title">Cricket <span>07</span></h2><p>Every 2026 nation. World XI. All-time XIs. All 10 IPL teams.</p></div><img class="game-art" src="/assets/match.webp" width="86" height="86" alt="India 2026 and CSK in Cricket 07"></a>
-<p class="game-prompt">Three ways to play. Pick the machine you’re on.</p>
-<div class="game-actions"><a class="act-mobile" href="https://games.mickykharbanda.com/mobile/#download"><b>Mobile <span aria-hidden="true">↓</span></b><small>Download the APK</small></a><a class="act-desktop" href="https://cricket07-whymickywhy.netlify.app/"><b>Desktop <span aria-hidden="true">↗</span></b><small>Play in your browser</small></a><a class="act-iphone" href="https://cricket07.dhaiwat.com/"><b>iPhone <span aria-hidden="true">↗</span></b><small>Dhaiwat’s browser build</small></a></div>
+<div class="game-actions tri"><a class="act-mobile" href="https://games.mickykharbanda.com/mobile/#download">Mobile <span aria-hidden="true">↓</span></a><a class="act-desktop" href="https://cricket07-whymickywhy.netlify.app/">Desktop <span aria-hidden="true">↗</span></a><a class="act-iphone" href="https://cricket07.dhaiwat.com/">iPhone <span aria-hidden="true">↗</span></a></div>
 <p id="game-copy-status" role="status" aria-live="polite"></p><input id="game-url" readonly value="https://cricket07-whymickywhy.netlify.app/" aria-label="Cricket 07 link to copy" hidden>
-<p class="game-help">The app is an early alpha for Android 8 or newer, 64-bit. The desktop build needs Chrome or Edge. On iPhone, Dhaiwat’s build plays in Safari — his site, not mine. <button id="copy-game" aria-label="Copy Cricket 07 link"><span id="copy-label">Copy link</span><span id="copy-icon" aria-hidden="true">⧉</span></button></p>
+<p class="game-help">Android 8+ alpha &middot; Chrome or Edge on desktop &middot; the iPhone build is Dhaiwat’s. <button id="copy-game" aria-label="Copy Cricket 07 link"><span id="copy-label">Copy link</span><span id="copy-icon" aria-hidden="true">⧉</span></button></p>
+</section>
+<section class="boardcard" id="board" aria-labelledby="board-title">
+<div class="boardcard-top"><div><span class="boardcard-label" id="board-count">★ THE REQUEST BOARD</span><h2 id="board-title">Vote for <span>what’s next.</span></h2></div><a class="boardcard-open" id="board-open" href="/request/">Open full <span aria-hidden="true">↗</span></a></div>
+<div class="boardcard-find"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg><input id="board-q" type="search" placeholder="Search the board" autocomplete="off" enterkeyhint="search" aria-label="Search the request board"></div>
+<ol class="boardcard-rows" id="board-rows" aria-live="polite"></ol>
+<p class="boardcard-miss" id="board-miss" hidden>Nothing on the board matches that — <a id="board-add" href="/request/">put it up yourself ↗</a></p>
 </section>
 <section class="feature game-feature arcade-feature" aria-labelledby="arcade-title">
 <a class="game-lead" href="/arcade/" aria-label="Play the free games"><div class="feature-copy"><span class="label">FOURTEEN GAMES &middot; NOTHING TO PAY</span><h2 id="arcade-title">All free<span> games</span></h2><p>Tekken, Cricket 07, Mario, Contra, Mustafa and nine more.</p></div><img class="game-art" src="/home/covers/mame-dinou.webp" width="86" height="86" alt="Mustafa, the Cadillacs and Dinosaurs arcade game"></a>
@@ -107,6 +169,186 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
     label.textContent='Select link';icon.textContent='↓';status.textContent='Press and hold the link below to copy it.';fallback.hidden=false;fallback.focus();fallback.select();
   }finally{button.disabled=false;}
 });
+/* ---- the request board, previewed -------------------------------------------------------
+ * Reads the same public endpoint the board page does, but WITHOUT a voter id -- that is the
+ * impersonal shape of the request, the one allowed to sit in a browser cache for a minute, and
+ * this is the busiest page on the site. The card is built to stand without it: if the board never
+ * arrives the heading, the search box and the button into the full page are all still there.
+ */
+(function () {
+  var rowsEl = document.getElementById('board-rows');
+  if (!rowsEl) return;
+  var qEl = document.getElementById('board-q'), missEl = document.getElementById('board-miss'),
+      countEl = document.getElementById('board-count'), openEl = document.getElementById('board-open'),
+      addEl = document.getElementById('board-add');
+  var PREVIEW = 5, HITS = 6, board = null;
+  var PALETTE = ['#3f7d55','#8a5c3b','#6f4e7c','#d86046','#679468','#d4ae49','#3c6e8f','#9c5b74'];
+  var BOARD_URL = '/request/';
+
+  var flat = function (t) {
+    return String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  };
+  // On the shelf: playable now, and out of the race. 'beta' is playable too -- rough, and the row
+  // says so. 'building' is not, and stays in the race.
+  var playable = function (r) { return r.status === 'live' || r.status === 'beta'; };
+  var at = function (title) { return BOARD_URL + '?q=' + encodeURIComponent(title); };
+
+  function colourFor(title) {
+    var h = 0;
+    for (var i = 0; i < title.length; i++) h = (h * 31 + title.charCodeAt(i)) >>> 0;
+    return PALETTE[h % PALETTE.length];
+  }
+  function inkOn(hex) {
+    var n = parseInt(hex.slice(1), 16);
+    return (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255 > 0.52
+      ? '#10231c' : '#f5f2e8';
+  }
+  function tile(title) {
+    // The FIRST LETTER of each word, not the first character: "Urban Chaos (1999)" wore "UC(",
+    // because a bracket is a character and the word it opens has a digit in it.
+    var letters = (title.match(/[a-z0-9]+/gi) || []).map(function (w) { return w[0]; })
+                    .join('').toUpperCase().slice(0, 3)
+               || title.slice(0, 2).toUpperCase();
+    var el = document.createElement('span');
+    el.className = 'tile';
+    var colour = colourFor(title);
+    el.style.background = colour;
+    el.style.color = inkOn(colour);
+    el.textContent = letters;
+    return el;
+  }
+
+  /** Five placeholders, the same height as the rows that replace them, so the card does not jump
+   *  the page around when the board lands. */
+  function skeleton() {
+    rowsEl.replaceChildren();
+    for (var i = 0; i < PREVIEW; i++) {
+      var li = document.createElement('li');
+      li.className = 'skel';
+      rowsEl.append(li);
+    }
+  }
+
+  function note(message) {
+    rowsEl.replaceChildren();
+    var li = document.createElement('li');
+    li.className = 'boardcard-note';
+    li.textContent = message;
+    rowsEl.append(li);
+  }
+
+  function row(r, rank) {
+    var built = playable(r), go = built && r.url;
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.href = go ? r.url : at(r.title);
+    if (rank) {
+      var n = document.createElement('b');
+      n.className = 'rank';
+      n.textContent = rank;
+      a.append(n);
+    }
+    var plate = document.createElement('span');
+    plate.className = 'plate';
+    if (r.cover_url) {
+      // Somebody else's image on somebody else's server: asked for lazily, without a referrer,
+      // and with the lettered sleeve ready the moment it does not arrive.
+      var img = document.createElement('img');
+      img.src = r.cover_url;
+      img.alt = '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.referrerPolicy = 'no-referrer';
+      img.onerror = function () { img.replaceWith(tile(r.title)); };
+      plate.append(img);
+    } else {
+      plate.append(tile(r.title));
+    }
+    a.append(plate);
+    var who = document.createElement('span');
+    who.className = 'who';
+    var name = document.createElement('b');
+    name.textContent = r.title;
+    var under = document.createElement('small');
+    under.textContent = built
+      ? (r.status === 'beta' ? 'In beta \u00b7 playable now' : 'Playable now')
+      : (r.system || 'On the board');
+    who.append(name, under);
+    a.append(who);
+    var chip = document.createElement('span');
+    chip.className = 'chip' + (built ? ' playable' : '');
+    if (go) {
+      chip.textContent = 'Play \u2197';
+    } else if (built) {
+      chip.textContent = 'Playable';
+    } else {
+      var star = document.createElement('i');
+      star.textContent = '\u2605';
+      chip.append(star, document.createTextNode(String(r.votes || 0)));
+    }
+    a.append(chip);
+    li.append(a);
+    return li;
+  }
+
+  function draw() {
+    if (!board) return;
+    var typed = qEl.value.trim(), q = flat(typed);
+    var racing = board.filter(function (r) { return !playable(r); });
+    var hit = function (r) {
+      return flat(r.title).indexOf(q) >= 0 || flat(r.system).indexOf(q) >= 0;
+    };
+    // Unsearched this is the race, which is what the board is for. Searched it covers the shelf as
+    // well, PLAYABLE FIRST: the board sorts built games to the bottom, so a search for "cricket"
+    // filled all six rows with games nobody can play yet and left Cricket 07 -- playable, one card
+    // up this very page -- off the list entirely. Whatever else somebody wanted to hear, "you can
+    // play this right now" is the answer to their search.
+    var hits = q ? board.filter(hit) : [];
+    var shown = q
+      ? hits.filter(playable).concat(hits.filter(function (r) { return !playable(r); })).slice(0, HITS)
+      : racing.slice(0, PREVIEW);
+
+    // Both links carry the search, so "open full" continues what was typed here rather than
+    // dropping it at the door.
+    openEl.href = addEl.href = q ? at(typed) : BOARD_URL;
+
+    if (!shown.length) {
+      rowsEl.replaceChildren();
+      if (!q) note('Nothing on the board yet.');
+    } else {
+      rowsEl.replaceChildren.apply(rowsEl, shown.map(function (r, i) {
+        return row(r, q ? 0 : i + 1);
+      }));
+    }
+    missEl.hidden = !(q && !shown.length);
+    countEl.textContent = q
+      ? (hits.length === 1 ? '1 MATCH' : hits.length + ' MATCHES')
+      : '\u2605 THE REQUEST BOARD \u00b7 ' + racing.length + ' WANTED';
+  }
+
+  qEl.addEventListener('input', draw);
+  // enterkeyhint says "search", so Enter has to do something: it opens the full board on the same
+  // search rather than submitting nothing.
+  qEl.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    e.preventDefault();
+    location.href = qEl.value.trim() ? at(qEl.value.trim()) : BOARD_URL;
+  });
+
+  skeleton();
+  fetch('/api/requests?range=all')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.ok || !d.requests) throw new Error('no board');
+      board = d.requests;
+      draw();
+    })
+    .catch(function () {
+      board = null;
+      note('Could not reach the board \u2014 open it on its own page.');
+    });
+})();
 document.getElementById('share').addEventListener('click',async()=>{if(navigator.share){try{await navigator.share({title:'Micky — All my links',url:bioUrl});return;}catch(error){if(error.name==='AbortError')return;}}await copyLink(bioUrl);});
 </script>
 <!-- Cloudflare Web Analytics: public bio site token. -->
