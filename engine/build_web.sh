@@ -28,7 +28,7 @@ for o in "$B"/obj/*.o; do [ -f "$OUT/$(basename "$o" .o).c" ] || rm -f "$o" "${o
 emcc $CFLAGS -Iruntime -c runtime/runtime.c -o "$B/runtime.o"
 emcc $CFLAGS -Iruntime -c runtime/interp.c -o "$B/interp.o"
 for f in host/*.c; do
-    case "$(basename "$f")" in window.c|watch.c) continue ;; esac   # SDL window / signals: native only
+    case "$(basename "$f")" in window.c|watch.c|main_android.c|window_android.c) continue ;; esac   # SDL window / signals / Android: native only
     emcc $CFLAGS $PFLAG --use-port=emdawnwebgpu -Iruntime -Ihost -c "$f" -o "$B/host/$(basename "$f" .c).o"
 done
 emcc $CFLAGS $PFLAG -DRC_NODE_BUILD -Iruntime -Ihost -c host/main.c -o "$B/main_node.o"
