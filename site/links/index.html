@@ -110,10 +110,25 @@ h1{font-size:36px;letter-spacing:-2px}
 .boardcard .chip{flex:none;display:flex;align-items:center;gap:4px;padding:5px 9px;border-radius:99px;background:#f1f0e6;font:700 11px 'DM Sans',Arial,sans-serif;color:var(--ink)}
 .boardcard .chip i{font-style:normal;color:#e0a52a}
 .boardcard .chip.playable{background:var(--yellow)}
+.boardcard .chip.frozen{background:#ece9dd;color:var(--muted)}
+.boardcard-rows li.frozen a{background:#f6f4ec}
+.boardcard-rows li.frozen .plate{filter:grayscale(1);opacity:.75}
+.boardcard-rows li.frozen .who b{color:var(--muted);font-weight:500}
 .boardcard-note{padding:8px 2px;font-size:11px;color:var(--muted)}
 .boardcard-miss{font-size:11px;line-height:1.5;color:var(--muted);margin:9px 2px 0}
 .boardcard-miss a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:380px){.boardcard{padding:14px 13px 12px}.boardcard h2{font-size:22px}.boardcard-open{padding:8px 10px;font-size:10px}.boardcard .who b{font-size:12.5px}}
+
+/* ---- the second flash, beside the first ----
+ * The card announced one new thing with a red pill. The build now fills the screen on every
+ * device, iPhone included, and that is the reason the iPhone button below points here instead of
+ * at somebody else's hosted copy -- so it gets its own pill next to that one, in the card's
+ * yellow rather than the red, so the row reads as two facts and not one sentence. The pills are
+ * a class now rather than a style attribute, so both are described in one place. The row wraps
+ * instead of growing the card when a narrow phone cannot hold both. */
+.game-feature .label{display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.game-feature .label .flag{margin:0;padding:1px 7px;border-radius:99px;letter-spacing:.08em;background:#d86046;color:#fff}
+.game-feature .label .flag-fill{background:var(--yellow);color:var(--ink)}
 </style>
 </head>
 <body>
@@ -122,10 +137,10 @@ h1{font-size:36px;letter-spacing:-2px}
 <header class="identity"><img class="portrait" src="/assets/karan-singh.jpg" width="106" height="106" alt="Karan Singh, also known as Micky"><span class="doodle">why, hello.</span><p class="hello">KARAN AT WORK. MICKY ON THE INTERNET.</p><h1>Hi, I’m Micky<span>.</span></h1><p class="name">Karan Singh · Co-founder, Clearlyy</p><p class="intro">AI, creative experiments & things worth making.<br>A few of them live here. ↓</p></header>
 <nav class="links" aria-label="Micky’s links">
 <section class="feature game-feature" aria-labelledby="game-title">
-<a class="game-lead" href="https://cricket07-whymickywhy.netlify.app/" aria-label="Open Cricket 07"><div class="feature-copy"><span class="label"><b style="background:#d86046;color:#fff;border-radius:99px;padding:1px 7px;margin-right:6px;letter-spacing:.08em">NEW</b>2026 TEAMS ARE IN</span><h2 id="game-title">Cricket <span>07</span></h2><p>Every 2026 nation. World XI. All-time XIs. All 10 IPL teams.</p></div><img class="game-art" src="/assets/match.webp" width="86" height="86" alt="India 2026 and CSK in Cricket 07"></a>
-<div class="game-actions tri"><a class="act-mobile" href="https://games.mickykharbanda.com/mobile/#download">Mobile <span aria-hidden="true">↓</span></a><a class="act-desktop" href="https://cricket07-whymickywhy.netlify.app/">Desktop <span aria-hidden="true">↗</span></a><a class="act-iphone" href="https://cricket07.dhaiwat.com/">iPhone <span aria-hidden="true">↗</span></a></div>
+<a class="game-lead" href="https://cricket07-whymickywhy.netlify.app/" aria-label="Open Cricket 07"><div class="feature-copy"><span class="label"><b class="flag">NEW</b>2026 TEAMS ARE IN<b class="flag flag-fill">FULL SCREEN</b></span><h2 id="game-title">Cricket <span>07</span></h2><p>Every 2026 nation. World XI. All-time XIs. All 10 IPL teams.</p></div><img class="game-art" src="/assets/match.webp" width="86" height="86" alt="India 2026 and CSK in Cricket 07"></a>
+<div class="game-actions tri"><a class="act-mobile" href="https://games.mickykharbanda.com/mobile/#download">Mobile <span aria-hidden="true">↓</span></a><a class="act-desktop" href="https://cricket07-whymickywhy.netlify.app/">Desktop <span aria-hidden="true">↗</span></a><a class="act-iphone" href="https://cricket07-whymickywhy.netlify.app/play/">iPhone <span aria-hidden="true">↗</span></a></div>
 <p id="game-copy-status" role="status" aria-live="polite"></p><input id="game-url" readonly value="https://cricket07-whymickywhy.netlify.app/" aria-label="Cricket 07 link to copy" hidden>
-<p class="game-help">Android 8+ alpha &middot; Chrome or Edge on desktop &middot; the iPhone build is Dhaiwat’s. <button id="copy-game" aria-label="Copy Cricket 07 link"><span id="copy-label">Copy link</span><span id="copy-icon" aria-hidden="true">⧉</span></button></p>
+<p class="game-help">Android 8+ alpha &middot; Chrome or Edge on desktop &middot; iPhone, with the 2026 squads: iOS 26, open in Safari, then Add to Home Screen. <button id="copy-game" aria-label="Copy Cricket 07 link"><span id="copy-label">Copy link</span><span id="copy-icon" aria-hidden="true">⧉</span></button></p>
 </section>
 <section class="boardcard" id="board" aria-labelledby="board-title">
 <div class="boardcard-top"><div><span class="boardcard-label" id="board-count">★ THE REQUEST BOARD</span><h2 id="board-title">Vote for <span>what’s next.</span></h2></div><a class="boardcard-open" id="board-open" href="/request/">Open full <span aria-hidden="true">↗</span></a></div>
@@ -192,6 +207,10 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
   // On the shelf: playable now, and out of the race. 'beta' is playable too -- rough, and the row
   // says so. 'building' is not, and stays in the race.
   var playable = function (r) { return r.status === 'live' || r.status === 'beta'; };
+  // Out of reach -- a current console title no browser will ever run. Out of the race, so it is
+  // never in the top five; still findable, because somebody searching "GTA5" deserves the answer
+  // rather than silence.
+  var cold = function (r) { return r.status === 'toobig'; };
   var at = function (title) { return BOARD_URL + '?q=' + encodeURIComponent(title); };
 
   function colourFor(title) {
@@ -239,8 +258,9 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
   }
 
   function row(r, rank) {
-    var built = playable(r), go = built && r.url;
+    var built = playable(r), frozen = cold(r), go = built && r.url;
     var li = document.createElement('li');
+    if (frozen) li.className = 'frozen';
     var a = document.createElement('a');
     a.href = go ? r.url : at(r.title);
     if (rank) {
@@ -273,15 +293,18 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
     var under = document.createElement('small');
     under.textContent = built
       ? (r.status === 'beta' ? 'In beta \u00b7 playable now' : 'Playable now')
+      : frozen ? 'Not possible in a browser'
       : (r.system || 'On the board');
     who.append(name, under);
     a.append(who);
     var chip = document.createElement('span');
-    chip.className = 'chip' + (built ? ' playable' : '');
+    chip.className = 'chip' + (built ? ' playable' : frozen ? ' frozen' : '');
     if (go) {
       chip.textContent = 'Play \u2197';
     } else if (built) {
       chip.textContent = 'Playable';
+    } else if (frozen) {
+      chip.textContent = 'Too big';
     } else {
       var star = document.createElement('i');
       star.textContent = '\u2605';
@@ -295,7 +318,7 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
   function draw() {
     if (!board) return;
     var typed = qEl.value.trim(), q = flat(typed);
-    var racing = board.filter(function (r) { return !playable(r); });
+    var racing = board.filter(function (r) { return !playable(r) && !cold(r); });
     var hit = function (r) {
       return flat(r.title).indexOf(q) >= 0 || flat(r.system).indexOf(q) >= 0;
     };
@@ -306,7 +329,10 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
     // play this right now" is the answer to their search.
     var hits = q ? board.filter(hit) : [];
     var shown = q
-      ? hits.filter(playable).concat(hits.filter(function (r) { return !playable(r); })).slice(0, HITS)
+      ? hits.filter(playable)
+            .concat(hits.filter(function (r) { return !playable(r) && !cold(r); }))
+            .concat(hits.filter(cold))
+            .slice(0, HITS)
       : racing.slice(0, PREVIEW);
 
     // Both links carry the search, so "open full" continues what was typed here rather than
