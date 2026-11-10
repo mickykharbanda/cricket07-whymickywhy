@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the public site, verified game downloads, and separate source/runtime kits."""
 import argparse
+import subprocess
 import hashlib
 import json
 from pathlib import Path
@@ -43,6 +44,9 @@ def stage_game_assets(directory):
     return manifest
 
 def source_files():
+    # Only files tracked in git: build output (engine/build*, out_all/, work/, third_party/, local backups) is
+    # gitignored or untracked, and none of it -- compiled game code included -- belongs in the source ZIP.
+    tracked = set(subprocess.run(['git', 'ls-files', '-z'], cwd=ROOT, check=True, capture_output=True).stdout.decode().split('\0'))
     for name in SOURCE_PATHS:
         path = ROOT / name
         candidates = sorted(path.rglob('*')) if path.is_dir() else [path]
@@ -50,6 +54,8 @@ def source_files():
             if not file.is_file():
                 continue
             rel = file.relative_to(ROOT)
+            if rel.as_posix() not in tracked:
+                continue
             if any(part in EXCLUDED_NAMES for part in rel.parts) or any(part.startswith('.env') for part in rel.parts):
                 continue
             if file.suffix.lower() in FORBIDDEN_SUFFIXES or rel.parts[:3] == ('site', 'play', 'build'):
