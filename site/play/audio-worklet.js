@@ -1,6 +1,6 @@
 // Plays the game's mixed audio: a ring of stereo float frames in the module's shared memory
-// (see c07_audio_ring in host/dsound.c: struct { u32 w, r, rate, frames; f32 data[frames * 2] }).
-class C07Ring extends AudioWorkletProcessor {
+// (see rc_audio_ring in host/dsound.c: struct { u32 w, r, rate, frames; f32 data[frames * 2] }).
+class RcRing extends AudioWorkletProcessor {
   constructor() {
     super();
     this.memory = null;
@@ -26,4 +26,4 @@ class C07Ring extends AudioWorkletProcessor {
     return true;
   }
 }
-registerProcessor('c07-ring', C07Ring);
+registerProcessor('rc-ring', RcRing);

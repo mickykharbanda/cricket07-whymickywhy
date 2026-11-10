@@ -58,7 +58,7 @@ def source_files():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--runtime', required=True, type=Path, help='Directory containing your compiled cricket07.js and cricket07.wasm')
+    parser.add_argument('--runtime', required=True, type=Path, help='Directory containing your compiled recomp.js and recomp.wasm (engine/build_web.sh: engine/build_web/www)')
     parser.add_argument('--game-exe', required=True, type=Path, help='The explicitly supplied original Cricket 07 executable for this release')
     parser.add_argument('--game-dir', required=True, type=Path, help='The explicitly supplied game folder and its file manifest for automatic browser downloads')
     args = parser.parse_args()
@@ -66,7 +66,7 @@ def main():
     if not executable.is_file() or hashlib.sha256(executable.read_bytes()).hexdigest() != GAME_EXE_SHA256:
         parser.error('The EXE does not match the explicitly supplied Cricket 07 build. No executable will be published.')
     runtime = args.runtime.resolve()
-    for name in ['cricket07.js', 'cricket07.wasm']:
+    for name in ['recomp.js', 'recomp.wasm']:
         if not (runtime / name).is_file():
             parser.error(f'Missing compiled runtime: {runtime / name}')
     if DIST.exists():
@@ -78,8 +78,8 @@ def main():
     shutil.copytree(ROOT / 'site', DIST, dirs_exist_ok=True, ignore=shutil.ignore_patterns('.DS_Store', '__pycache__', 'build'))
     build = DIST / 'play/build'
     build.mkdir(parents=True)
-    for name in ['cricket07.js', 'cricket07.wasm']:
-        shutil.copy2(runtime / name, build / name)
+    for file in sorted(runtime.glob('recomp.*')):   # recomp.js, recomp.wasm (and a worker file, if the build has one)
+        shutil.copy2(file, build / file.name)
     for license_file in (ROOT / 'LICENSES').glob('*.txt'):
         shutil.copy2(license_file, DIST / 'assets/fonts' / license_file.name)
     game_manifest = stage_game_assets(args.game_dir)

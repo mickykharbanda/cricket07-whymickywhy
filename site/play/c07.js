@@ -1,5 +1,5 @@
 // Cricket 07 in the browser: gets the game files into OPFS (downloaded from next to the page on first
-// visit, or imported from a local folder), starts the recompiled game (build/cricket07.js), replays its
+// visit, or imported from a local folder), starts the recompiled game (build/recomp.js), replays its
 // frames with WebGPU and feeds it input and audio.
 //
 // Game files: if game/manifest.json exists next to the page (see make_dist.sh), the files it lists are
@@ -7,6 +7,8 @@
 // Without a manifest the player picks their game folder instead.
 //
 // URL options: ?mute (no audio) ?fps (frame rate in the console) ?log (host log) ?autoplay
+//              ?4x3 (the game's own 4:3 picture; by default it fills a wide screen, host/widescreen.c)
+//              ?touch=1 / ?touch=0 (force the on-screen controls on or off)
 //              ?game=<url> (where manifest.json and the files live; default "game/") ?join=<room code>
 //
 // Online play (netplay.js, host/netplay.c): players meet in a room on the Worker; when the host starts,
@@ -20,6 +22,7 @@ const OPFS_DIR = 'c07game';
 const EXE = 'Cricket07.cracked.exe';
 const MARKER = '.installed.json';   // { version } once every file is complete
 const GAME_BASE = new URL(params.get('game') || 'game/', location.href).href.replace(/\/?$/, '/');
+const TOUCH = document.documentElement.classList.contains('touch');   // on-screen controls (index.html decides)
 const status = (t) => { $('status').textContent = t; };
 // the launcher's screens (index.html): loading, home, online, lobby
 const show = (view) => { for (const v of document.querySelectorAll('#panel .view')) v.classList.toggle('hidden', v.id !== 'view-' + view); };
@@ -192,37 +195,81 @@ let netKeyPressed = 0;   // keys pressed since the last poll, so a tap shorter t
 function hookInput(M, net) {
   const canvas = $('canvas');
   if (net) {
-    const key = (down) => (e) => {
-      const bit = NET_KEYS[e.code];
-      if (bit === undefined) return;
-      e.preventDefault();
+    const press = (code, down) => {
+      const bit = NET_KEYS[code];
+      if (bit === undefined) return false;
       if (down) { netKeyBits |= 1 << bit; netKeyPressed |= 1 << bit; } else netKeyBits &= ~(1 << bit);
+      return true;
     };
+    const key = (down) => (e) => { if (press(e.code, down)) e.preventDefault(); };
     window.addEventListener('keydown', key(true));
     window.addEventListener('keyup', key(false));
     window.addEventListener('blur', () => { netKeyBits = 0; });
     canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+    if (TOUCH) C07Touch.setup(press);
     return;
   }
-  const key = (down) => (e) => {
-    const u = HID[e.code];
-    if (u === undefined || e.repeat) return;
-    if (!(e.metaKey && !down)) e.preventDefault();
+  const press = (code, down) => {
+    const u = HID[code];
+    if (u === undefined) return false;
     M._input_key_hid(u, down ? 1 : 0);
+    return true;
   };
+  const key = (down) => (e) => {
+    if (HID[e.code] === undefined || e.repeat) return;
+    if (!(e.metaKey && !down)) e.preventDefault();
+    press(e.code, down);
+  };
+  if (TOUCH) C07Touch.setup(press);   // our on-screen controls (touch.js), the same layout as the Android app
   window.addEventListener('keydown', key(true));
   window.addEventListener('keyup', key(false));
   // The game draws its own cursor and reads relative motion. Lock the pointer when the browser allows
   // it (then the system cursor can't leave the game); without a lock, motion over the canvas still works.
+  // Touch on the game's screen (not on a control: touch.js stops those): a tap clicks where the finger is and a
+  // drag drags the cursor (host/input.c: input_tap, since the game's cursor only moves by relative motion). The
+  // browser's mouse events that follow a touch are ignored, as their motion is in screen points.
+  let tapId = null, tapLast = null, touchAt = -1e9;
+  const gameArea = () => {   // the game's 640x480 screen inside the canvas (widescreen: full height, centred)
+    const r = canvas.getBoundingClientRect();
+    const h = r.width * 3 > r.height * 4 ? r.height : r.width * 3 / 4, w = h * 4 / 3;
+    return { x: r.left + (r.width - w) / 2, y: r.top + (r.height - h) / 2, scale: 480 / h };
+  };
+  canvas.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse') return;
+    e.preventDefault();
+    touchAt = e.timeStamp;
+    tapId = e.pointerId;
+    try { canvas.setPointerCapture(e.pointerId); } catch { /* the pointer is already gone */ }
+    const a = gameArea();
+    tapLast = { x: e.clientX, y: e.clientY, fx: 0, fy: 0 };
+    M._input_tap(Math.max(0, Math.min(639, Math.round((e.clientX - a.x) * a.scale))),
+      Math.max(0, Math.min(479, Math.round((e.clientY - a.y) * a.scale))));
+  });
+  canvas.addEventListener('pointermove', (e) => {
+    if (e.pointerId !== tapId) return;
+    const sc = gameArea().scale;
+    tapLast.fx += (e.clientX - tapLast.x) * sc; tapLast.fy += (e.clientY - tapLast.y) * sc;
+    tapLast.x = e.clientX; tapLast.y = e.clientY;
+    const dx = Math.trunc(tapLast.fx), dy = Math.trunc(tapLast.fy);
+    tapLast.fx -= dx; tapLast.fy -= dy;
+    if (dx || dy) M._input_tap_move(dx, dy);
+  });
+  for (const t of ['pointerup', 'pointercancel'])
+    canvas.addEventListener(t, (e) => {
+      if (e.pointerType !== 'mouse') touchAt = e.timeStamp;
+      if (e.pointerId === tapId) { tapId = null; M._input_tap_release(); }
+    });
+  const fromTouch = (e) => e.timeStamp - touchAt < 1000 || e.sourceCapabilities?.firesTouchEvents;
   canvas.addEventListener('mousedown', (e) => {
+    if (fromTouch(e)) return;
     if (document.pointerLockElement !== canvas) {
       const p = canvas.requestPointerLock?.();
       if (p && p.catch) p.catch(() => {});
     }
     M._input_mouse_button([0, 2, 1][e.button] ?? 0, 1);
   });
-  window.addEventListener('mouseup', (e) => M._input_mouse_button([0, 2, 1][e.button] ?? 0, 0));
-  canvas.addEventListener('mousemove', (e) => M._input_mouse_move(e.movementX, e.movementY));
+  window.addEventListener('mouseup', (e) => { if (!fromTouch(e)) M._input_mouse_button([0, 2, 1][e.button] ?? 0, 0); });
+  canvas.addEventListener('mousemove', (e) => { if (!fromTouch(e)) M._input_mouse_move(e.movementX, e.movementY); });
   canvas.addEventListener('contextmenu', (e) => e.preventDefault());
 }
 
@@ -303,8 +350,8 @@ async function startAudio(M) {
   if (params.has('mute')) return;
   const ctx = new AudioContext({ sampleRate: 44100, latencyHint: 'interactive' });
   await ctx.audioWorklet.addModule('audio-worklet.js');
-  const node = new AudioWorkletNode(ctx, 'c07-ring', { outputChannelCount: [2] });
-  node.port.postMessage({ memory: M.wasmMemory, ring: M._c07_audio_ring() });
+  const node = new AudioWorkletNode(ctx, 'rc-ring', { outputChannelCount: [2] });
+  node.port.postMessage({ memory: M.wasmMemory, ring: M._rc_audio_ring() });
   node.connect(ctx.destination);
   const resume = () => ctx.resume();
   window.addEventListener('pointerdown', resume);
@@ -316,8 +363,10 @@ async function startAudio(M) {
 function sizeCanvas() {
   const canvas = $('canvas');
   const r = canvas.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
-  canvas.width = Math.max(640, Math.round(r.width * dpr));
-  canvas.height = Math.max(480, Math.round(r.height * dpr));
+  // at least 640x480, scaled up evenly so the picture keeps the canvas's shape (a phone's stage is small)
+  const w = Math.max(1, r.width * dpr), h = Math.max(1, r.height * dpr), s = Math.max(1, 640 / w, 480 / h);
+  canvas.width = Math.round(w * s);
+  canvas.height = Math.round(h * s);
 }
 
 // A netplay session: every peer starts from the same empty saves folder, kept apart from this browser's
@@ -351,48 +400,60 @@ function showNetStatus(M, session) {
 async function run(session) {
   const rosterSaves = await C07Roster.prepare(session);
   $('panel').classList.add('hidden');
+  document.documentElement.classList.add('playing');   // index.html: the touch layout and controls
+  // Online play keeps 4:3 (widescreen changes the game's culling, so every peer must agree): the stage too.
+  if (session) document.documentElement.classList.remove('wide');
+  updateGate();
   fullscreenTip();
   window.c07Running = true;
   if (session) await clearNetSaves(session);
   else await navigator.storage.persist?.().catch(() => false);
   sizeCanvas();
   const script = document.createElement('script');
-  script.src = 'build/cricket07.js';
+  script.src = 'build/recomp.js';
   await new Promise((ok, fail) => { script.onload = ok; script.onerror = fail; document.head.appendChild(script); });
-  const M = await createC07({
+  const M = await createRecomp({
     arguments: ['/opfs/' + OPFS_DIR],
     print: (t) => console.log(t),
     printErr: (t) => console.log(t),
     preRun: [(m) => {
-      if (params.has('mute')) m.ENV.C07_NO_AUDIO = '1';
-      if (params.has('log')) m.ENV.C07_LOG = '1';
-      if (params.has('pads')) m.ENV.C07_PADS = params.get('pads');
-      m.ENV.C07_USERDATA = rosterSaves || '/opfs/' + (localStorage.getItem('c07-save-directory') || 'userdata');
-      if (session) Object.assign(m.ENV, C07Netplay.gameEnv(session), { C07_USERDATA: '/opfs/' + netSaves(session) });
-      m.ENV.C07_LOG_FPS = params.has('fps') ? '1' : '';
-      if (!params.has('fps')) delete m.ENV.C07_LOG_FPS;
+      m.ENV.RC_EXE = params.get('exe') || EXE;   // the hosted game keeps its original executable name
+      if (params.has('mute')) m.ENV.RC_NO_AUDIO = '1';
+      if (params.has('log')) m.ENV.RC_LOG = '1';
+      if (params.has('pads')) m.ENV.RC_PADS = params.get('pads');
+      // widescreen: the game fills a screen wider than 4:3 with a wider view (host/widescreen.c), not a stretch
+      if (!session && !params.has('4x3')) m.ENV.RC_WIDESCREEN = '1';
+      m.ENV.RC_USERDATA = rosterSaves || '/opfs/' + (localStorage.getItem('c07-save-directory') || 'userdata');
+      if (session) Object.assign(m.ENV, C07Netplay.gameEnv(session), { RC_USERDATA: '/opfs/' + netSaves(session) });
+      m.ENV.RC_LOG_FPS = params.has('fps') ? '1' : '';
+      if (!params.has('fps')) delete m.ENV.RC_LOG_FPS;
     }],
   });
   const canvas = $('canvas');
-  M._c07_gpu_init(canvas.width, canvas.height);
-  new ResizeObserver(() => { sizeCanvas(); M._c07_set_canvas_size(canvas.width, canvas.height); }).observe(canvas);
+  M._rc_gpu_init(canvas.width, canvas.height);
+  new ResizeObserver(() => { sizeCanvas(); M._rc_set_canvas_size(canvas.width, canvas.height); }).observe(canvas);
   hookInput(M, !!session);
   if (session) { session.client.attach(M); showNetStatus(M, session); }
   startAudio(M).catch((e) => console.warn('audio unavailable:', e));
   const poll = session ? pollLocalPad : pollGamepads;
-  const frame = () => { poll(M); M._c07_gpu_pump(1); requestAnimationFrame(frame); };
+  const frame = () => { poll(M); M._rc_gpu_pump(1); requestAnimationFrame(frame); };
   requestAnimationFrame(frame);
-  setInterval(() => M._c07_gpu_pump(0), 1);   // readbacks mid-frame are answered without waiting for vsync
+  setInterval(() => M._rc_gpu_pump(0), 1);   // readbacks mid-frame are answered without waiting for vsync
   // Online, a hidden tab still has to present frames (browsers pause requestAnimationFrame there), or the
   // lockstep would freeze every other player with it.
-  if (session) setInterval(() => { if (document.hidden) { poll(M); M._c07_gpu_pump(1); } }, 16);
+  if (session) setInterval(() => { if (document.hidden) { poll(M); M._rc_gpu_pump(1); } }, 16);
   canvas.focus();
   window.c07 = M;
+  setInterval(() => kickCollector('periodic'), 90000);   // iPhone/iPad: keep Safari's collector running
 }
 
 async function boot() {
   if (!crossOriginIsolated) { status('This page needs cross-origin isolation (COOP/COEP headers; see recomp/web/serve.py).'); return; }
-  if (!navigator.gpu) { status('This browser has no WebGPU. Use a current Chrome, Edge or Safari.'); return; }
+  if (!navigator.gpu) {
+    if (IOS) noWebGPUiOS();
+    else status('This browser has no WebGPU. Use a current Chrome, Edge or Safari.');
+    return;
+  }
   // navigator.gpu can exist with no usable adapter (GPU or driver blocklisted, hardware acceleration off,
   // Remote Desktop / VM): say so instead of starting a game that can only show a black screen
   const adapter = await navigator.gpu.requestAdapter({ powerPreference: 'high-performance' }).catch(() => null) ||
@@ -416,7 +477,7 @@ async function boot() {
     // still governs the hosted-files message and the host diagnostics further down.
     if (!onlineReady) { setupOnline(); onlineReady = true; }
     show('online');
-    ($('np-code').value ? $('np-join') : $('np-name')).focus();
+    if (!TOUCH) ($('np-code').value ? $('np-join') : $('np-name')).focus();   // a phone would raise its keyboard
   };
   const ready = () => {
     show('home');
@@ -460,21 +521,87 @@ async function boot() {
   ready();
 }
 
+// ------------------------------------------------------------------ iPhone / iPad (WebKit)
+
+// Every iOS browser is WebKit, so switching browsers can't help: WebGPU is on by default from iOS 26, and on
+// iOS 17-18 only behind a Safari feature flag, which doesn't reach Chrome and other apps (their WKWebView).
+const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+function noWebGPUiOS() {
+  const ua = navigator.userAgent;
+  const other = /CriOS/.test(ua) ? 'Chrome' : /FxiOS/.test(ua) ? 'Firefox' : /EdgiOS/.test(ua) ? 'Edge' : '';
+  const safari = !other && /Version\/[\d.]+ .*Safari\//.test(ua) && !/OPiOS|GSA\//.test(ua);
+  $('status').innerHTML = 'Cricket 07 needs <b>WebGPU</b>, which iPhone and iPad only support from <b>iOS 26</b>. ' +
+    'Here\'s what you can do:<ol class="options">' +
+    '<li><span><b>Update to iOS 26</b> in <b>Settings → General → Software Update</b>, then open the game again.</span></li>' +
+    '<li><span><b>Don\'t want to update?</b> Turn on <b>WebGPU</b> in <b>Settings → Apps → Safari → Advanced → Feature Flags</b> ' +
+      '(iOS 17: <b>Settings → Safari → Advanced → Feature Flags</b>), then ' +
+      (safari ? 'reload this page in Safari.' : `open the game in <b>Safari</b>, not ${other || 'this app'}: the setting only works in Safari.`) +
+      ' This early WebGPU may not run the game.</span></li></ol>' +
+    '<span class="small">Already on iOS 26? Lockdown Mode can switch WebGPU off.</span>';
+}
+
+// Safari's page-thread garbage collector can stop firing after this process has written files into OPFS: the
+// next collection then waits for gigabytes of new allocation, and the game's per-frame garbage grows until iOS
+// kills the page at 2 GB. Nothing a page can call collects directly, but allocation counts: ArrayBuffers
+// detached the moment they are made push the allocation total past the threshold while nothing stays resident,
+// and a WeakRef shows when the collection has happened. WebKit only: elsewhere the collectors keep up.
+// (From Dhaiwat Pandya's cricket07-browser, web/loader.js.)
+const WEBKIT = navigator.vendor?.startsWith('Apple');
+let kicking = null;
+function kickCollector(label) {
+  if (!WEBKIT || !ArrayBuffer.prototype.transfer || typeof WeakRef === 'undefined') return Promise.resolve(false);
+  if (kicking) return kicking;
+  kicking = (async () => {
+    let probe = { kick: 1 }; const ref = new WeakRef(probe); probe = null;
+    const t0 = performance.now();
+    let n = 0;
+    for (; n < 32; n++) {   // rounds of 512 MB (64 MB at a time), up to 16 GB of churn
+      try { for (let i = 0; i < 8; i++) new ArrayBuffer(64 << 20).transfer(0); } catch { break; }
+      await new Promise((r) => setTimeout(r, 60));   // the collector runs concurrently: give it a moment
+      if (!ref.deref()) break;
+    }
+    await new Promise((r) => setTimeout(r, 50));
+    const ok = !ref.deref();
+    if (n > 0 || !ok) console.log(`[gc] ${label}: ${ok ? 'collected' : 'no collection'} after ${(n + 1) * 512} MB of churn, ${(performance.now() - t0).toFixed(0)} ms`);
+    return ok;
+  })().finally(() => { kicking = null; });
+  return kicking;
+}
+
 // ------------------------------------------------------------------ fullscreen
 
-// The stage (game + overlays) goes fullscreen; the canvas grows with it and the game letterboxes its 4:3
-// picture inside. Alt+Enter (Option+Enter on a Mac) toggles it, as in PC games of the time; it is caught
-// before the game's own key handling so Enter doesn't also reach a menu.
+// Every device plays fullscreen. The stage (game + overlays) goes fullscreen and the canvas grows with it; the
+// game fills it edge to edge (widescreen: a wider view, not a stretch) or letterboxes its 4:3 picture with ?4x3.
+// Play and Play Online go fullscreen on their own click (a browser only allows it from a tap or click). After
+// that, the corner button or Alt+Enter (Option+Enter on a Mac) toggles it on a computer, caught before the
+// game's own key handling so Enter doesn't also reach a menu.
+// iPhone Safari is the exception: it gives no page fullscreen at all, only Add to Home Screen (the gate below).
+const CAN_FULLSCREEN = !!($('stage').requestFullscreen || $('stage').webkitRequestFullscreen);
+const STANDALONE = !!navigator.standalone || matchMedia('(display-mode: fullscreen), (display-mode: standalone)').matches;
+const fullscreenActive = () => !!(document.fullscreenElement || document.webkitFullscreenElement);
+function enterFullscreen() {
+  const stage = $('stage');
+  const p = Promise.resolve((stage.requestFullscreen || stage.webkitRequestFullscreen).call(stage, { navigationUI: 'hide' }));
+  // a phone or tablet turns to landscape and stays there while fullscreen (Android; iOS has no lock)
+  if (TOUCH) p.then(() => screen.orientation?.lock?.('landscape')).catch(() => {});
+  return p;
+}
+
 function setupFullscreen() {
   const stage = $('stage');
-  const active = () => document.fullscreenElement || document.webkitFullscreenElement;
+  const active = fullscreenActive;
   const toggle = () => {
     if (active()) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
-    else (stage.requestFullscreen || stage.webkitRequestFullscreen).call(stage)?.catch?.(() => {});
+    else enterFullscreen().catch(() => {});
     $('canvas').focus();
   };
-  if (!stage.requestFullscreen && !stage.webkitRequestFullscreen) { $('fs').classList.add('hidden'); return; }
+  if (!CAN_FULLSCREEN) { $('fs').classList.add('hidden'); return; }
   $('fs').onclick = toggle;
+  // Play / Play Online: straight into fullscreen with the same click (capture phase: before their handlers)
+  $('panel').addEventListener('click', (e) => {
+    if (!e.target.closest('#play, #go-online') || STANDALONE || active()) return;
+    enterFullscreen().catch(() => {});
+  }, true);
   const swallow = (e) => {
     if (e.code !== 'Enter' && e.code !== 'NumpadEnter') return;
     if (!e.altKey) return;
@@ -484,9 +611,22 @@ function setupFullscreen() {
   };
   window.addEventListener('keydown', swallow, true);
   window.addEventListener('keyup', swallow, true);
+  // Esc pauses the game, but in fullscreen the browser takes it to exit fullscreen first. Where the Keyboard
+  // Lock API exists (Chrome, Edge), locking Esc while fullscreen hands a tap of it to the game and the browser
+  // asks the player to hold Esc to exit instead. Elsewhere Esc still leaves fullscreen.
+  const kbd = navigator.keyboard;
+  let locked = false;
+  const title = () => {
+    $('fs').title = active() ? `Exit fullscreen (Alt+Enter or ${locked ? 'hold ' : ''}Esc)` : 'Fullscreen (Alt+Enter)';
+  };
   const sync = () => {
+    if (active() && !locked && kbd?.lock) {
+      kbd.lock(['Escape']).then(() => {
+        if (active()) { locked = true; title(); } else kbd.unlock();
+      }, () => {});
+    } else if (!active() && locked) { kbd.unlock(); locked = false; }
     $('fs-icon').setAttribute('d', active() ? 'M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5' : 'M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5');
-    $('fs').title = active() ? 'Exit fullscreen (Alt+Enter or Esc)' : 'Fullscreen (Alt+Enter)';
+    title();
   };
   document.addEventListener('fullscreenchange', sync);
   document.addEventListener('webkitfullscreenchange', sync);
@@ -498,14 +638,94 @@ function setupFullscreen() {
   wake();
 }
 
-// once the game starts: a short hint, so players learn the shortcut
+// once the game starts outside fullscreen (the browser refused, or the player left it): a short hint
 function fullscreenTip() {
   const tip = $('fstip');
-  if (document.fullscreenElement || document.webkitFullscreenElement || $('fs').classList.contains('hidden')) return;
-  tip.classList.remove('hidden');
-  tip.style.opacity = '1';
-  setTimeout(() => { tip.style.opacity = '0'; }, 5000);
-  setTimeout(() => tip.classList.add('hidden'), 5500);
+  if (TOUCH || fullscreenActive() || $('fs').classList.contains('hidden')) return;
+  setTimeout(() => {
+    if (fullscreenActive()) return;
+    tip.classList.remove('hidden');
+    tip.style.opacity = '1';
+    setTimeout(() => { tip.style.opacity = '0'; }, 5000);
+    setTimeout(() => tip.classList.add('hidden'), 5500);
+  }, 600);
+}
+
+// Phones and tablets (html.touch) play fullscreen and sideways. The gate (#gate in index.html) covers the page
+// until they do:
+//   - home: iPhone Safari has no fullscreen for pages; only Add to Home Screen gives one. The launcher stays
+//     covered, since the home-screen app keeps its own storage and the game would otherwise download twice;
+//   - fullscreen: the game runs in a browser tab that is not fullscreen (the player left it, or the browser
+//     refused): a button goes back;
+//   - rotate: the game runs and the screen is upright (iOS can't lock it; Android locks landscape).
+// (After Dhaiwat Pandya's cricket07-browser, web/loader.js.)
+function gateState() {
+  if (!TOUCH) return '';
+  if (!STANDALONE && !CAN_FULLSCREEN) return params.has('nogate') ? '' : 'home';
+  if (!document.documentElement.classList.contains('playing')) return '';
+  if (!STANDALONE && !fullscreenActive()) return 'fullscreen';
+  if (matchMedia('(orientation: portrait)').matches) return 'rotate';
+  return '';
+}
+
+const ICON = (d) => `<svg class="inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" ` +
+  `stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const SHARE_ICON = ICON('<path d="M12 3v12M8 7l4-4 4 4"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>');
+const MENU_ICON = ICON('<path d="M4 7h16M4 12h16M4 17h10"/>');
+const MORE_ICON = ICON('<circle cx="5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/>' +
+  '<circle cx="19" cy="12" r="1.3" fill="currentColor"/>');
+const GATES = {
+  home: { title: 'Add Cricket 07 to your Home Screen',
+    text: 'On iPhone the game plays fullscreen only from the Home Screen.<ol>' +
+      `<li><span>Tap ${MENU_ICON} or ${MORE_ICON} next to the address, then <b>Share</b> (or tap ${SHARE_ICON} if Safari shows it).</span></li>` +
+      '<li><span>Tap <b>Add to Home Screen</b> (under <b>More</b> if it isn\'t listed).</span></li>' +
+      '<li><span>Open <b>Cricket 07</b> from your Home Screen and turn your phone sideways.</span></li></ol>' },
+  fullscreen: { title: 'Cricket 07 plays fullscreen', text: 'Tap below to carry on.', button: 'Go fullscreen' },
+  rotate: { title: 'Turn your phone sideways', text: 'Cricket 07 plays in landscape.' },
+};
+
+let gateShown = '';
+function updateGate() {
+  const state = gateState();
+  if (state === gateShown) return;
+  gateShown = state;
+  const gate = $('gate');
+  gate.classList.toggle('hidden', !state);
+  gate.dataset.state = state;
+  if (!state) { $('canvas').focus(); return; }
+  const g = GATES[state];
+  $('gate-title').textContent = g.title;
+  $('gate-text').innerHTML = g.text;
+  $('gate-btn').textContent = g.button || '';
+  $('gate-btn').classList.toggle('hidden', !g.button);
+  document.dispatchEvent(new Event('c07-release'));   // let go of on-screen buttons the gate now covers
+}
+
+// Touch: no zooming. The viewport tag stops pinch zoom on Android; iOS ignores it, so its gesture events are
+// refused, and html.touch's touch-action stops double-tap zoom. An iPhone home-screen app can report a viewport
+// shorter than the screen once turned to landscape, leaving a band at the bottom: there the page takes its
+// height from the screen (index.html: --app-h). iOS gives screen.width/height upright whatever the orientation.
+function setupScreen() {
+  if (!TOUCH) return;
+  for (const t of ['gesturestart', 'gesturechange', 'gestureend']) document.addEventListener(t, (e) => e.preventDefault());
+  if (!navigator.standalone) return;
+  const fit = () => {
+    const land = matchMedia('(orientation: landscape)').matches;
+    const h = land ? Math.min(screen.width, screen.height) : Math.max(screen.width, screen.height);
+    document.documentElement.style.setProperty('--app-h', `${Math.max(h, window.innerHeight)}px`);
+  };
+  for (const t of ['resize', 'orientationchange']) window.addEventListener(t, fit);
+  matchMedia('(orientation: landscape)').addEventListener?.('change', fit);
+  fit();
+}
+
+function setupGate() {
+  if (!TOUCH) return;
+  $('gate-btn').onclick = () => enterFullscreen().catch(() => {});
+  for (const t of ['resize', 'orientationchange']) window.addEventListener(t, updateGate);
+  for (const t of ['fullscreenchange', 'webkitfullscreenchange']) document.addEventListener(t, updateGate);
+  matchMedia('(orientation: portrait)').addEventListener?.('change', updateGate);
+  updateGate();
 }
 
 // ------------------------------------------------------------------ online lobby
@@ -513,7 +733,7 @@ function fullscreenTip() {
 async function buildVersion() {
   // peers must run the same build and game files, or their simulations diverge
   const manifest = await fetchManifest();
-  const wasm = await fetch('build/cricket07.wasm', { method: 'HEAD' }).catch(() => null);
+  const wasm = await fetch('build/recomp.wasm', { method: 'HEAD' }).catch(() => null);
   // the ETag comes back weak (W/"...") when the response is compressed: compare only its value
   const etag = (wasm?.headers.get('ETag') || '').replace(/^W\//, '').replace(/"/g, '');
   return `${manifest?.version || 'local'}:${etag || wasm?.headers.get('Content-Length') || '?'}`;
@@ -683,6 +903,8 @@ function setupHostInfo() {
 }
 
 setupFullscreen();
+setupScreen();
+setupGate();
 setupKbdHelp();
 if (!window.C07_PUBLIC) setupHostInfo();
 boot();

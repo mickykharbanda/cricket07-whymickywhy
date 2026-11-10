@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Play Cricket 07 — The Micky Edit</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- Added to the home screen, the game opens without the browser's bars: the only fullscreen an iPhone allows
+     a page. Android and desktop Chrome take app-manifest.json (fullscreen, landscape); iOS the apple-* tags. -->
+<link rel="manifest" href="app-manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cricket 07">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#070b08">
+<script>
+  // Widescreen unless ?4x3: the stage is 16:9 and the game fills it (c07.js; online play stays 4:3).
+  // On-screen controls when the main pointer is a finger, or with ?touch=1 (never with ?touch=0).
+  (function () {
+    var q = new URLSearchParams(location.search), h = document.documentElement;
+    if (!q.has("4x3")) h.classList.add("wide");
+    var t = q.get("touch");
+    if (t === "1" || (t !== "0" && window.matchMedia && matchMedia("(pointer: coarse)").matches)) h.classList.add("touch");
+  })();
+</script>
 <style>
   :root {
     --bg: #070b08; --fg: #eef4ef; --muted: #9fb3a5; --faint: #6f8576;
@@ -21,14 +40,18 @@
   .credit { color: var(--muted); font-size: 13px; text-align: center; }
   .credit a { color: var(--accent-hi); text-decoration: underline; text-underline-offset: 2px; }
   .credit a:hover { color: var(--fg); }
-  /* The 4:3 stage is centred. On viewports wide enough to fit a side-panel reference without crowding
-     the stage, 440px is reserved symmetrically (220 each side) so the panel sits in that gap and the
-     stage stays centred rather than off-set. On narrow viewports the panel is hidden and the stage uses
-     the full width. The .kbd-off body class (set when the player dismisses the panel) frees the space. */
-  #stage { position: relative; width: min(100%, calc((100vh - 72px) * 4 / 3)); aspect-ratio: 4 / 3; background: #000;
+  /* The stage is 16:9 (widescreen, html.wide: the script in <head>) or 4:3, and centred. On viewports wide
+     enough to fit a side-panel reference without crowding the stage, 440px is reserved symmetrically (220 each
+     side) so the panel sits in that gap and the stage stays centred rather than off-set. On narrow viewports the
+     panel is hidden and the stage uses the full width. The .kbd-off body class frees the space. Fullscreen (every
+     device, from the Play click) drops all of this and fills the screen edge to edge. */
+  :root { --ar-w: 4; --ar-h: 3; }
+  html.wide { --ar-w: 16; --ar-h: 9; }
+  #stage { position: relative; width: min(100%, calc((100vh - 72px) * var(--ar-w) / var(--ar-h)));
+    aspect-ratio: var(--ar-w) / var(--ar-h); background: #000;
     border-radius: 12px; overflow: hidden; box-shadow: 0 30px 80px rgba(0, 0, 0, .55); }
   @media (min-width: 1120px) {
-    body:not(.kbd-off) #stage { width: min(calc(100% - 440px), calc((100vh - 72px) * 4 / 3)); }
+    body:not(.kbd-off) #stage { width: min(calc(100% - 440px), calc((100vh - 72px) * var(--ar-w) / var(--ar-h))); }
   }
   canvas { width: 100%; height: 100%; display: block; cursor: none; }
   .hidden { display: none !important; }
@@ -127,7 +150,7 @@
   progress::-moz-progress-bar { background: var(--accent); }
   #status { font-variant-numeric: tabular-nums; color: var(--muted); max-width: 52ch; margin-inline: auto; }
 
-  /* fullscreen: the stage fills the screen and the game letterboxes itself inside the canvas */
+  /* fullscreen: the stage fills the screen; the game fills it (widescreen) or letterboxes its 4:3 picture (?4x3) */
   #stage:fullscreen { width: 100vw; height: 100vh; aspect-ratio: auto; border-radius: 0; box-shadow: none; }
   #stage:-webkit-full-screen { width: 100vw; height: 100vh; aspect-ratio: auto; border-radius: 0; }
   #fs { position: absolute; right: 12px; bottom: 12px; z-index: 2; width: 40px; height: 40px; display: grid; place-items: center;
@@ -181,6 +204,66 @@
     border-radius: 10px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); display: none; }
   #kbd-show:hover { color: var(--fg); background: rgba(10, 18, 12, .92); }
   #kbd-show svg { width: 18px; height: 18px; }
+
+  /* touch (phones and tablets, html.touch): the stage is the whole screen, edge to edge and under the notch
+     (viewport-fit=cover); the launcher's menus keep clear of the notch and home bar with the safe-area insets.
+     touch.js draws our on-screen controls over it. */
+  html.touch { --app-h: 100dvh; touch-action: manipulation; }   /* no double-tap zoom (pinch: the viewport tag) */
+  html.touch, html.touch body { overflow: hidden; overscroll-behavior: none; }
+  html.touch main { padding: 0; }
+  html.touch #stage { position: fixed; inset: 0; bottom: auto; margin: 0; width: 100%; height: var(--app-h);
+    aspect-ratio: auto; border-radius: 0; box-shadow: none; }
+  html.touch #panel { padding: max(20px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
+    max(20px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left)); }
+  html.touch canvas { touch-action: none; }
+  html.touch #kbd, html.touch #kbd-show, html.touch #fstip, html.touch #fs, html.touch .credit { display: none !important; }
+  /* the controls layer: drawn on a canvas, sized to the screen; it takes no pointer events itself (touch.js
+     listens on the stage, so a tap that misses every control still reaches the game as a menu tap) */
+  #touch { display: none; }
+  html.touch.playing #touch { display: block; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+    -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+  #touch canvas { width: 100%; height: 100%; cursor: default; }
+  #touch-toast { position: absolute; left: 50%; top: 18%; transform: translateX(-50%); padding: 8px 16px; border-radius: 99px;
+    background: rgba(0, 0, 0, .75); color: #fff; font-size: 13px; transition: opacity .4s ease; pointer-events: none; }
+  /* the controls' settings sheet (the gear): the same choices as the Android app */
+  #touch-settings { position: absolute; inset: 0; z-index: 4; display: grid; place-items: center; pointer-events: auto;
+    background: rgba(0, 0, 0, .55); padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); touch-action: manipulation; }
+  #touch-settings .sheet { width: min(100%, 360px); max-height: 100%; overflow: auto; padding: 18px 20px; border-radius: 16px;
+    background: #101a13; border: 1px solid var(--line); box-shadow: 0 20px 60px rgba(0, 0, 0, .6); display: grid; gap: 12px; }
+  #touch-settings h2 { margin: 0; font-size: 17px; }
+  #touch-settings label { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+  #touch-settings .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  #touch-settings .seg button { padding: 9px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--fg); font: inherit; }
+  #touch-settings .seg button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #04140a; font-weight: 600; }
+  #touch-settings input[type=range] { flex: 1; accent-color: var(--accent); }
+  #touch-settings input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--accent); }
+  #touch-settings .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  #touch-settings .row3 button { padding: 10px 6px; border-radius: 10px; border: 1px solid var(--line); background: var(--card);
+    color: var(--fg); font: 600 13px/1.2 inherit; }
+  #touch-settings .row3 button.primary { background: var(--accent); border-color: var(--accent); color: #04140a; }
+  /* touch: until the game is fullscreen and sideways, this covers the screen (c07.js: updateGate) */
+  #gate { position: fixed; inset: 0; z-index: 5; bottom: auto; height: var(--app-h, 100%); display: grid; place-items: center;
+    padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom))
+      max(24px, env(safe-area-inset-left));
+    background: var(--bg); text-align: center; touch-action: none; }
+  #gate .gate-box { max-width: 36ch; display: grid; justify-items: center; gap: 10px; }
+  #gate .gate-logo { width: 200px; height: auto; margin-bottom: 6px; }
+  #gate h2 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+  #gate-text { color: var(--muted); font-size: 14px; }
+  #gate-text b { color: var(--fg); font-weight: 600; }
+  #gate svg.inline { width: 17px; height: 17px; vertical-align: -3px; }
+  #gate ol, #status ol { margin: 14px 0 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 10px; text-align: left; }
+  #gate li, #status li { counter-increment: step; display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; }
+  #gate li::before, #status li::before { content: counter(step); width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--card-hi); color: var(--fg); font-size: 12px; font-weight: 600; }
+  #gate .gate-rotate { display: none; width: 56px; height: 56px; color: var(--accent); }
+  #gate[data-state="rotate"] .gate-rotate { display: block; animation: turn 2.4s ease-in-out infinite; }
+  #gate[data-state="rotate"] .gate-logo { display: none; }
+  @keyframes turn { 0%, 30% { transform: rotate(0); } 60%, 100% { transform: rotate(-90deg); } }
+  #gate .btn { margin-top: 8px; }
+  /* opened from the home screen: already as fullscreen as the system allows */
+  @media (display-mode: fullscreen), (display-mode: standalone) { #fs { display: none !important; } }
 #go-online,#host-box{display:none!important}.choices{grid-template-columns:1fr}.credit{font-size:11px}.credit a{color:#dfe99b}</style>
 
 
@@ -195,6 +278,17 @@
         <path id="fs-icon" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
     </button>
     <div id="fstip" class="hidden">Press <kbd>Alt</kbd> + <kbd>Enter</kbd> for fullscreen</div>
+    <div id="touch" aria-hidden="true"></div>
+    <div id="gate" class="hidden" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+      <div class="gate-box">
+        <img class="gate-logo" src="cricket07-logo.png" width="520" height="306" alt="">
+        <svg class="gate-rotate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg>
+        <h2 id="gate-title"></h2>
+        <div id="gate-text"></div>
+        <button id="gate-btn" class="btn hidden" type="button"></button>
+      </div>
+    </div>
     <div id="panel">
 
       <!-- loading: browser checks, the first-visit download, errors -->
@@ -369,6 +463,7 @@
 <script src="netplay.js"></script>
 <script src="roster.js"></script>
 <script src="saves.js"></script>
+<script src="touch.js"></script>
 <script src="c07.js"></script>
 <!-- Cloudflare Web Analytics: public site token; account access stays private. -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"c8448a382b5d45aeaf5aaa3588226fa5"}'></script>

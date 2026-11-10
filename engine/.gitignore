@@ -20,3 +20,5 @@ work/
 .wrangler/
 node_modules/
 .claude/
+site/
+work/

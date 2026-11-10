@@ -220,8 +220,8 @@
   // Environment for a peer's game: deterministic simulation, this peer's slot, the session's settings.
   function gameEnv(session) {
     return {
-      C07_DETERMINISTIC: '1', C07_NETPLAY: '1', C07_NP_PLAYERS: String(session.players),
-      C07_NP_SLOT: String(session.you), C07_NP_DELAY: String(session.delay), C07_PADS: String(session.players),
+      RC_DETERMINISTIC: '1', RC_NETPLAY: '1', RC_NP_PLAYERS: String(session.players),
+      RC_NP_SLOT: String(session.you), RC_NP_DELAY: String(session.delay), RC_PADS: String(session.players),
     };
   }
 

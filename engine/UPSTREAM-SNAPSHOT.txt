@@ -1,3 +1,4 @@
 https://github.com/Dhaiwat10/cricket07-browser
-commit 8b22692094bd4d064e4c738b75887ea66ed303fa
+commit 7faa180 (Catch up with the live site; self-hosting guide, 8 Nov 2026), merged over the earlier
+snapshot 8b22692094bd4d064e4c738b75887ea66ed303fa with this edition's Android and translator changes kept.
 Original source retained under its MIT license.
