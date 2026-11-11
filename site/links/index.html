@@ -110,6 +110,9 @@ h1{font-size:36px;letter-spacing:-2px}
 .boardcard .chip{flex:none;display:flex;align-items:center;gap:4px;padding:5px 9px;border-radius:99px;background:#f1f0e6;font:700 11px 'DM Sans',Arial,sans-serif;color:var(--ink)}
 .boardcard .chip i{font-style:normal;color:#e0a52a}
 .boardcard .chip.playable{background:var(--yellow)}
+/* Playable, but not here. Never the shelf's yellow: that colour is this site saying "I built
+   this, it runs here", which is not ours to lend to a link off the page. */
+.boardcard .chip.away{background:#2f4858;color:#f2f7ef}
 .boardcard .chip.frozen{background:#ece9dd;color:var(--muted)}
 .boardcard-rows li.frozen a{background:#f6f4ec}
 .boardcard-rows li.frozen .plate{filter:grayscale(1);opacity:.75}
@@ -211,7 +214,14 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
   // never in the top five; still findable, because somebody searching "GTA5" deserves the answer
   // rather than silence.
   var cold = function (r) { return r.status === 'toobig'; };
+  // Playable, but on somebody else's site. It STAYS IN THE RACE at the place its stars earned --
+  // the board page does the same -- so this preview must not take it for a shelf game.
+  var away = function (r) { return r.status === 'elsewhere'; };
   var at = function (title) { return BOARD_URL + '?q=' + encodeURIComponent(title); };
+  var hostOf = function (url) {
+    try { return 'Plays on ' + new URL(url).hostname.replace(/^www\./, ''); }
+    catch (e) { return 'Plays on another site'; }
+  };
 
   function colourFor(title) {
     var h = 0;
@@ -258,11 +268,13 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
   }
 
   function row(r, rank) {
-    var built = playable(r), frozen = cold(r), go = built && r.url;
+    var built = playable(r), frozen = cold(r), offsite = away(r);
+    var go = (built || offsite) && r.url;
     var li = document.createElement('li');
     if (frozen) li.className = 'frozen';
     var a = document.createElement('a');
     a.href = go ? r.url : at(r.title);
+    if (offsite && go) { a.target = '_blank'; a.rel = 'noopener'; }
     if (rank) {
       var n = document.createElement('b');
       n.className = 'rank';
@@ -294,11 +306,13 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
     under.textContent = built
       ? (r.status === 'beta' ? 'In beta \u00b7 playable now' : 'Playable now')
       : frozen ? 'Not possible in a browser'
+      : offsite && r.url ? hostOf(r.url)
+      : r.status === 'building' ? 'Coming soon'
       : (r.system || 'On the board');
     who.append(name, under);
     a.append(who);
     var chip = document.createElement('span');
-    chip.className = 'chip' + (built ? ' playable' : frozen ? ' frozen' : '');
+    chip.className = 'chip' + (built ? ' playable' : frozen ? ' frozen' : offsite ? ' away' : '');
     if (go) {
       chip.textContent = 'Play \u2197';
     } else if (built) {
@@ -318,7 +332,11 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
   function draw() {
     if (!board) return;
     var typed = qEl.value.trim(), q = flat(typed);
-    var racing = board.filter(function (r) { return !playable(r) && !cold(r); });
+    var racing = board.filter(function (r) { return !playable(r) && !cold(r); })
+      .slice().sort(function (a, b) {
+        if (b.votes !== a.votes) return b.votes - a.votes;
+        return String(a.created).localeCompare(String(b.created));
+      });
     var hit = function (r) {
       return flat(r.title).indexOf(q) >= 0 || flat(r.system).indexOf(q) >= 0;
     };
@@ -329,8 +347,8 @@ document.getElementById('copy-game').addEventListener('click',async()=>{
     // play this right now" is the answer to their search.
     var hits = q ? board.filter(hit) : [];
     var shown = q
-      ? hits.filter(playable)
-            .concat(hits.filter(function (r) { return !playable(r) && !cold(r); }))
+      ? hits.filter(function (r) { return playable(r) || away(r); })
+            .concat(hits.filter(function (r) { return !playable(r) && !away(r) && !cold(r); }))
             .concat(hits.filter(cold))
             .slice(0, HITS)
       : racing.slice(0, PREVIEW);
