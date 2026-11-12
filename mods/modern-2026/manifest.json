@@ -3,7 +3,7 @@
   "file": "modern-pack.bin",
   "originalSize": 341202052,
   "size": 13954571,
-  "sha256": "90e74e33e66675f460201fa8e6c4e65c569222d41ea2dff972ec9eb2819864a3",
+  "sha256": "7898b1cc8ffe0cb6bd9b60c025b6c39effeb0f12f74afebbbec2db479a8549f0",
   "resources": [
     {
       "resource": "113964e05e69ab31d264fb8f15c58e5c.cdf",
@@ -14,7 +14,7 @@
       ],
       "offset": 0,
       "size": 620140,
-      "sha256": "7047b6eb1e7e495d1e18283aa8e6840ec42018974c85b3b729d7b87065cb5783"
+      "sha256": "b1cf87c1aafd7f305d3c0cb7413c35cca0d7e07fe64242d45aeebfef427d0767"
     },
     {
       "resource": "be2970b0ada8e42cf891ce60ffe69575.xml",
@@ -899,306 +899,6 @@
   ],
   "previousLayouts": [
     {
-      "size": 5902469,
-      "resources": [
-        {
-          "resource": "113964e05e69ab31d264fb8f15c58e5c.cdf",
-          "offset": 0,
-          "size": 620140
-        },
-        {
-          "resource": "be2970b0ada8e42cf891ce60ffe69575.xml",
-          "offset": 620140,
-          "size": 9155
-        },
-        {
-          "resource": "730eef3fd7726e43de955f21083ab000.xml",
-          "offset": 629295,
-          "size": 30792
-        },
-        {
-          "resource": "49ad277eb4663535abe0d4b1ec726023.xml",
-          "offset": 660087,
-          "size": 13246
-        },
-        {
-          "resource": "43d0cad4d9bbad98eae6413793768df7.fsh",
-          "offset": 673333,
-          "size": 262192
-        },
-        {
-          "resource": "8ec8e653e3dc10f1b939e471dc6d23a1.fsh",
-          "offset": 935525,
-          "size": 65584
-        },
-        {
-          "resource": "2cbd1412b486dbbcd81a632b820f9314.fsh",
-          "offset": 1001109,
-          "size": 65584
-        },
-        {
-          "resource": "bddd067df5965fc1ec0d6a28ca545c50.fsh",
-          "offset": 1066693,
-          "size": 65584
-        },
-        {
-          "resource": "1584f6e5778f4d84a64e4e48e714b84f.fsh",
-          "offset": 1132277,
-          "size": 16432
-        },
-        {
-          "resource": "c12d34c0ca1c9d84519824e4b4003c56.fsh",
-          "offset": 1148709,
-          "size": 262192
-        },
-        {
-          "resource": "1da9b42c96b4357cfc0ed1973958df06.fsh",
-          "offset": 1410901,
-          "size": 65584
-        },
-        {
-          "resource": "51e9f021f96390cb713d28f9ad182bc5.fsh",
-          "offset": 1476485,
-          "size": 65584
-        },
-        {
-          "resource": "436aff3bdba5613b9dd2a7431d86c462.fsh",
-          "offset": 1542069,
-          "size": 65584
-        },
-        {
-          "resource": "260a5c29d5e659a2622ab47e020482f3.fsh",
-          "offset": 1607653,
-          "size": 16432
-        },
-        {
-          "resource": "d9372a82a5267562bf10901e45a0e046.fsh",
-          "offset": 1624085,
-          "size": 262192
-        },
-        {
-          "resource": "68f264e0258c636097b07b2967c217a4.fsh",
-          "offset": 1886277,
-          "size": 65584
-        },
-        {
-          "resource": "474f69f1076b25cf96ff2e71a05f2b82.fsh",
-          "offset": 1951861,
-          "size": 65584
-        },
-        {
-          "resource": "a9e6d8ca65d6606c4d0d91b58b74a4bf.fsh",
-          "offset": 2017445,
-          "size": 65584
-        },
-        {
-          "resource": "7479a4bb3a23da4679aa19c1ab7ffac0.fsh",
-          "offset": 2083029,
-          "size": 16432
-        },
-        {
-          "resource": "44b8f4413d5296e687c186afde1039a1.fsh",
-          "offset": 2099461,
-          "size": 262192
-        },
-        {
-          "resource": "cc34f3fac4a5db86083758c67bcffb1e.fsh",
-          "offset": 2361653,
-          "size": 65584
-        },
-        {
-          "resource": "87510b32e74ec2678d346be9ddca5b4f.fsh",
-          "offset": 2427237,
-          "size": 65584
-        },
-        {
-          "resource": "294796c8b0300bc78a06d660cf685b83.fsh",
-          "offset": 2492821,
-          "size": 65584
-        },
-        {
-          "resource": "2a3e7886c9dc7bc14c0ffb426425e52d.fsh",
-          "offset": 2558405,
-          "size": 16432
-        },
-        {
-          "resource": "e344d56e2740fa20b401700730a79666.fsh",
-          "offset": 2574837,
-          "size": 262192
-        },
-        {
-          "resource": "070ff852d24a1a904d40193ef73d2c4c.fsh",
-          "offset": 2837029,
-          "size": 65584
-        },
-        {
-          "resource": "d10acb6b509bb9c391b50eb7b50cd0e9.fsh",
-          "offset": 2902613,
-          "size": 65584
-        },
-        {
-          "resource": "a36bad6f7c4851004266e19412a25b66.fsh",
-          "offset": 2968197,
-          "size": 65584
-        },
-        {
-          "resource": "95d95c6fc1f219b89598e93575f14ef8.fsh",
-          "offset": 3033781,
-          "size": 16432
-        },
-        {
-          "resource": "f08a6c41cc98da538ad5575e65fc15e5.fsh",
-          "offset": 3050213,
-          "size": 262192
-        },
-        {
-          "resource": "0151b250bd628704231e81ba2c2bcad6.fsh",
-          "offset": 3312405,
-          "size": 65584
-        },
-        {
-          "resource": "9567519009c93fe1007bc3ece4202b4c.fsh",
-          "offset": 3377989,
-          "size": 65584
-        },
-        {
-          "resource": "65173000b045e648cedb70484dfd55b6.fsh",
-          "offset": 3443573,
-          "size": 65584
-        },
-        {
-          "resource": "217d5bd31658a05a0ba24bf416e7ed6d.fsh",
-          "offset": 3509157,
-          "size": 16432
-        },
-        {
-          "resource": "2e3bde59c82ba793134d22da304428e1.fsh",
-          "offset": 3525589,
-          "size": 262192
-        },
-        {
-          "resource": "a494be9c4eeb13db2c679c5194903bde.fsh",
-          "offset": 3787781,
-          "size": 65584
-        },
-        {
-          "resource": "d2b55d758cf3c43547e0537d8f7d49c4.fsh",
-          "offset": 3853365,
-          "size": 65584
-        },
-        {
-          "resource": "b5f92a681cccb2905b3b17863e438873.fsh",
-          "offset": 3918949,
-          "size": 65584
-        },
-        {
-          "resource": "e2d48a0e8ac8945a40bcf2990f11f136.fsh",
-          "offset": 3984533,
-          "size": 16432
-        },
-        {
-          "resource": "ff4263bc1c73979663a708f71eecbe80.fsh",
-          "offset": 4000965,
-          "size": 262192
-        },
-        {
-          "resource": "226e7ae0decb040dcdbe5ab310fdf71c.fsh",
-          "offset": 4263157,
-          "size": 65584
-        },
-        {
-          "resource": "411e55262dec85eef98350a6dc718fd5.fsh",
-          "offset": 4328741,
-          "size": 65584
-        },
-        {
-          "resource": "a7cb477b2a9c96ab6470f0e38f60c11e.fsh",
-          "offset": 4394325,
-          "size": 65584
-        },
-        {
-          "resource": "d9b4ad42447a459abde4d61bec76fa26.fsh",
-          "offset": 4459909,
-          "size": 16432
-        },
-        {
-          "resource": "b66ce7a79f556f69f0d7f5eed492a596.fsh",
-          "offset": 4476341,
-          "size": 262192
-        },
-        {
-          "resource": "8144d8c52975c09dcb68815510b49836.fsh",
-          "offset": 4738533,
-          "size": 65584
-        },
-        {
-          "resource": "40c2be9f3a1949a104dd1d86237f7cb5.fsh",
-          "offset": 4804117,
-          "size": 65584
-        },
-        {
-          "resource": "eb1b39bbed208507afea2eda2eba69de.fsh",
-          "offset": 4869701,
-          "size": 65584
-        },
-        {
-          "resource": "cc56e8a7e559c0da975fa9f3937bbff8.fsh",
-          "offset": 4935285,
-          "size": 16432
-        },
-        {
-          "resource": "4b58bb4842464db52d80310fb955df20.fsh",
-          "offset": 4951717,
-          "size": 262192
-        },
-        {
-          "resource": "1b955f4e583968f50793ad9d94df8190.fsh",
-          "offset": 5213909,
-          "size": 65584
-        },
-        {
-          "resource": "b8b2b82e797fb34fc47634d81ed0d308.fsh",
-          "offset": 5279493,
-          "size": 65584
-        },
-        {
-          "resource": "fba05bdfbd0950a0f966e188069f9c13.fsh",
-          "offset": 5345077,
-          "size": 65584
-        },
-        {
-          "resource": "3135b350fa507dbf18661451e8a3f505.fsh",
-          "offset": 5410661,
-          "size": 16432
-        },
-        {
-          "resource": "ab8c45b9b9b897779700096a09116803.fsh",
-          "offset": 5427093,
-          "size": 262192
-        },
-        {
-          "resource": "3bcc2658d842d2ba717c4dbddc890dd7.fsh",
-          "offset": 5689285,
-          "size": 65584
-        },
-        {
-          "resource": "0869ff9cbd776a3ffa982ccd52f6347e.fsh",
-          "offset": 5754869,
-          "size": 65584
-        },
-        {
-          "resource": "955e82997d6a4f96085c3f487b9f3661.fsh",
-          "offset": 5820453,
-          "size": 65584
-        },
-        {
-          "resource": "0d77bd0cec74ff6b15ea0d3502b47b3a.fsh",
-          "offset": 5886037,
-          "size": 16432
-        }
-      ]
-    },
-    {
       "size": 7448109,
       "resources": [
         {
@@ -2017,6 +1717,416 @@
           "size": 70232
         }
       ]
+    },
+    {
+      "size": 13954571,
+      "resources": [
+        {
+          "resource": "113964e05e69ab31d264fb8f15c58e5c.cdf",
+          "offset": 0,
+          "size": 620140
+        },
+        {
+          "resource": "be2970b0ada8e42cf891ce60ffe69575.xml",
+          "offset": 620140,
+          "size": 9145
+        },
+        {
+          "resource": "730eef3fd7726e43de955f21083ab000.xml",
+          "offset": 629285,
+          "size": 30792
+        },
+        {
+          "resource": "49ad277eb4663535abe0d4b1ec726023.xml",
+          "offset": 660077,
+          "size": 13246
+        },
+        {
+          "resource": "43d0cad4d9bbad98eae6413793768df7.fsh",
+          "offset": 673323,
+          "size": 262304
+        },
+        {
+          "resource": "8ec8e653e3dc10f1b939e471dc6d23a1.fsh",
+          "offset": 935627,
+          "size": 262416
+        },
+        {
+          "resource": "2cbd1412b486dbbcd81a632b820f9314.fsh",
+          "offset": 1198043,
+          "size": 262400
+        },
+        {
+          "resource": "bddd067df5965fc1ec0d6a28ca545c50.fsh",
+          "offset": 1460443,
+          "size": 262416
+        },
+        {
+          "resource": "1584f6e5778f4d84a64e4e48e714b84f.fsh",
+          "offset": 1722859,
+          "size": 16544
+        },
+        {
+          "resource": "c12d34c0ca1c9d84519824e4b4003c56.fsh",
+          "offset": 1739403,
+          "size": 262304
+        },
+        {
+          "resource": "1da9b42c96b4357cfc0ed1973958df06.fsh",
+          "offset": 2001707,
+          "size": 262416
+        },
+        {
+          "resource": "51e9f021f96390cb713d28f9ad182bc5.fsh",
+          "offset": 2264123,
+          "size": 262400
+        },
+        {
+          "resource": "436aff3bdba5613b9dd2a7431d86c462.fsh",
+          "offset": 2526523,
+          "size": 262416
+        },
+        {
+          "resource": "260a5c29d5e659a2622ab47e020482f3.fsh",
+          "offset": 2788939,
+          "size": 16544
+        },
+        {
+          "resource": "d9372a82a5267562bf10901e45a0e046.fsh",
+          "offset": 2805483,
+          "size": 262304
+        },
+        {
+          "resource": "68f264e0258c636097b07b2967c217a4.fsh",
+          "offset": 3067787,
+          "size": 262416
+        },
+        {
+          "resource": "474f69f1076b25cf96ff2e71a05f2b82.fsh",
+          "offset": 3330203,
+          "size": 262400
+        },
+        {
+          "resource": "a9e6d8ca65d6606c4d0d91b58b74a4bf.fsh",
+          "offset": 3592603,
+          "size": 262416
+        },
+        {
+          "resource": "7479a4bb3a23da4679aa19c1ab7ffac0.fsh",
+          "offset": 3855019,
+          "size": 16544
+        },
+        {
+          "resource": "44b8f4413d5296e687c186afde1039a1.fsh",
+          "offset": 3871563,
+          "size": 262304
+        },
+        {
+          "resource": "cc34f3fac4a5db86083758c67bcffb1e.fsh",
+          "offset": 4133867,
+          "size": 262416
+        },
+        {
+          "resource": "87510b32e74ec2678d346be9ddca5b4f.fsh",
+          "offset": 4396283,
+          "size": 262400
+        },
+        {
+          "resource": "294796c8b0300bc78a06d660cf685b83.fsh",
+          "offset": 4658683,
+          "size": 262416
+        },
+        {
+          "resource": "2a3e7886c9dc7bc14c0ffb426425e52d.fsh",
+          "offset": 4921099,
+          "size": 16544
+        },
+        {
+          "resource": "e344d56e2740fa20b401700730a79666.fsh",
+          "offset": 4937643,
+          "size": 262304
+        },
+        {
+          "resource": "070ff852d24a1a904d40193ef73d2c4c.fsh",
+          "offset": 5199947,
+          "size": 262416
+        },
+        {
+          "resource": "d10acb6b509bb9c391b50eb7b50cd0e9.fsh",
+          "offset": 5462363,
+          "size": 262400
+        },
+        {
+          "resource": "a36bad6f7c4851004266e19412a25b66.fsh",
+          "offset": 5724763,
+          "size": 262416
+        },
+        {
+          "resource": "95d95c6fc1f219b89598e93575f14ef8.fsh",
+          "offset": 5987179,
+          "size": 16544
+        },
+        {
+          "resource": "f08a6c41cc98da538ad5575e65fc15e5.fsh",
+          "offset": 6003723,
+          "size": 262304
+        },
+        {
+          "resource": "0151b250bd628704231e81ba2c2bcad6.fsh",
+          "offset": 6266027,
+          "size": 262416
+        },
+        {
+          "resource": "9567519009c93fe1007bc3ece4202b4c.fsh",
+          "offset": 6528443,
+          "size": 262400
+        },
+        {
+          "resource": "65173000b045e648cedb70484dfd55b6.fsh",
+          "offset": 6790843,
+          "size": 262416
+        },
+        {
+          "resource": "217d5bd31658a05a0ba24bf416e7ed6d.fsh",
+          "offset": 7053259,
+          "size": 16544
+        },
+        {
+          "resource": "2e3bde59c82ba793134d22da304428e1.fsh",
+          "offset": 7069803,
+          "size": 262304
+        },
+        {
+          "resource": "a494be9c4eeb13db2c679c5194903bde.fsh",
+          "offset": 7332107,
+          "size": 262416
+        },
+        {
+          "resource": "d2b55d758cf3c43547e0537d8f7d49c4.fsh",
+          "offset": 7594523,
+          "size": 262400
+        },
+        {
+          "resource": "b5f92a681cccb2905b3b17863e438873.fsh",
+          "offset": 7856923,
+          "size": 262416
+        },
+        {
+          "resource": "e2d48a0e8ac8945a40bcf2990f11f136.fsh",
+          "offset": 8119339,
+          "size": 16544
+        },
+        {
+          "resource": "ff4263bc1c73979663a708f71eecbe80.fsh",
+          "offset": 8135883,
+          "size": 262304
+        },
+        {
+          "resource": "226e7ae0decb040dcdbe5ab310fdf71c.fsh",
+          "offset": 8398187,
+          "size": 262416
+        },
+        {
+          "resource": "411e55262dec85eef98350a6dc718fd5.fsh",
+          "offset": 8660603,
+          "size": 262400
+        },
+        {
+          "resource": "a7cb477b2a9c96ab6470f0e38f60c11e.fsh",
+          "offset": 8923003,
+          "size": 262416
+        },
+        {
+          "resource": "d9b4ad42447a459abde4d61bec76fa26.fsh",
+          "offset": 9185419,
+          "size": 16544
+        },
+        {
+          "resource": "b66ce7a79f556f69f0d7f5eed492a596.fsh",
+          "offset": 9201963,
+          "size": 262304
+        },
+        {
+          "resource": "8144d8c52975c09dcb68815510b49836.fsh",
+          "offset": 9464267,
+          "size": 262416
+        },
+        {
+          "resource": "40c2be9f3a1949a104dd1d86237f7cb5.fsh",
+          "offset": 9726683,
+          "size": 262400
+        },
+        {
+          "resource": "eb1b39bbed208507afea2eda2eba69de.fsh",
+          "offset": 9989083,
+          "size": 262416
+        },
+        {
+          "resource": "cc56e8a7e559c0da975fa9f3937bbff8.fsh",
+          "offset": 10251499,
+          "size": 16544
+        },
+        {
+          "resource": "4b58bb4842464db52d80310fb955df20.fsh",
+          "offset": 10268043,
+          "size": 262304
+        },
+        {
+          "resource": "1b955f4e583968f50793ad9d94df8190.fsh",
+          "offset": 10530347,
+          "size": 262416
+        },
+        {
+          "resource": "b8b2b82e797fb34fc47634d81ed0d308.fsh",
+          "offset": 10792763,
+          "size": 262400
+        },
+        {
+          "resource": "fba05bdfbd0950a0f966e188069f9c13.fsh",
+          "offset": 11055163,
+          "size": 262416
+        },
+        {
+          "resource": "3135b350fa507dbf18661451e8a3f505.fsh",
+          "offset": 11317579,
+          "size": 16544
+        },
+        {
+          "resource": "ab8c45b9b9b897779700096a09116803.fsh",
+          "offset": 11334123,
+          "size": 262304
+        },
+        {
+          "resource": "3bcc2658d842d2ba717c4dbddc890dd7.fsh",
+          "offset": 11596427,
+          "size": 262416
+        },
+        {
+          "resource": "0869ff9cbd776a3ffa982ccd52f6347e.fsh",
+          "offset": 11858843,
+          "size": 262400
+        },
+        {
+          "resource": "955e82997d6a4f96085c3f487b9f3661.fsh",
+          "offset": 12121243,
+          "size": 262416
+        },
+        {
+          "resource": "0d77bd0cec74ff6b15ea0d3502b47b3a.fsh",
+          "offset": 12383659,
+          "size": 16544
+        },
+        {
+          "resource": "97a96c0b7d61af237764622f9270a98f.fsh",
+          "offset": 12400203,
+          "size": 71264
+        },
+        {
+          "resource": "347986af1f0d2d3c159198bce503c044.fsh",
+          "offset": 12471467,
+          "size": 70624
+        },
+        {
+          "resource": "a628e5117ae1ee272a0fe780ef0cf138.fsh",
+          "offset": 12542091,
+          "size": 70624
+        },
+        {
+          "resource": "363cdac6feb14eb5f6b233dc32ce3c2d.fsh",
+          "offset": 12612715,
+          "size": 70624
+        },
+        {
+          "resource": "3dcf7b6d60f1a4e4301b700d8691cd94.fsh",
+          "offset": 12683339,
+          "size": 70624
+        },
+        {
+          "resource": "44666c65a2bd896e1950f07cbc995428.fsh",
+          "offset": 12753963,
+          "size": 70624
+        },
+        {
+          "resource": "dde67a6da2b56afccd36bbaa7a0be1d0.fsh",
+          "offset": 12824587,
+          "size": 70624
+        },
+        {
+          "resource": "e89f65d8dc0604244e74bbd4882f35a4.fsh",
+          "offset": 12895211,
+          "size": 70624
+        },
+        {
+          "resource": "31d7bcd65d82fb4e1dd4c675b7010808.fsh",
+          "offset": 12965835,
+          "size": 70624
+        },
+        {
+          "resource": "8f3ad539dcd5aba7c1672f4d9f0420a8.fsh",
+          "offset": 13036459,
+          "size": 70624
+        },
+        {
+          "resource": "ea3a49108eabd63b0fc08f66e1281d6b.fsh",
+          "offset": 13107083,
+          "size": 70624
+        },
+        {
+          "resource": "6c6d87d85a76b34c3056bef75a940376.fsh",
+          "offset": 13177707,
+          "size": 70624
+        },
+        {
+          "resource": "c541751e6839f51943572fe291f4b6ab.fsh",
+          "offset": 13248331,
+          "size": 70624
+        },
+        {
+          "resource": "c2e6c21559bd3dcb9ee001c9f850cd26.fsh",
+          "offset": 13318955,
+          "size": 70624
+        },
+        {
+          "resource": "dadb5fe4d1e1c242ed28bddce202bbf0.fsh",
+          "offset": 13389579,
+          "size": 70624
+        },
+        {
+          "resource": "06fe897fa4ac10ddabed02d7660e8046.fsh",
+          "offset": 13460203,
+          "size": 70624
+        },
+        {
+          "resource": "4683e94d8beb50e9d37a87ef91af0be1.fsh",
+          "offset": 13530827,
+          "size": 70624
+        },
+        {
+          "resource": "e49fcaf11babf4389da08229aeb4abd9.fsh",
+          "offset": 13601451,
+          "size": 70624
+        },
+        {
+          "resource": "56ab1b4f274a04641ea28ae34296ace9.fsh",
+          "offset": 13672075,
+          "size": 70624
+        },
+        {
+          "resource": "980f0b1e0cd9c70945fcd1edee3b94fe.fsh",
+          "offset": 13742699,
+          "size": 70624
+        },
+        {
+          "resource": "12b8d5a9f072511b502f322f2372bbbb.fsh",
+          "offset": 13813323,
+          "size": 70624
+        },
+        {
+          "resource": "4b84b177e4486fde8780da5045d4a931.fsh",
+          "offset": 13883947,
+          "size": 70624
+        }
+      ]
     }
   ],
   "teams": [
@@ -2044,7 +2154,11 @@
         "Gurnoor Brar",
         "Ruturaj Gaikwad",
         "Ishan Kishan",
-        "Prasidh Krishna"
+        "Prasidh Krishna",
+        "Yashasvi Jaiswal",
+        "Washington Sundar",
+        "Ravi Bishnoi",
+        "Dhruv Jurel"
       ]
     },
     {
@@ -2504,44 +2618,44 @@
       "isWicketKeeper": false
     },
     {
-      "name": "Sanju Samson",
-      "displayName": "S.Samson",
+      "name": "Yashasvi Jaiswal",
+      "displayName": "Y.Jaiswal",
       "id": 30016,
       "row": 1182,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Washington Sundar",
+      "displayName": "W.Sundar",
+      "id": 30017,
+      "row": 1181,
+      "templateRow": 530,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ravi Bishnoi",
+      "displayName": "R.Bishnoi",
+      "id": 30018,
+      "row": 1180,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Dhruv Jurel",
+      "displayName": "D.Jurel",
+      "id": 30019,
+      "row": 1179,
       "templateRow": 545,
       "role": "wicketkeeper",
       "isWicketKeeper": true
     },
     {
-      "name": "Ayush Mhatre",
-      "displayName": "A.Mhatre",
-      "id": 30017,
-      "row": 1181,
-      "templateRow": 525,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Dewald Brevis",
-      "displayName": "D.Brevis",
-      "id": 30018,
-      "row": 1180,
-      "templateRow": 525,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Shivam Dube",
-      "displayName": "S.Dube",
-      "id": 30019,
-      "row": 1179,
-      "templateRow": 547,
-      "role": "allrounder",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "MS Dhoni",
-      "displayName": "MS.Dhoni",
+      "name": "Sanju Samson",
+      "displayName": "S.Samson",
       "id": 30020,
       "row": 1178,
       "templateRow": 545,
@@ -2549,10 +2663,46 @@
       "isWicketKeeper": true
     },
     {
-      "name": "Jamie Overton",
-      "displayName": "J.Overton",
+      "name": "Ayush Mhatre",
+      "displayName": "A.Mhatre",
       "id": 30021,
       "row": 1177,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Dewald Brevis",
+      "displayName": "D.Brevis",
+      "id": 30022,
+      "row": 1176,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shivam Dube",
+      "displayName": "S.Dube",
+      "id": 30023,
+      "row": 1175,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "MS Dhoni",
+      "displayName": "MS.Dhoni",
+      "id": 30024,
+      "row": 1174,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Jamie Overton",
+      "displayName": "J.Overton",
+      "id": 30025,
+      "row": 1173,
       "templateRow": 547,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -2560,8 +2710,8 @@
     {
       "name": "Noor Ahmad",
       "displayName": "N.Ahmad",
-      "id": 30022,
-      "row": 1176,
+      "id": 30026,
+      "row": 1172,
       "templateRow": 539,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2569,8 +2719,8 @@
     {
       "name": "Khaleel Ahmed",
       "displayName": "K.Ahmed",
-      "id": 30023,
-      "row": 1175,
+      "id": 30027,
+      "row": 1171,
       "templateRow": 562,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2578,8 +2728,8 @@
     {
       "name": "Rahul Chahar",
       "displayName": "R.Chahar",
-      "id": 30024,
-      "row": 1174,
+      "id": 30028,
+      "row": 1170,
       "templateRow": 539,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2587,8 +2737,8 @@
     {
       "name": "Urvil Patel",
       "displayName": "U.Patel",
-      "id": 30025,
-      "row": 1173,
+      "id": 30029,
+      "row": 1169,
       "templateRow": 545,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -2596,8 +2746,8 @@
     {
       "name": "Sarfaraz Khan",
       "displayName": "S.Khan",
-      "id": 30026,
-      "row": 1172,
+      "id": 30030,
+      "row": 1168,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -2605,8 +2755,8 @@
     {
       "name": "Matthew Short",
       "displayName": "M.Short",
-      "id": 30027,
-      "row": 1171,
+      "id": 30031,
+      "row": 1167,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -2614,8 +2764,8 @@
     {
       "name": "Akeal Hosein",
       "displayName": "A.Hosein",
-      "id": 30028,
-      "row": 1170,
+      "id": 30032,
+      "row": 1166,
       "templateRow": 554,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2623,8 +2773,8 @@
     {
       "name": "Matt Henry",
       "displayName": "M.Henry",
-      "id": 30029,
-      "row": 1169,
+      "id": 30033,
+      "row": 1165,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2632,8 +2782,8 @@
     {
       "name": "Mukesh Choudhary",
       "displayName": "M.Choudhary",
-      "id": 30030,
-      "row": 1168,
+      "id": 30034,
+      "row": 1164,
       "templateRow": 562,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2641,8 +2791,8 @@
     {
       "name": "Shreyas Gopal",
       "displayName": "S.Gopal",
-      "id": 30031,
-      "row": 1167,
+      "id": 30035,
+      "row": 1163,
       "templateRow": 539,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -2650,42 +2800,6 @@
     {
       "name": "Prashant Veer",
       "displayName": "P.Veer",
-      "id": 30032,
-      "row": 1166,
-      "templateRow": 525,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Kartik Sharma",
-      "displayName": "K.Sharma",
-      "id": 30033,
-      "row": 1165,
-      "templateRow": 545,
-      "role": "batsman",
-      "isWicketKeeper": true
-    },
-    {
-      "name": "Prithvi Shaw",
-      "displayName": "P.Shaw",
-      "id": 30034,
-      "row": 1164,
-      "templateRow": 525,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Pathum Nissanka",
-      "displayName": "P.Nissanka",
-      "id": 30035,
-      "row": 1163,
-      "templateRow": 525,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Karun Nair",
-      "displayName": "K.Nair",
       "id": 30036,
       "row": 1162,
       "templateRow": 525,
@@ -2693,8 +2807,8 @@
       "isWicketKeeper": false
     },
     {
-      "name": "Tristan Stubbs",
-      "displayName": "T.Stubbs",
+      "name": "Kartik Sharma",
+      "displayName": "K.Sharma",
       "id": 30037,
       "row": 1161,
       "templateRow": 545,
@@ -2702,8 +2816,8 @@
       "isWicketKeeper": true
     },
     {
-      "name": "Ashutosh Sharma",
-      "displayName": "A.Sharma",
+      "name": "Prithvi Shaw",
+      "displayName": "P.Shaw",
       "id": 30038,
       "row": 1160,
       "templateRow": 525,
@@ -2711,10 +2825,46 @@
       "isWicketKeeper": false
     },
     {
-      "name": "Vipraj Nigam",
-      "displayName": "V.Nigam",
+      "name": "Pathum Nissanka",
+      "displayName": "P.Nissanka",
       "id": 30039,
       "row": 1159,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Karun Nair",
+      "displayName": "K.Nair",
+      "id": 30040,
+      "row": 1158,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Tristan Stubbs",
+      "displayName": "T.Stubbs",
+      "id": 30041,
+      "row": 1157,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Ashutosh Sharma",
+      "displayName": "A.Sharma",
+      "id": 30042,
+      "row": 1156,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Vipraj Nigam",
+      "displayName": "V.Nigam",
+      "id": 30043,
+      "row": 1155,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2722,8 +2872,8 @@
     {
       "name": "Mitchell Starc",
       "displayName": "M.Starc",
-      "id": 30040,
-      "row": 1158,
+      "id": 30044,
+      "row": 1154,
       "templateRow": 562,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2731,8 +2881,8 @@
     {
       "name": "Mukesh Kumar",
       "displayName": "M.Kumar",
-      "id": 30041,
-      "row": 1157,
+      "id": 30045,
+      "row": 1153,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2740,8 +2890,8 @@
     {
       "name": "Abishek Porel",
       "displayName": "A.Porel",
-      "id": 30042,
-      "row": 1156,
+      "id": 30046,
+      "row": 1152,
       "templateRow": 552,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -2749,8 +2899,8 @@
     {
       "name": "David Miller",
       "displayName": "D.Miller",
-      "id": 30043,
-      "row": 1155,
+      "id": 30047,
+      "row": 1151,
       "templateRow": 534,
       "role": "batsman",
       "isWicketKeeper": false
@@ -2758,8 +2908,8 @@
     {
       "name": "Nitish Rana",
       "displayName": "N.Rana",
-      "id": 30044,
-      "row": 1154,
+      "id": 30048,
+      "row": 1150,
       "templateRow": 534,
       "role": "batsman",
       "isWicketKeeper": false
@@ -2767,8 +2917,8 @@
     {
       "name": "Sameer Rizvi",
       "displayName": "S.Rizvi",
-      "id": 30045,
-      "row": 1153,
+      "id": 30050,
+      "row": 1149,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -2776,8 +2926,8 @@
     {
       "name": "T Natarajan",
       "displayName": "T.Natarajan",
-      "id": 30046,
-      "row": 1152,
+      "id": 30051,
+      "row": 1148,
       "templateRow": 562,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2785,8 +2935,8 @@
     {
       "name": "Lungi Ngidi",
       "displayName": "L.Ngidi",
-      "id": 30047,
-      "row": 1151,
+      "id": 30052,
+      "row": 1147,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2794,8 +2944,8 @@
     {
       "name": "Auqib Nabi",
       "displayName": "A.Nabi",
-      "id": 30048,
-      "row": 1150,
+      "id": 30053,
+      "row": 1146,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2803,8 +2953,8 @@
     {
       "name": "Dushmantha Chameera",
       "displayName": "D.Chameera",
-      "id": 30050,
-      "row": 1149,
+      "id": 30054,
+      "row": 1145,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2812,8 +2962,8 @@
     {
       "name": "Kyle Jamieson",
       "displayName": "K.Jamieson",
-      "id": 30051,
-      "row": 1148,
+      "id": 30055,
+      "row": 1144,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2821,8 +2971,8 @@
     {
       "name": "Sai Sudharsan",
       "displayName": "S.Sudharsan",
-      "id": 30052,
-      "row": 1147,
+      "id": 30056,
+      "row": 1143,
       "templateRow": 534,
       "role": "batsman",
       "isWicketKeeper": false
@@ -2830,8 +2980,8 @@
     {
       "name": "Jos Buttler",
       "displayName": "J.Buttler",
-      "id": 30053,
-      "row": 1146,
+      "id": 30057,
+      "row": 1142,
       "templateRow": 545,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -2839,8 +2989,8 @@
     {
       "name": "Glenn Phillips",
       "displayName": "G.Phillips",
-      "id": 30054,
-      "row": 1145,
+      "id": 30058,
+      "row": 1141,
       "templateRow": 545,
       "role": "batsman",
       "isWicketKeeper": true
@@ -2848,8 +2998,8 @@
     {
       "name": "Shahrukh Khan",
       "displayName": "S.Khan",
-      "id": 30055,
-      "row": 1144,
+      "id": 30059,
+      "row": 1140,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -2857,26 +3007,17 @@
     {
       "name": "Rahul Tewatia",
       "displayName": "R.Tewatia",
-      "id": 30056,
-      "row": 1143,
+      "id": 30060,
+      "row": 1139,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
     },
     {
-      "name": "Washington Sundar",
-      "displayName": "W.Sundar",
-      "id": 30057,
-      "row": 1142,
-      "templateRow": 530,
-      "role": "allrounder",
-      "isWicketKeeper": false
-    },
-    {
       "name": "Rashid Khan",
       "displayName": "R.Khan",
-      "id": 30058,
-      "row": 1141,
+      "id": 30061,
+      "row": 1138,
       "templateRow": 539,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2884,8 +3025,8 @@
     {
       "name": "Kagiso Rabada",
       "displayName": "K.Rabada",
-      "id": 30059,
-      "row": 1140,
+      "id": 30062,
+      "row": 1137,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2893,8 +3034,8 @@
     {
       "name": "Jason Holder",
       "displayName": "J.Holder",
-      "id": 30060,
-      "row": 1139,
+      "id": 30063,
+      "row": 1136,
       "templateRow": 547,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -2902,8 +3043,8 @@
     {
       "name": "Kumar Kushagra",
       "displayName": "K.Kushagra",
-      "id": 30061,
-      "row": 1138,
+      "id": 30064,
+      "row": 1135,
       "templateRow": 545,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -2911,8 +3052,8 @@
     {
       "name": "Anuj Rawat",
       "displayName": "A.Rawat",
-      "id": 30062,
-      "row": 1137,
+      "id": 30065,
+      "row": 1134,
       "templateRow": 545,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -2920,33 +3061,6 @@
     {
       "name": "Sai Kishore",
       "displayName": "S.Kishore",
-      "id": 30063,
-      "row": 1136,
-      "templateRow": 554,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Ishant Sharma",
-      "displayName": "I.Sharma",
-      "id": 30064,
-      "row": 1135,
-      "templateRow": 553,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Ashok Sharma",
-      "displayName": "A.Sharma",
-      "id": 30065,
-      "row": 1134,
-      "templateRow": 553,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Manav Suthar",
-      "displayName": "M.Suthar",
       "id": 30066,
       "row": 1133,
       "templateRow": 554,
@@ -2954,10 +3068,37 @@
       "isWicketKeeper": false
     },
     {
-      "name": "Luke Wood",
-      "displayName": "L.Wood",
+      "name": "Ishant Sharma",
+      "displayName": "I.Sharma",
       "id": 30067,
       "row": 1132,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ashok Sharma",
+      "displayName": "A.Sharma",
+      "id": 30068,
+      "row": 1131,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Manav Suthar",
+      "displayName": "M.Suthar",
+      "id": 30069,
+      "row": 1130,
+      "templateRow": 554,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Luke Wood",
+      "displayName": "L.Wood",
+      "id": 30070,
+      "row": 1129,
       "templateRow": 562,
       "role": "bowler",
       "isWicketKeeper": false
@@ -2965,33 +3106,6 @@
     {
       "name": "Finn Allen",
       "displayName": "F.Allen",
-      "id": 30068,
-      "row": 1131,
-      "templateRow": 545,
-      "role": "batsman",
-      "isWicketKeeper": true
-    },
-    {
-      "name": "Sunil Narine",
-      "displayName": "S.Narine",
-      "id": 30069,
-      "row": 1130,
-      "templateRow": 530,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Ajinkya Rahane",
-      "displayName": "A.Rahane",
-      "id": 30070,
-      "row": 1129,
-      "templateRow": 525,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Angkrish Raghuvanshi",
-      "displayName": "A.Raghuvanshi",
       "id": 30071,
       "row": 1128,
       "templateRow": 545,
@@ -2999,10 +3113,37 @@
       "isWicketKeeper": true
     },
     {
-      "name": "Cameron Green",
-      "displayName": "C.Green",
+      "name": "Sunil Narine",
+      "displayName": "S.Narine",
       "id": 30072,
       "row": 1127,
+      "templateRow": 530,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ajinkya Rahane",
+      "displayName": "A.Rahane",
+      "id": 30073,
+      "row": 1126,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Angkrish Raghuvanshi",
+      "displayName": "A.Raghuvanshi",
+      "id": 30074,
+      "row": 1125,
+      "templateRow": 545,
+      "role": "batsman",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Cameron Green",
+      "displayName": "C.Green",
+      "id": 30075,
+      "row": 1124,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3010,8 +3151,8 @@
     {
       "name": "Rinku Singh",
       "displayName": "R.Singh",
-      "id": 30073,
-      "row": 1126,
+      "id": 30076,
+      "row": 1123,
       "templateRow": 534,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3019,8 +3160,8 @@
     {
       "name": "Ramandeep Singh",
       "displayName": "R.Singh",
-      "id": 30074,
-      "row": 1125,
+      "id": 30077,
+      "row": 1122,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3028,8 +3169,8 @@
     {
       "name": "Varun Chakaravarthy",
       "displayName": "V.Chakaravarthy",
-      "id": 30075,
-      "row": 1124,
+      "id": 30078,
+      "row": 1121,
       "templateRow": 539,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3037,8 +3178,8 @@
     {
       "name": "Harshit Rana",
       "displayName": "H.Rana",
-      "id": 30076,
-      "row": 1123,
+      "id": 30079,
+      "row": 1120,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3046,8 +3187,8 @@
     {
       "name": "Vaibhav Arora",
       "displayName": "V.Arora",
-      "id": 30077,
-      "row": 1122,
+      "id": 30080,
+      "row": 1119,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3055,8 +3196,8 @@
     {
       "name": "Matheesha Pathirana",
       "displayName": "M.Pathirana",
-      "id": 30078,
-      "row": 1121,
+      "id": 30081,
+      "row": 1118,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3064,8 +3205,8 @@
     {
       "name": "Tim Seifert",
       "displayName": "T.Seifert",
-      "id": 30079,
-      "row": 1120,
+      "id": 30082,
+      "row": 1117,
       "templateRow": 545,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -3073,8 +3214,8 @@
     {
       "name": "Rovman Powell",
       "displayName": "R.Powell",
-      "id": 30080,
-      "row": 1119,
+      "id": 30083,
+      "row": 1116,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3082,8 +3223,8 @@
     {
       "name": "Rachin Ravindra",
       "displayName": "R.Ravindra",
-      "id": 30081,
-      "row": 1118,
+      "id": 30084,
+      "row": 1115,
       "templateRow": 547,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3091,8 +3232,8 @@
     {
       "name": "Manish Pandey",
       "displayName": "M.Pandey",
-      "id": 30082,
-      "row": 1117,
+      "id": 30085,
+      "row": 1114,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3100,8 +3241,8 @@
     {
       "name": "Anukul Roy",
       "displayName": "A.Roy",
-      "id": 30083,
-      "row": 1116,
+      "id": 30086,
+      "row": 1113,
       "templateRow": 547,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3109,8 +3250,8 @@
     {
       "name": "Akash Deep",
       "displayName": "A.Deep",
-      "id": 30084,
-      "row": 1115,
+      "id": 30087,
+      "row": 1112,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3118,8 +3259,8 @@
     {
       "name": "Umran Malik",
       "displayName": "U.Malik",
-      "id": 30085,
-      "row": 1114,
+      "id": 30088,
+      "row": 1111,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3127,8 +3268,8 @@
     {
       "name": "Kartik Tyagi",
       "displayName": "K.Tyagi",
-      "id": 30086,
-      "row": 1113,
+      "id": 30089,
+      "row": 1110,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3136,8 +3277,8 @@
     {
       "name": "Rahul Tripathi",
       "displayName": "R.Tripathi",
-      "id": 30087,
-      "row": 1112,
+      "id": 30090,
+      "row": 1109,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3145,8 +3286,8 @@
     {
       "name": "Mitchell Marsh",
       "displayName": "M.Marsh",
-      "id": 30088,
-      "row": 1111,
+      "id": 30091,
+      "row": 1108,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3154,8 +3295,8 @@
     {
       "name": "Aiden Markram",
       "displayName": "A.Markram",
-      "id": 30089,
-      "row": 1110,
+      "id": 30092,
+      "row": 1107,
       "templateRow": 530,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3163,8 +3304,8 @@
     {
       "name": "Rishabh Pant",
       "displayName": "R.Pant",
-      "id": 30090,
-      "row": 1109,
+      "id": 30093,
+      "row": 1106,
       "templateRow": 552,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -3172,8 +3313,8 @@
     {
       "name": "Nicholas Pooran",
       "displayName": "N.Pooran",
-      "id": 30091,
-      "row": 1108,
+      "id": 30094,
+      "row": 1105,
       "templateRow": 552,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -3181,8 +3322,8 @@
     {
       "name": "Ayush Badoni",
       "displayName": "A.Badoni",
-      "id": 30092,
-      "row": 1107,
+      "id": 30095,
+      "row": 1104,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3190,8 +3331,8 @@
     {
       "name": "Abdul Samad",
       "displayName": "A.Samad",
-      "id": 30093,
-      "row": 1106,
+      "id": 30096,
+      "row": 1103,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3199,8 +3340,8 @@
     {
       "name": "Shahbaz Ahmed",
       "displayName": "S.Ahmed",
-      "id": 30094,
-      "row": 1105,
+      "id": 30097,
+      "row": 1102,
       "templateRow": 554,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3208,8 +3349,8 @@
     {
       "name": "Wanindu Hasaranga",
       "displayName": "W.Hasaranga",
-      "id": 30095,
-      "row": 1104,
+      "id": 30098,
+      "row": 1101,
       "templateRow": 547,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3217,8 +3358,8 @@
     {
       "name": "Mohammed Shami",
       "displayName": "M.Shami",
-      "id": 30096,
-      "row": 1103,
+      "id": 30099,
+      "row": 1100,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3226,8 +3367,8 @@
     {
       "name": "Avesh Khan",
       "displayName": "A.Khan",
-      "id": 30097,
-      "row": 1102,
+      "id": 30100,
+      "row": 1099,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3235,8 +3376,8 @@
     {
       "name": "Prince Yadav",
       "displayName": "P.Yadav",
-      "id": 30098,
-      "row": 1101,
+      "id": 30101,
+      "row": 1098,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3244,8 +3385,8 @@
     {
       "name": "Josh Inglis",
       "displayName": "J.Inglis",
-      "id": 30099,
-      "row": 1100,
+      "id": 30102,
+      "row": 1097,
       "templateRow": 545,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -3253,8 +3394,8 @@
     {
       "name": "Arshin Kulkarni",
       "displayName": "A.Kulkarni",
-      "id": 30100,
-      "row": 1099,
+      "id": 30103,
+      "row": 1096,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3262,8 +3403,8 @@
     {
       "name": "Digvesh Singh Rathi",
       "displayName": "DS.Rathi",
-      "id": 30101,
-      "row": 1098,
+      "id": 30104,
+      "row": 43,
       "templateRow": 539,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3271,8 +3412,8 @@
     {
       "name": "Anrich Nortje",
       "displayName": "A.Nortje",
-      "id": 30102,
-      "row": 1097,
+      "id": 30105,
+      "row": 42,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3280,33 +3421,6 @@
     {
       "name": "Mohsin Khan",
       "displayName": "M.Khan",
-      "id": 30103,
-      "row": 1096,
-      "templateRow": 562,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Mayank Yadav",
-      "displayName": "M.Yadav",
-      "id": 30104,
-      "row": 43,
-      "templateRow": 553,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Manimaran Siddharth",
-      "displayName": "M.Siddharth",
-      "id": 30105,
-      "row": 42,
-      "templateRow": 554,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Arjun Tendulkar",
-      "displayName": "A.Tendulkar",
       "id": 30106,
       "row": 41,
       "templateRow": 562,
@@ -3314,10 +3428,37 @@
       "isWicketKeeper": false
     },
     {
-      "name": "Mukul Choudhary",
-      "displayName": "M.Choudhary",
+      "name": "Mayank Yadav",
+      "displayName": "M.Yadav",
       "id": 30107,
       "row": 40,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Manimaran Siddharth",
+      "displayName": "M.Siddharth",
+      "id": 30108,
+      "row": 39,
+      "templateRow": 554,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Arjun Tendulkar",
+      "displayName": "A.Tendulkar",
+      "id": 30109,
+      "row": 38,
+      "templateRow": 562,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mukul Choudhary",
+      "displayName": "M.Choudhary",
+      "id": 30110,
+      "row": 37,
       "templateRow": 545,
       "role": "batsman",
       "isWicketKeeper": true
@@ -3325,8 +3466,8 @@
     {
       "name": "Quinton de Kock",
       "displayName": "Qd.Kock",
-      "id": 30108,
-      "row": 39,
+      "id": 30111,
+      "row": 36,
       "templateRow": 552,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -3334,8 +3475,8 @@
     {
       "name": "Suryakumar Yadav",
       "displayName": "S.Yadav",
-      "id": 30109,
-      "row": 38,
+      "id": 30112,
+      "row": 35,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3343,8 +3484,8 @@
     {
       "name": "Tilak Varma",
       "displayName": "T.Varma",
-      "id": 30110,
-      "row": 37,
+      "id": 30113,
+      "row": 34,
       "templateRow": 534,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3352,8 +3493,8 @@
     {
       "name": "Hardik Pandya",
       "displayName": "H.Pandya",
-      "id": 30111,
-      "row": 36,
+      "id": 30114,
+      "row": 33,
       "templateRow": 547,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3361,8 +3502,8 @@
     {
       "name": "Will Jacks",
       "displayName": "W.Jacks",
-      "id": 30112,
-      "row": 35,
+      "id": 30115,
+      "row": 32,
       "templateRow": 530,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3370,8 +3511,8 @@
     {
       "name": "Mitchell Santner",
       "displayName": "M.Santner",
-      "id": 30113,
-      "row": 34,
+      "id": 30116,
+      "row": 31,
       "templateRow": 554,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3379,8 +3520,8 @@
     {
       "name": "Deepak Chahar",
       "displayName": "D.Chahar",
-      "id": 30114,
-      "row": 33,
+      "id": 30118,
+      "row": 30,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3388,8 +3529,8 @@
     {
       "name": "Jasprit Bumrah",
       "displayName": "J.Bumrah",
-      "id": 30115,
-      "row": 32,
+      "id": 30119,
+      "row": 29,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3397,8 +3538,8 @@
     {
       "name": "Trent Boult",
       "displayName": "T.Boult",
-      "id": 30116,
-      "row": 31,
+      "id": 30120,
+      "row": 28,
       "templateRow": 562,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3406,8 +3547,8 @@
     {
       "name": "Ryan Rickelton",
       "displayName": "R.Rickelton",
-      "id": 30118,
-      "row": 30,
+      "id": 30121,
+      "row": 27,
       "templateRow": 552,
       "role": "wicketkeeper",
       "isWicketKeeper": true
@@ -3415,8 +3556,8 @@
     {
       "name": "Sherfane Rutherford",
       "displayName": "S.Rutherford",
-      "id": 30119,
-      "row": 29,
+      "id": 30122,
+      "row": 26,
       "templateRow": 534,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3424,33 +3565,6 @@
     {
       "name": "Shardul Thakur",
       "displayName": "S.Thakur",
-      "id": 30120,
-      "row": 28,
-      "templateRow": 553,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Corbin Bosch",
-      "displayName": "C.Bosch",
-      "id": 30121,
-      "row": 27,
-      "templateRow": 547,
-      "role": "allrounder",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "AM Ghazanfar",
-      "displayName": "A.Ghazanfar",
-      "id": 30122,
-      "row": 26,
-      "templateRow": 539,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Ashwani Kumar",
-      "displayName": "A.Kumar",
       "id": 30123,
       "row": 25,
       "templateRow": 553,
@@ -3458,10 +3572,37 @@
       "isWicketKeeper": false
     },
     {
-      "name": "Mayank Markande",
-      "displayName": "M.Markande",
+      "name": "Corbin Bosch",
+      "displayName": "C.Bosch",
       "id": 30124,
       "row": 24,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "AM Ghazanfar",
+      "displayName": "A.Ghazanfar",
+      "id": 30125,
+      "row": 23,
+      "templateRow": 539,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Ashwani Kumar",
+      "displayName": "A.Kumar",
+      "id": 30126,
+      "row": 22,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Mayank Markande",
+      "displayName": "M.Markande",
+      "id": 30127,
+      "row": 21,
       "templateRow": 539,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3469,8 +3610,8 @@
     {
       "name": "Robin Minz",
       "displayName": "R.Minz",
-      "id": 30125,
-      "row": 23,
+      "id": 30128,
+      "row": 20,
       "templateRow": 545,
       "role": "batsman",
       "isWicketKeeper": true
@@ -3478,8 +3619,8 @@
     {
       "name": "Raj Bawa",
       "displayName": "R.Bawa",
-      "id": 30126,
-      "row": 22,
+      "id": 30129,
+      "row": 19,
       "templateRow": 547,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3487,33 +3628,6 @@
     {
       "name": "Priyansh Arya",
       "displayName": "P.Arya",
-      "id": 30127,
-      "row": 21,
-      "templateRow": 525,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Prabhsimran Singh",
-      "displayName": "P.Singh",
-      "id": 30128,
-      "row": 20,
-      "templateRow": 545,
-      "role": "wicketkeeper",
-      "isWicketKeeper": true
-    },
-    {
-      "name": "Nehal Wadhera",
-      "displayName": "N.Wadhera",
-      "id": 30129,
-      "row": 19,
-      "templateRow": 534,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Shashank Singh",
-      "displayName": "S.Singh",
       "id": 30130,
       "row": 18,
       "templateRow": 525,
@@ -3521,10 +3635,37 @@
       "isWicketKeeper": false
     },
     {
-      "name": "Marcus Stoinis",
-      "displayName": "M.Stoinis",
+      "name": "Prabhsimran Singh",
+      "displayName": "P.Singh",
       "id": 30131,
       "row": 17,
+      "templateRow": 545,
+      "role": "wicketkeeper",
+      "isWicketKeeper": true
+    },
+    {
+      "name": "Nehal Wadhera",
+      "displayName": "N.Wadhera",
+      "id": 30132,
+      "row": 16,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Shashank Singh",
+      "displayName": "S.Singh",
+      "id": 30133,
+      "row": 15,
+      "templateRow": 525,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Marcus Stoinis",
+      "displayName": "M.Stoinis",
+      "id": 30134,
+      "row": 14,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3532,8 +3673,8 @@
     {
       "name": "Marco Jansen",
       "displayName": "M.Jansen",
-      "id": 30132,
-      "row": 16,
+      "id": 30135,
+      "row": 13,
       "templateRow": 562,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3541,8 +3682,8 @@
     {
       "name": "Harpreet Brar",
       "displayName": "H.Brar",
-      "id": 30133,
-      "row": 15,
+      "id": 30136,
+      "row": 12,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3550,8 +3691,8 @@
     {
       "name": "Yuzvendra Chahal",
       "displayName": "Y.Chahal",
-      "id": 30134,
-      "row": 14,
+      "id": 30137,
+      "row": 11,
       "templateRow": 539,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3559,33 +3700,6 @@
     {
       "name": "Lockie Ferguson",
       "displayName": "L.Ferguson",
-      "id": 30135,
-      "row": 13,
-      "templateRow": 553,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Cooper Connolly",
-      "displayName": "C.Connolly",
-      "id": 30136,
-      "row": 12,
-      "templateRow": 534,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Azmatullah Omarzai",
-      "displayName": "A.Omarzai",
-      "id": 30137,
-      "row": 11,
-      "templateRow": 547,
-      "role": "allrounder",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Xavier Bartlett",
-      "displayName": "X.Bartlett",
       "id": 30138,
       "row": 10,
       "templateRow": 553,
@@ -3593,10 +3707,37 @@
       "isWicketKeeper": false
     },
     {
-      "name": "Vijaykumar Vyshak",
-      "displayName": "V.Vyshak",
+      "name": "Cooper Connolly",
+      "displayName": "C.Connolly",
       "id": 30139,
       "row": 9,
+      "templateRow": 534,
+      "role": "batsman",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Azmatullah Omarzai",
+      "displayName": "A.Omarzai",
+      "id": 30140,
+      "row": 8,
+      "templateRow": 547,
+      "role": "allrounder",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Xavier Bartlett",
+      "displayName": "X.Bartlett",
+      "id": 30141,
+      "row": 7,
+      "templateRow": 553,
+      "role": "bowler",
+      "isWicketKeeper": false
+    },
+    {
+      "name": "Vijaykumar Vyshak",
+      "displayName": "V.Vyshak",
+      "id": 30142,
+      "row": 6,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3604,8 +3745,8 @@
     {
       "name": "Yash Thakur",
       "displayName": "Y.Thakur",
-      "id": 30140,
-      "row": 8,
+      "id": 30143,
+      "row": 5,
       "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
@@ -3613,8 +3754,8 @@
     {
       "name": "Vishnu Vinod",
       "displayName": "V.Vinod",
-      "id": 30141,
-      "row": 7,
+      "id": 30144,
+      "row": 4,
       "templateRow": 545,
       "role": "batsman",
       "isWicketKeeper": true
@@ -3622,8 +3763,8 @@
     {
       "name": "Musheer Khan",
       "displayName": "M.Khan",
-      "id": 30142,
-      "row": 6,
+      "id": 30145,
+      "row": 3,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3631,8 +3772,8 @@
     {
       "name": "Suryansh Shedge",
       "displayName": "S.Shedge",
-      "id": 30143,
-      "row": 5,
+      "id": 30146,
+      "row": 2,
       "templateRow": 525,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3640,26 +3781,17 @@
     {
       "name": "Mitchell Owen",
       "displayName": "M.Owen",
-      "id": 30144,
-      "row": 4,
+      "id": 30148,
+      "row": 1,
       "templateRow": 525,
-      "role": "batsman",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Yashasvi Jaiswal",
-      "displayName": "Y.Jaiswal",
-      "id": 30145,
-      "row": 3,
-      "templateRow": 534,
       "role": "batsman",
       "isWicketKeeper": false
     },
     {
       "name": "Vaibhav Sooryavanshi",
       "displayName": "V.Sooryavanshi",
-      "id": 30146,
-      "row": 2,
+      "id": 30149,
+      "row": 1090,
       "templateRow": 534,
       "role": "batsman",
       "isWicketKeeper": false
@@ -3667,26 +3799,17 @@
     {
       "name": "Riyan Parag",
       "displayName": "R.Parag",
-      "id": 30148,
-      "row": 1,
+      "id": 30150,
+      "row": 1088,
       "templateRow": 547,
       "role": "allrounder",
       "isWicketKeeper": false
     },
     {
-      "name": "Dhruv Jurel",
-      "displayName": "D.Jurel",
-      "id": 30149,
-      "row": 1090,
-      "templateRow": 545,
-      "role": "wicketkeeper",
-      "isWicketKeeper": true
-    },
-    {
       "name": "Shimron Hetmyer",
       "displayName": "S.Hetmyer",
-      "id": 30150,
-      "row": 1088,
+      "id": 30151,
+      "row": 1087,
       "templateRow": 552,
       "role": "batsman",
       "isWicketKeeper": true
@@ -3694,8 +3817,8 @@
     {
       "name": "Ravindra Jadeja",
       "displayName": "R.Jadeja",
-      "id": 30151,
-      "row": 1087,
+      "id": 30152,
+      "row": 1083,
       "templateRow": 554,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3703,8 +3826,8 @@
     {
       "name": "Sam Curran",
       "displayName": "S.Curran",
-      "id": 30152,
-      "row": 1083,
+      "id": 30153,
+      "row": 1078,
       "templateRow": 562,
       "role": "allrounder",
       "isWicketKeeper": false
@@ -3712,18 +3835,9 @@
     {
       "name": "Jofra Archer",
       "displayName": "J.Archer",
-      "id": 30153,
-      "row": 1078,
-      "templateRow": 553,
-      "role": "bowler",
-      "isWicketKeeper": false
-    },
-    {
-      "name": "Ravi Bishnoi",
-      "displayName": "R.Bishnoi",
       "id": 30154,
       "row": 1077,
-      "templateRow": 539,
+      "templateRow": 553,
       "role": "bowler",
       "isWicketKeeper": false
     },

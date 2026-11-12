@@ -18,11 +18,11 @@ This pack repurposes eleven secondary slots:
 | Minister's XI | Royal Challengers Bengaluru |
 | V. Chancellor's XI | Sunrisers Hyderabad |
 
-The build verifies that 52 other original squads, and 943 protected original player records, remain byte-for-byte unchanged. Modern players have distinct IDs and may be shared between their national and franchise squads. India has 16 players; each IPL side has 20 selected players, the engine's squad capacity. The full fetched IPL squads remain in `sources/`.
+The build verifies that 52 other original squads, and 943 protected original player records, remain byte-for-byte unchanged. Modern players have distinct IDs and may be shared between their national and franchise squads. Every side names 20 players, the engine's squad capacity, and the build refuses to write a squad that names fewer: a squad record holds twenty slots and the engine reads all of them, so a part-filled squad leaves slots that resolve to unrelated players. The India squad is also checked to be all-Indian, against the country recorded for each name in `sources/`. The full fetched IPL squads remain in `sources/`.
 
 ## Scope and sources
 
-- India ODI selection: [BCCI's 16 October 2026 New Zealand tour announcement](https://www.bcci.tv/news/article/indias-odi-and-test-squads-for-new-zealand-tour-announced).
+- India ODI selection: the sixteen named in [BCCI's 16 October 2026 New Zealand tour announcement](https://www.bcci.tv/news/article/indias-odi-and-test-squads-for-new-zealand-tour-announced), plus four standbys to fill the engine's twenty-player squad — Yashasvi Jaiswal, Washington Sundar, Ravi Bishnoi and Dhruv Jurel. All four are current India players, taken with their real roles and shirt numbers from the official IPL squad data in `sources/`; they are this pack's own choice of reserves, not part of the BCCI announcement.
 - IPL selections, captains, jersey numbers, crests and shirt references: official [IPL team pages](https://www.iplt20.com/teams), fetched from each team's `api/bff/cms/teams/<slug>?tab=squad&season=2026` endpoint. Each saved response records its source URL and season.
 - Uniforms are editable fan recreations based on those references: shirts/trousers, pads, keeper equipment, hats and helmets. These are not official downloadable game skins. Faces and abilities use generic/proxy game templates; these are not authentic face scans or official 2026 ratings. Historic career counters are cleared without clearing the packed ability fields.
 - Original stadiums, animations and commentary remain. Commentary does not gain newly recorded player or team names. Existing tours referencing repurposed secondary slots will face the modern teams in expanded mode.

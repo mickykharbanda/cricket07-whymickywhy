@@ -10,6 +10,10 @@ ARCHIVE=ROOT/'game/Data/data.gob';ES={e[0]:e for e in entries(ARCHIVE)}
 with ARCHIVE.open('rb') as stream:INDEX=stream.read(157696)
 PLAN=json.loads((OUT/'team-plan.json').read_text());RESOURCES=[]
 CDF='113964e05e69ab31d264fb8f15c58e5c.cdf'
+# A squad record holds exactly this many player slots and the engine reads all of them: every one of
+# the 67 original squads fills all 20. A slot left over from a short squad holds no usable player id,
+# and the engine resolves it to an unrelated record, so a part-filled squad shows strangers' names.
+SQUAD=20
 
 def resource(name,data):
     assert name in ES,name
@@ -103,7 +107,7 @@ def build():
     original=load(CDF);data=bytearray(original)
     protected=set()
     preserved=list(range(44))+list(range(55,63))
-    for slot in preserved:protected.update(struct.unpack_from('<20H',original,432004+2808*slot))
+    for slot in preserved:protected.update(struct.unpack_from(f'<{SQUAD}H',original,432004+2808*slot))
     # All original India players are protected, including the reserves beyond XI.
     protected_rows=set(range(524,565))
     for row in range(1200):
@@ -131,6 +135,18 @@ def build():
             src=json.loads((SRC/(team['slug']+'.json')).read_text());pool={p['name']:p for p in src['squad']['players']}
             chosen=[copy.deepcopy(pool[n]) for n in team['players'].split('|')];title=src['title'];source=src['sourceUrl']
             captain=next(p['name'] for p in src['squad']['players'] if p.get('isCaptain'))
+        # A short squad must fail the build rather than ship slots the engine fills with strangers.
+        assert len(chosen)==SQUAD,(f"{team['slug']} names {len(chosen)} players; a squad record holds exactly "
+            f'{SQUAD} and the engine reads every slot. Name {SQUAD} players in team-plan.json.')
+        picked=[norm(p['name']) for p in chosen]
+        repeated=sorted({n for n in picked if picked.count(n)>1})
+        assert not repeated,f"{team['slug']} names the same player twice: {repeated}"
+        # A national squad may only contain that nation's players. The country comes from the official
+        # squad data in sources/; a name absent from it has no country to check and is rejected too.
+        if team.get('country'):
+            foreign=[(p['name'],p.get('country') or 'not in sources/') for p in chosen if p.get('country')!=team['country']]
+            assert not foreign,(f"{team['slug']} is a {team['country']} squad but these are not "
+                f"{team['country']} players: {foreign}")
         ids=[];numbers=[]
         for player in chosen:
             name=norm(player['name'])
@@ -148,8 +164,8 @@ def build():
         off=432004+team['slot']*2808;template_off=432004+13*2808
         # Team records begin 24 bytes before the 20-player selection array.
         data[off-24:off-24+2808]=original[template_off-24:template_off-24+2808]
-        data[off-24:off-4]=bytes(numbers+[0]*(20-len(numbers)))
-        struct.pack_into('<20H',data,off,*(ids+[65535]*(20-len(ids))))
+        data[off-24:off-4]=bytes(numbers)
+        struct.pack_into(f'<{SQUAD}H',data,off,*ids)
         struct.pack_into('<I',data,off+40,team['slot'])
         struct.pack_into('<H',data,off+46,allocated[norm(captain)][0])
         node=next(t for t in info.findall('team') if int(t.get('Index'))==team['slot'])
