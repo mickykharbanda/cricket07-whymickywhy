@@ -1,6 +1,7 @@
 /* Runtime for recompiled code: guest memory, PE image loading, function dispatch, traps. */
 #include "runtime.h"
 
+#include <errno.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -369,8 +370,16 @@ void runtime_init(CPU *c) {
     if (!g_mem) { fprintf(stderr, "cannot allocate guest memory\n"); exit(1); }
     if ((uintptr_t)g_mem < brk0) memset(g_mem, 0, brk0 - (uintptr_t)g_mem < size ? brk0 - (uintptr_t)g_mem : size);
 #else
-    g_mem = mmap(NULL, GUEST_SPACE + 0x10000, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANON | MAP_NORESERVE, -1, 0);
-    if (g_mem == MAP_FAILED) { perror("mmap 4GiB guest space"); exit(1); }
+    g_mem = mmap(NULL, (size_t)GUEST_SPACE + 0x10000, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_ANON | MAP_NORESERVE, -1, 0);
+    /* The reservation is address space, not memory: MAP_NORESERVE means pages are committed only as
+       the game touches them. It still has to be one contiguous run, which is the whole risk on a
+       32-bit process -- 1.25 GiB out of a ~3 GiB user address space already holding the Java heap,
+       ART and every loaded library. Say how much was asked for, so a failure in logcat is legible. */
+    if (g_mem == MAP_FAILED) {
+        fprintf(stderr, "cannot reserve %llu MiB of contiguous guest address space: %s\n",
+                (unsigned long long)((GUEST_SPACE + 0x10000) >> 20), strerror(errno));
+        exit(1);
+    }
 #endif
     memset(c, 0, sizeof *c);
     c->esp = GUEST_STACK_TOP;

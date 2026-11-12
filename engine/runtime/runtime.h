@@ -14,11 +14,15 @@ extern char g_trap_msg[256];
 #define GUEST_STACK_TOP        0x00300000u
 #define GUEST_STACK_SIZE       0x00200000u
 #define GUEST_HEAP_BASE        0x10000000u
-/* Natively the guest gets a full 4 GiB reservation. In the browser (wasm32) it must share a 4 GiB
-   memory with everything else, so the heap and VirtualAlloc ranges are compacted: the game peaks at
-   ~125 MB of heap and ~580 MB of virtual allocations (mostly mapped archives, of which only what the game reads becomes
-   resident: host/core.c, lazy file views). */
-#ifdef __EMSCRIPTEN__
+/* On a 64-bit host the guest gets a full 4 GiB reservation. Where the host's own pointers are 32 bits
+   -- the browser (wasm32) and armeabi-v7a Android -- the guest cannot have an address space as large
+   as the one it is living inside, so the heap and VirtualAlloc ranges are compacted to 1.25 GiB: the
+   game peaks at ~125 MB of heap and ~580 MB of virtual allocations (mostly mapped archives, of which
+   only what the game reads becomes resident: host/core.c, lazy file views).
+   The compact layout is selected by host pointer size, not by target: a 32-bit process asking for the
+   4 GiB layout would compute a size_t that has silently wrapped (0x100010000 truncates to 0x10000),
+   get a 64 KiB mapping back, and fault on the first access past it. */
+#if defined(__EMSCRIPTEN__) || __SIZEOF_POINTER__ == 4
 #define GUEST_SPACE            0x50000000ull
 #define GUEST_HEAP_HI          0x20000000u
 #define GUEST_VALLOC_LO        0x20000000u

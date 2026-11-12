@@ -53,6 +53,47 @@ its own patches: widescreen, remembered display options, taps steering the menu 
 loading lazily (which keeps phones under their memory limit). The patches file fixes two bugs in the
 original game; each entry says why.
 
+### Build for Android
+
+`build_android.sh` compiles the same translated code into `libcricket.so` for the Micky's Games app,
+one ABI at a time:
+
+```bash
+NDK=~/android-ndk-r27d PROFILE=profiles/cricket07.h ./build_android.sh                   # arm64-v8a
+NDK=~/android-ndk-r27d PROFILE=profiles/cricket07.h ABI=armeabi-v7a ./build_android.sh   # 32-bit ARM
+```
+
+Each ABI needs SDL2 and wgpu-native built for it, in `third_party/` (not in this repo -- they are
+binaries):
+
+| ABI | SDL2 | wgpu-native |
+|---|---|---|
+| `arm64-v8a` | `third_party/sdl2-android/` | `third_party/wgpu-android/` |
+| `armeabi-v7a` | `third_party/sdl2-android-armeabi-v7a/` | `third_party/wgpu-android-armeabi-v7a/` |
+
+wgpu-native publishes both: take `wgpu-android-aarch64-release.zip` and
+`wgpu-android-armv7-release.zip` from the **same** [release](https://github.com/gfx-rs/wgpu-native/releases)
+(the headers must match the library, and `host/render_wgpu.c` is written against one API for both).
+SDL2 is built from `third_party/sdl2-src`, at the version whose Java classes the app ships:
+
+```bash
+cmake -S third_party/sdl2-src/SDL2-2.32.10 -B /tmp/sdl2-v7 \
+  -DCMAKE_TOOLCHAIN_FILE=$NDK/build/cmake/android.toolchain.cmake \
+  -DANDROID_ABI=armeabi-v7a -DANDROID_PLATFORM=android-26 \
+  -DCMAKE_BUILD_TYPE=Release -DSDL_SHARED=ON -DSDL_STATIC=OFF
+cmake --build /tmp/sdl2-v7 -j
+```
+
+Then copy `libSDL2.so` into `third_party/sdl2-android-armeabi-v7a/lib/`, with the source tree's own
+`include/` beside it (`SDL_config.h` dispatches on `__ANDROID__`, so the headers are shared).
+
+Two things differ on a 32-bit ABI. The guest address space is compacted to 1.25 GiB, the same layout
+the browser uses, because a 32-bit process cannot host a 4 GiB guest (`runtime/runtime.h`); the
+reservation still has to be one contiguous run, which is the part most likely to fail on a phone.
+And clang has no `-frounding-math` for 32-bit ARM, so while `fesetround()` still mirrors the x87
+rounding mode at run time, the compiler no longer promises to fold FP constants under it -- treat an
+`armeabi-v7a` build as offline-only for lockstep netplay against another target.
+
 ### Play on your computer
 
 ```bash
