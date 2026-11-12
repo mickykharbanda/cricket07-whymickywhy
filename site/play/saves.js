@@ -6,6 +6,26 @@
   const folder = () => FOLDERS[document.getElementById('roster-mode')?.value] || ['c07-save-directory', 'userdata'];
   const saveKey = () => folder()[0];
   const current = () => localStorage.getItem(saveKey()) || folder()[1];
+
+  // The game asks for its own save folder exactly once, while it boots: it calls Windows'
+  // CreateDirectoryA on "<My Documents>\EA SPORTS(TM) Cricket 07", which the engine turns into
+  // <save folder>/Documents and Settings/Player/My Documents/EA SPORTS(TM) Cricket 07. But that
+  // call is a single bare mkdir with no parents, and the engine itself only ever creates the save
+  // folder's top level -- so with those three levels missing the call fails, and the game then has
+  // nowhere to save for the whole session. (Proven by running the engine with its file log on: the
+  // same boot logs "No such file or directory" against that path, and "ok" once these exist.)
+  //
+  // Four empty directories are cheap, so make them before Play is ever pressed -- and again
+  // whenever the roster changes, because each roster saves into its own folder.
+  const CHAIN = ['Documents and Settings', 'Player', 'My Documents'];
+  async function ensureSaveFolder(name) {
+    const root = await navigator.storage.getDirectory();
+    let dir = await root.getDirectoryHandle(name, { create: true });
+    for (const part of CHAIN) dir = await dir.getDirectoryHandle(part, { create: true });
+  }
+  const readySaveFolder = () => ensureSaveFolder(current()).catch(() => {});
+  readySaveFolder();
+  document.getElementById('roster-mode')?.addEventListener('change', readySaveFolder);
   async function collect(dir, prefix = '') {
     const files = [];
     for await (const [name, handle] of dir.entries()) {
@@ -72,6 +92,8 @@
     const name = 'c07-restored-' + crypto.randomUUID();
     const dir = await root.getDirectoryHandle(name, { create: true });
     try {
+      // A backup taken before the chain existed does not carry it, and this is a brand new folder.
+      await ensureSaveFolder(name);
       for (const file of files) {
         let parent = dir;
         for (const part of file.path.slice(0, -1)) parent = await parent.getDirectoryHandle(part, { create: true });
