@@ -169,7 +169,14 @@ def build():
         struct.pack_into('<I',data,off+40,team['slot'])
         struct.pack_into('<H',data,off+46,allocated[norm(captain)][0])
         node=next(t for t in info.findall('team') if int(t.get('Index'))==team['slot'])
-        old_title=node.get('TeamName');node.set('TeamName','Royal Challengers' if team['abbr']=='RCB' else title);node.set('TeamNameShort',team['short']);node.set('Abbreviation',team['abbr']);node.set('StandardOfCricket','3')
+        # StandardOfCricket is the category Play Now files a team under: 0 International,
+        # 1 Australian State, 2 English County, 3 Other. The repurposed slots were all 3, which is
+        # why the modern teams are reached through "Other". Tested by setting all eleven to 0:
+        # they duly moved into Play Now's International category, and the tournament team selects
+        # did NOT change -- Knockout Cup still offered the same sixteen national sides. So the
+        # competitions' team lists live in the engine, not in this data, and this field cannot put
+        # the franchises into a tournament. Left as a per-team knob; omitting it keeps 3.
+        old_title=node.get('TeamName');node.set('TeamName','Royal Challengers' if team['abbr']=='RCB' else title);node.set('TeamNameShort',team['short']);node.set('Abbreviation',team['abbr']);node.set('StandardOfCricket',str(team.get('standard','3')))
         mgr=next(t for t in manager.findall('./teams/team') if int(t.get('id'))==team['slot']);mgr.set('name',title)
         for kit in mgr.findall('kit'):
             kit.set('namecolour','#FFFFFF');kit.set('numbercolour','#FFFFFF')

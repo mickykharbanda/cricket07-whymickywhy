@@ -27,6 +27,23 @@ The build verifies that 52 other original squads, and 943 protected original pla
 - Uniforms are editable fan recreations based on those references: shirts/trousers, pads, keeper equipment, hats and helmets. These are not official downloadable game skins. Faces and abilities use generic/proxy game templates; these are not authentic face scans or official 2026 ratings. Historic career counters are cleared without clearing the packed ability fields.
 - Original stadiums, animations and commentary remain. Commentary does not gain newly recorded player or team names. Existing tours referencing repurposed secondary slots will face the modern teams in expanded mode.
 
+## Why there is no IPL competition
+
+The modern teams can play each other from **Play Now**, and tours schedule them as warm-up
+opponents, but no competition in the game can be made to field them. The team list each
+competition offers is fixed inside the recompiled executable, not in this archive.
+
+Tested rather than assumed: `StandardOfCricket` in `teaminfo.xml` is the category Play Now files
+a team under (0 International, 1 Australian State, 2 English County, 3 Other). Setting all eleven
+modern teams to 0 moved them into Play Now's **International** category exactly as expected — and
+changed nothing in any tournament. Knockout Cup still offered the same sixteen national sides and
+still took eight of them; the modern teams appeared in none of the tournament team selects. The
+build keeps a per-team `standard` field in `team-plan.json` for this, defaulting to 3, which is
+the shipped behaviour; setting it does not and cannot create an IPL competition.
+
+An IPL season with a table and playoffs therefore needs a change to the engine itself
+(`cricket07-public`), not to this pack.
+
 ## Reversibility and saves
 
 Only the browser's cached archive is patched. Files under `game/` remain untouched. The worker verifies the downloaded payload and its stored bytes before changing archive pointers. Choosing **Original teams** restores all original pointers and archive length; it also brings back the secondary teams listed above. Online multiplayer uses Original teams.
