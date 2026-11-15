@@ -27,9 +27,12 @@ int widescreen_on(void) {
     if (on < 0) on = getenv("RC_WIDESCREEN") && atoi(getenv("RC_WIDESCREEN")) && !netplay_on();
     return on;
 #elif defined(__ANDROID__)
-    /* the app's "Fill the screen" switch (render_wgpu.c, set from CricketActivity); never in online play */
-    extern int g_fill_screen, netplay_on(void);
-    return g_fill_screen && !getenv("RC_GAME_DEFAULTS") && !netplay_on();
+    /* The phone always fills its screen, as the browser and the desktop do: a 4:3 picture on a 20:9
+       display is mostly black bars, and there is no reason to offer that. There is no player switch
+       any more -- nativeSetFill is kept only so an older launcher still links, and is ignored.
+       Online play is the one exception, and not a preference: every peer must run the same game. */
+    extern int netplay_on(void);
+    return !getenv("RC_GAME_DEFAULTS") && !netplay_on();
 #else
     extern int settings_widescreen(void);
     return settings_widescreen();

@@ -140,13 +140,13 @@ Java_com_micky_games_CricketActivity_nativeKey(JNIEnv *env, jclass cls, jint usa
     input_key_hid((int)usage, down ? 1 : 0);
 }
 
-/* Letterbox the 4:3 picture (0) or stretch it across the whole window (1). Only an int is written
-   here; the render thread notices it in begin_frame() and reconfigures the surface itself. */
+/* Ignored: the picture always fills the screen now (widescreen.c), so there is no letterboxed mode
+   to switch back to. Kept so a launcher built against the old interface still links -- a missing
+   native method is an UnsatisfiedLinkError at the call, not at load, which would strand the player
+   on a black screen rather than simply doing nothing. */
 JNIEXPORT void JNICALL
 Java_com_micky_games_CricketActivity_nativeSetFill(JNIEnv *env, jclass cls, jint on) {
-    (void)env; (void)cls;
-    extern int g_fill_screen;
-    g_fill_screen = on ? 1 : 0;
+    (void)env; (void)cls; (void)on;
 }
 
 /* ---------------------------------------------------------------- touch as mouse

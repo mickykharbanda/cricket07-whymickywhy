@@ -187,7 +187,7 @@ static int g_surf_w, g_surf_h;   /* back buffer: the largest 4:3 area that fits 
 /* Android's "Fill the screen" switch (Java_com_micky_games_CricketActivity_nativeSetFill). It used to
    stretch the 4:3 picture; it now turns on widescreen (widescreen.c reads it on Android), which fills
    the window with a wider view at the right proportions. begin_frame() picks the change up. */
-int g_fill_screen = 0;
+int g_fill_screen = 1;   /* Android fills the screen always; see widescreen_on() */
 static int g_fill_applied = 0;
 static int g_win_w, g_win_h;     /* window (swap chain) size; the back buffer is centred in it */
 static WGPUTexture g_depth;
