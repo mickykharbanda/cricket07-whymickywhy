@@ -62,6 +62,17 @@ void dyncode_register(uint32_t addr, uint32_t len);
 int dyncode_contains(uint32_t addr);
 void interp_call(CPU *c, uint32_t eip);   /* return address already pushed */
 
+/* Progress breadcrumb. On Android there is no usable USB connection, so the log ladder in logcat is
+   out of reach; rc_rung leaves the last rung the engine reached on disk instead. host/main_android.c
+   writes it with a raw write + fsync, so it survives a crash, a kill and the low-memory killer
+   alike -- the failures that leave no tombstone are exactly the ones we cannot otherwise see.
+   A no-op on every other target. */
+#ifdef __ANDROID__
+void rc_rung(const char *token);
+#else
+#define rc_rung(token) ((void)0)
+#endif
+
 typedef struct { uint32_t addr; uint32_t regs[8]; double st0; uint32_t top; } TraceRec;
 extern TraceRec *g_trace;          /* set by a test harness to record every instruction */
 extern uint32_t g_trace_len, g_trace_cap;

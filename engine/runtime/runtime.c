@@ -248,8 +248,22 @@ void rdtsc(CPU *c) {
 /* ------------------------------------------------------------------ imports */
 
 typedef struct { char name[96]; GuestFn fn; } ImportSlot;
-static ImportSlot g_imports[4096];  /* PE imports + GetProcAddress results + COM method slots */
+/* 8192 to match MAX_SLOTS in host/com.c, which indexes its parallel g_slots[] by the same number:
+   the two were 4096 and 8192, so imports past 4096 would have run off the end of this one while the
+   other still looked fine. import_slot_ok() below refuses to go past the end either way. */
+#define MAX_IMPORTS 8192
+static ImportSlot g_imports[MAX_IMPORTS];  /* PE imports + GetProcAddress results + COM method slots */
 static uint32_t g_nimports;
+
+/* Writing past g_imports[] corrupts whatever follows it in BSS and crashes somewhere unrelated later,
+   which is the least readable failure there is -- especially on a phone with no tombstone. Stop here
+   with a name instead. */
+static void import_slot_ok(const char *what) {
+    if (g_nimports < MAX_IMPORTS) return;
+    fprintf(stderr, "[runtime] out of import slots: %u used, all of them, adding \"%s\"\n", g_nimports, what);
+    rc_rung("oom-imports");
+    exit(1);
+}
 
 static void unimplemented_import(CPU *c) {
     /* The return address on the stack identifies the caller; the slot is found from the IAT
@@ -269,6 +283,7 @@ static GuestFn find_handler(const char *name) {
 }
 
 uint32_t add_dynamic_import(const char *name, GuestFn fn) {
+    import_slot_ok(name);
     ImportSlot *sl = &g_imports[g_nimports];
     snprintf(sl->name, sizeof sl->name, "%s", name);
     sl->fn = fn;
@@ -333,6 +348,7 @@ int load_image(const char *path, LoadedImage *out) {
         for (uint32_t k = 0;; k++) {
             uint32_t thunk = R32(image_base + ilt + 4 * k);
             if (!thunk) break;
+            import_slot_ok(dll);
             ImportSlot *s = &g_imports[g_nimports];
             if (thunk & 0x80000000u)
                 snprintf(s->name, sizeof s->name, "%s!#%u", dll, thunk & 0xffff);
